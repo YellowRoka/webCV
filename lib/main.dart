@@ -87,7 +87,7 @@ class MyApp extends StatelessWidget {
                   }
 
                   if(state is StateManagerStateSchools){
-                    itemScrollController.scrollTo(index: 12, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
+                    itemScrollController.scrollTo(index: 11, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
                   }
 
                   if(state is StateManagerStateSkills){
