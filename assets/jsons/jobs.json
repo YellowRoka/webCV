@@ -1,0 +1,48 @@
+{
+    "jobs":[
+        {
+            "company":    "B. Braun Group",
+            "position":   "Software Engineer",
+            "image":      "bb.jpg",
+            "place":      "Budapest, Hungary",
+            "date":       "Apr 2020 - Mar 2022, 2 years",
+            "tasks":      "- develope the software of the embedded medical devices\n - software bug fixes,\n- implement new features\n- working with legacy code\n- software maintenance\n- develope installer tools\n- develope new features for auto-tester tools(internal tools)\n- develepove matlab/simulink model & mathlab scripts\n- refact matlab model & mathlab scripts\n- check, create and develepove software requirements\n- create documentations\n- run smoke tests on develpoer side",
+            "experinces": "VSCode, Eclipse, Git, SVN, Notepad++, Visual Studio, Atlassian - Crucible, Jira, MCD, Debian, matlab/simulink",
+            "languages":  "C/C++, NSIS (Nullsoft Scriptable Install System), Java, Gherkin",
+            "commit":     ""
+        },
+        {
+            "company":    "MuzixGroup",
+            "position":   "Robotical Software Engineer",
+            "image":      "mzx.jpg",
+            "place":      "Budapest, Hungary",
+            "date":       "Sep 2019 - Dec 2019, 4 months",
+            "tasks":      "- maintenance, retrieval, verification, storage of data / specifications of products,\n- Application-level design and development of robots tailored to customer needs\n- Functional testing of written software\n- on-site monitoring of the robot system and immediate rectification of errors\n- software and hardware troubleshooting\n- keeping in touch with the buyer and supplier",
+            "experinces": "Android Studio, Android OS, Google DialogFlow, Grandle Build Tool, XML,",
+            "languages":  "Java",
+            "commit":     ""
+        },
+        {
+            "company":    "Mentor Graphics",
+            "position":   "Software Engineer ",
+            "image":      "mentor.jpg",
+            "place":      "Budapest, Hungary ",
+            "date":       "Feb 2019 - May 2019, 4 months",
+            "tasks":      "- modul and software testing\n- source code modification",
+            "experinces": "QAC, AUTOSAR, Git,Junit, Eclipse, Notepad++, (AR)XML, Jira, SiL, Jenkins,",
+            "languages":  "C/C++, Java",
+            "commit":     "During my time at the company, I passed the ISTQB - Foundation level exam by the Masterfield exam center. But because of my Master's thesis, I had to switch companies during my training period."
+        },
+        {
+            "company":    "evosoft Hungary ",
+            "position":   "Software Engineer",
+            "image":      "evosoft.jpg",
+            "place":      "Budapest, Hungary",
+            "date":       " Feb 2017 - Jan 20192 years ",
+            "tasks":      "- evaluation of measurements\n- compile, run and evaluate developer side measurements\n- development of test environments\n- development of module tests\n- software development\n- software bug fixes\n- implementation of improvements at code and model level\n- model based development (ARXML editing)\n- documentation\n- maintenance of hardware\n- refactoring of modules, functions\n- Editing UML graphics\n- Processing and implementation of requirements\n- testing\n- Checking and fixing QAC errors\n- participation in reviews",
+            "experinces": "INCA, Vector, QAC, AUTOSAR, GIT, RTRT modul testing, Trace32, Eclipse, Visual Studio, Notepad++, (AR)XML, tickets, Jenkins, miniHiL,",
+            "languages":  "Ada, C/C++,",
+            "commit":     ""
+        }
+    ]
+}

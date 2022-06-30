@@ -1,0 +1,61 @@
+{
+    "name":      "Gergő Fónad",
+    "address1":  "Liget Street 5, 3070 Bátonyterenye",
+    "address2":  "Népszínház Street 47, 1081 Budapest",
+    "image":     "me.jpg",
+    "birth":     "1993.05.07.",
+    "mobile":    "06205178033",
+    "mail":      "fonadgergo@hotmail.com",
+    "languages": "Hungarian - Native or bilingual proficiency,\nEnglish - Limited working proficiency,\nGerman - Elementary proficiency ",
+
+    "schools":[
+        {
+            "name":                "Óbuda Universty - Neumann János Faculty of Informatics MSc.",
+            "date":                " 2018 - 2020",
+            "general_subjects":    "- applied mathematics\n- embedded systems\n- image processing\n- control technique\n- cloud computing systems\n- parallel programming\n- basics of database development",
+            "vocational_subjects": "- machine learning\n- programming robot systems\n- control of robots\n- industrial and service robots\n- kinematics and dynamics of robots",
+            "thesis":              "Master's thesis: Design and implementation of a multi-purpose application framework for CruzR human service robot",
+            "brief":               "The purpose of the assignment was to create a program that was customized by the customer needs are summarized and later expanded and customized for further customers according to your needs. The implemented application is written in Java programming language. Written for the robot application had to keep in touch with users and their current environment too."
+        },
+        {
+            "name":                "Óbuda University - Kandó Kálmán Faculty of Electrical Engineering BSc.",
+            "date":                "2013 - 2017",
+            "general_subjects":    "- mathematics\n- physics\n- legal and social sciences",
+            "vocational_subjects": "- electrical engineering\n- knowledge of electrical materials\n- electronics\n- digital technology\n- signal and image processing\n- programming\n- embedded systems\n- automation",
+            "thesis":              "Thesis: Humanoid robot arm",
+            "brief":               "Assembled from recycled parts, programmed in C programming language STM32L476RG (ARM Cortex M4) Microcontroller Based Robotic Arm with PC Supported Program which is written in C# programming language. The robot can also be trained and controlled by a motion sensor.",
+            "commit":              "Activities and Societies: I gave support for the other students from C and Assembly programming language, developing embedded systems, and subject from automatisation."
+        }
+    ],
+
+    "trainings":[
+        {
+            "name":"Certified Tester Foundation Level (CTFL)\nMasterfield Training Center\nCredential ID H19041208/CTFL "
+        },
+
+        {
+            "name":"Android developer foundation course (2 hetes)\nDr. Ekler Péter @webuni\nCredential ID 4G6ACGJT"
+        },
+        {
+            "name":"Android developer intensive basic training (8 hetes)\nDr. Ekler Péter @webuni\nCredential ID 44P2MXJX"
+        },
+        {
+            "name":"Android developer advanced training (12 hetes)\nDr. Ekler Péter @webuni\nCredential ID ZRY645E3"
+        },
+
+        {
+            "name":"Java backend foundation course (3 hetes)\nEkler-Antal Éva @webuni\nCredential ID: - "
+        },
+        {
+            "name":"Java Spring Boot backend developer training (12 hetes)\nImre Gábor @webuni\nCredential ID VL2F8MHV"
+        },
+       
+        {
+            "name":"Intensive Flutter foundation course (3 hetes)\nPásztor Dániel @webuni\nCredential ID: - "
+        },
+        {
+            "name":"Intensive Flutter basic training (12 hetes)\nPásztor Dániel @webuni\nCredential ID FU43CHUU"
+        }
+
+    ]
+}
