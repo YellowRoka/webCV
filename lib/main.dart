@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:cv_2022_06_30/bloc/state_manager_bloc.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,17 @@ import 'home_page_elements/cards/school_card.dart';
 import 'home_page_elements/cards/skills_card.dart';
 import 'json_workers/jsonBasedataObjs.dart';
 import 'json_workers/jsonJobsObjs.dart';
+
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pdfW;
+import 'package:printing/printing.dart';
+
+//for deploy on github:
+//flutter build web --release --base-href="/webcvpage.github.io/" -v
+
+//help: 
+//https://stackoverflow.com/questions/65689346/404-failed-to-load-resource-deploying-flutter-web-app-to-github-pages
+//https://docs.github.com/en/pages/quickstart
 
 late JobConverter      jobs;
 late BaseDataConverter baseData;
@@ -35,13 +47,35 @@ void main() async {
   jsonModel  = json.decode(jsonString);
   baseData   = BaseDataConverter.fromJson(jsonModel);
 
-  runApp(const MyApp());
+  runApp( const MyApp() );
 }
 
 final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  Future<void> printToPDF( var child ) async {
+    Printing.layoutPdf(
+      format:   PdfPageFormat.a4,
+      onLayout: ( PdfPageFormat format ) async {
+        final pdfW.Document pdf = pdfW.Document();
+
+        pdf.addPage(
+          pdfW.Page(
+            pageFormat: format,
+            build:      (pdfW.Context context) {
+              return pdfW.Center( child: child );
+            },
+          ),
+        );
+
+        final file = File("example.pdf");
+         file.writeAsBytes(await pdf.save());
+        return pdf.save();
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +84,8 @@ class MyApp extends StatelessWidget {
         primaryColor:    Colors.black,
         backgroundColor: Colors.black,
     );
+    
+    //printToPDF(MyHomePage());
     
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -87,7 +123,7 @@ class MyApp extends StatelessWidget {
                   }
 
                   if(state is StateManagerStateSchools){
-                    itemScrollController.scrollTo(index: 10, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
+                    itemScrollController.scrollTo(index: 9, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
                   }
 
                   if(state is StateManagerStateSkills){

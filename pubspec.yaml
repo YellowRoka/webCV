@@ -41,6 +41,8 @@ dependencies:
   bloc_concurrency: ^0.2.0
 
   scrollable_positioned_list: ^0.3.2
+  pdf: ^3.8.1
+  printing: ^5.9.1
 
 dev_dependencies:
   flutter_test:
@@ -73,9 +75,11 @@ flutter:
     - assets/bg.jpg
     - assets/me.jpg
     - assets/mentor.jpg
-    - assets/mzx.jpg
+    - assets/mza.jpg
     - assets/evosoft.jpg
     - assets/bb.jpg
+    - assets/vendo.png
+    - assets/mzx.png
     - assets/masterfield.jpg
 
     - assets/jsons/
