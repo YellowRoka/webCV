@@ -6,7 +6,7 @@
             "image":      "vendo.png",
             "place":      "Budapest, Hungary",
             "date":       "Mar 2022 - now, 6 months",
-            "tasks":      "- create system architect\n- Application-level design and development based on product requirement\n- select the system hardware parts\n- create and implement UI design\n- design and create statemachines\n- create and implement local databases\n- implement costumers requirements\n- keep in touch with costumer's other developer teams\n- make time table and coordinate the parts of the project\n- create the base release processes\n-create animations\n- write code generator\n- refactoring\n- make performance optimalizations",
+            "tasks":      "- create system architect\n- Application-level design and development based on product requirement\n- select the system hardware parts\n- create and implement UI design\n- design and create statemachines\n- create and implement local databases\n- implement costumers requirements\n- keep in touch with costumer's other developer teams\n- make time table and coordinate the parts of the project\n- create the base release processes\n- create animations\n- write code generator\n- refactoring\n- make performance optimalizations",
             "experinces": "Flutter, Debian, Windows, Web, Raspberry Pi4, ORM, Hive, BLOC, REST-API, TCP Socket, Blender, Asana, Git, JSON, embedded sytem, front end, graphical design,",
             "languages":  "Dart, C/C++, python, java",
             "commit":     "During my time at the company, I am the main responsible of the developing of the central component. This component connect the base hardware functions with the cloud function, and keep in touch with the user. I manage this part of the project."
@@ -18,7 +18,7 @@
             "place":      "Budapest, Hungary",
             "date":       "Marc 2021 - now, 15 months",
             "tasks":      "- sotware maintenance\n- Application-level design and development of robots tailored to customer needs\n- Functional testing of written software\n- on-site monitoring of the robot system and immediate rectification of errors\n- software and hardware troubleshooting\n- keeping in touch with the buyer and supplier",
-            "experinces": "Android Studio, Android OS, Google DialogFlow, Grandle Build Tool, XML,",
+            "experinces": "Android Studio, Android OS, Google DialogFlow, Grandle Build Tool, XML, FireBase",
             "languages":  "Java, Kotlin",
             "commit":     "Maintenance and further development of a tender winner project, that created based on my master thesis.\n(https://mzxrobotics.com/palyazat)"
         },
