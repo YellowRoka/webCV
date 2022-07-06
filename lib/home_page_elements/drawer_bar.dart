@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -18,16 +17,20 @@ class DrawerBar extends StatelessWidget {
       backgroundColor:Colors.black.withOpacity( 0.3 ),
       child: Center(
         child: SingleChildScrollView(
-          child: Column(
-            children: [
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.person,           color: Colors.white, size: 100 ), onPressed: (){ callForPersonal( context ); } ),
-              const SizedBox( height: 50 ),
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.factory_outlined, color: Colors.white, size: 100 ), onPressed: (){ callForWorks( context );    } ),
-              const SizedBox( height: 50 ),
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.school_outlined,  color: Colors.white, size: 100 ), onPressed: (){ callForScools( context );   } ),
-              const SizedBox( height: 50 ),
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.add_chart_sharp,  color: Colors.white, size: 100 ), onPressed: (){ callForSkills( context );   } ),
-            ],
+          child: Builder(
+            builder: (context) {
+              return Column(
+                children: [
+                  ElevatedButton( style: buttonTheme, child: const Icon( Icons.person,           color: Colors.white, size: 100 ), onPressed: (){ callForPersonal( context ); } ),
+                  const SizedBox( height: 50 ),
+                  ElevatedButton( style: buttonTheme, child: const Icon( Icons.factory_outlined, color: Colors.white, size: 100 ), onPressed: (){ callForWorks( context );    } ),
+                  const SizedBox( height: 50 ),
+                  ElevatedButton( style: buttonTheme, child: const Icon( Icons.school_outlined,  color: Colors.white, size: 100 ), onPressed: (){ callForScools( context );   } ),
+                  const SizedBox( height: 50 ),
+                  ElevatedButton( style: buttonTheme, child: const Icon( Icons.add_chart_sharp,  color: Colors.white, size: 100 ), onPressed: (){ callForSkills( context );   } ),
+                ],
+              );
+            }
           ),
         ),
       ),
@@ -36,21 +39,21 @@ class DrawerBar extends StatelessWidget {
   
   void callForPersonal( BuildContext context ){
     BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventToPersonal() );
-    BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventHideBar()    );
+    Navigator.pop(context);
   }
   
   void callForWorks( BuildContext context ){
     BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventToWorks() );
-    BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventHideBar() );
+    Navigator.pop(context);
   }
 
   void callForScools( BuildContext context ){
     BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventToSchools() );
-    BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventHideBar()   );
+    Navigator.pop(context);
   }
 
   void callForSkills( BuildContext context ){
     BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventToSkills() );
-    BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventHideBar()  );
+    Navigator.pop(context);
   }
 }

@@ -5,7 +5,6 @@ import 'package:cv_2022_06_30/bloc/state_manager_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import 'home_page_elements/FOB_widget.dart';
@@ -20,7 +19,9 @@ import 'json_workers/jsonJobsObjs.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pdfW;
 import 'package:printing/printing.dart';
-
+//FLUTTER EAT HDD after every debug build!!!!
+//help:https://stackoverflow.com/questions/68204150/flutter-web-stable-reducing-my-hard-drive-space-everytime-i-run-the-web-app
+// remove flutter_tools.* from %TEMP%
 //for deploy on github:
 //flutter build web --release --base-href="/webcvpage.github.io/" -v
 
@@ -30,11 +31,6 @@ import 'package:printing/printing.dart';
 
 late JobConverter      jobs;
 late BaseDataConverter baseData;
-
-final ItemScrollController  itemScrollController  = ItemScrollController();
-final ItemPositionsListener itemPositionsListener = ItemPositionsListener.create();
-
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -50,7 +46,6 @@ void main() async {
   runApp( const MyApp() );
 }
 
-final GlobalKey<ScaffoldState> _scaffoldkey = GlobalKey<ScaffoldState>();
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -85,61 +80,32 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.black,
     );
     
+    final ItemScrollController  itemScrollController  = ItemScrollController();
     //printToPDF(MyHomePage());
     
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      
-      title: 'CV ${baseData.name}',
-      theme: materialTheme,
-      home:  MultiProvider(
-
-        providers: [ BlocProvider( create: (context) => StateManagerBloc()..add( const StateManagerEventInit() ) ) ],
+    return BlocProvider( 
+      create: (context) => StateManagerBloc( itemScrollController )..add( const StateManagerEventInit() ) ,
+      lazy:   false,
+      child:  MaterialApp(
+        debugShowCheckedModeBanner: false,
         
-        child:     Builder(
+        title: 'CV ${baseData.name}',
+        theme: materialTheme,
+        home:  Builder(
           builder: (context) {  
             return Scaffold(
-              key:                  _scaffoldkey,
-              floatingActionButton: FOB( _scaffoldkey.currentState?.isDrawerOpen??false ),
-              drawer:               const DrawerBar(),
-
-              body: BlocListener<StateManagerBloc, StateManagerState>(
-                child:    MyHomePage(),
-                listener: ( context, state ) {
-                  
-                  if(state is StateManagerStateShowedBar){
-                    _scaffoldkey.currentState!.openDrawer();
-                  }
-                  if(state is StateManagerStateHidedBar){
-                    _scaffoldkey.currentState!.closeDrawer();
-                  }
-
-                  if(state is StateManagerStatePersonal){
-                    itemScrollController.scrollTo(index: 0, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-                  }
-
-                  if(state is StateManagerStateWorks){
-                    itemScrollController.scrollTo(index: 2, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-                  }
-
-                  if(state is StateManagerStateSchools){
-                    itemScrollController.scrollTo(index: 9, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-                  }
-
-                  if(state is StateManagerStateSkills){
-                    itemScrollController.scrollTo(index: 14, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-                  }
-                },
-              ),
-
               onDrawerChanged: ( isOpen ){
                 if( isOpen ){
                   BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventShowBar() );
                 }
                 else{
-                  BlocProvider.of<StateManagerBloc>(context).add(const StateManagerEventHideBar() );
+                  BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventHideBar() );
                 }
-              }
+              },
+  
+              drawer:                const DrawerBar(),
+              floatingActionButton:  const FOB(),
+              body:                  MyHomePage( itemScrollController: itemScrollController ),
             );
           }
         )
@@ -151,7 +117,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
 
-  List<Widget> dataCards = [
+  final List<Widget> dataCards = [
           DataCard   ( description: baseData ),
     const SizedBox   ( height: 10 ),
 
@@ -167,6 +133,12 @@ class MyHomePage extends StatelessWidget {
           JobCard    ( description: jobs.jobs[ 3 ] ),
     const SizedBox   ( height: 20 ),
 
+          JobCard    ( description: jobs.jobs[ 4 ] ),
+    const SizedBox   ( height: 10 ),
+
+          JobCard    ( description: jobs.jobs[ 5 ] ),
+    const SizedBox   ( height: 20 ),
+
           SchoolCard ( description: baseData.schools[ 0 ] ),
     const SizedBox   ( height: 10 ),
 
@@ -176,10 +148,14 @@ class MyHomePage extends StatelessWidget {
           SkillsCard ( description: baseData ),
   ];
 
-  MyHomePage({Key? key}) : super(key: key);
+  final ItemScrollController  itemScrollController;
+  
+  MyHomePage({Key? key, required this.itemScrollController}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    //final ItemPositionsListener itemPositionsListener = ItemPositionsListener.create();
+
     return Stack(
       children: [
         Container(
@@ -197,7 +173,7 @@ class MyHomePage extends StatelessWidget {
     
               itemCount:             dataCards.length,
               itemScrollController:  itemScrollController,
-              itemPositionsListener: itemPositionsListener,
+              //itemPositionsListener: itemPositionsListener,
               itemBuilder:           ( context, index ) => dataCards[ index ],
             ),
           ),
