@@ -35,3 +35,20 @@ class StateManagerStateSchools extends StateManagerState {
 class StateManagerStateSkills extends StateManagerState {
   const StateManagerStateSkills();
 }
+
+class StateManagerStateSendedMail extends StateManagerState {
+  const StateManagerStateSendedMail();
+}
+
+class StateManagerStateCreatedPDF extends StateManagerState {
+  const StateManagerStateCreatedPDF();
+}
+
+class StateManagerStateCreatePDF extends StateManagerState {
+  const StateManagerStateCreatePDF();
+}
+
+class StateManagerStatePopPDFNotification extends StateManagerState {
+  const StateManagerStatePopPDFNotification();
+}
+

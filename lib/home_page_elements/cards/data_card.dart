@@ -6,7 +6,7 @@ import 'base_card.dart';
 class DataCard extends StatelessWidget {
   final BaseDataConverter description;
 
-  const DataCard({Key? key, required this.description}) : super(key: key);
+  const DataCard( { Key? key, required this.description } ) : super( key: key );
 
   @override
   Widget build(BuildContext context) {
@@ -15,24 +15,24 @@ class DataCard extends StatelessWidget {
     const TextStyle headStyle = TextStyle( color: Colors.white, fontSize: 20, decoration: TextDecoration.none );
 
     return BaseCard(
-      heigt:    260,
-      width:    660,
+      heigt:    null,
+      width:    null,
       children: [
         Row(
           children: [
             CircleAvatar(  
               radius:          100,
-              backgroundImage: AssetImage('assets/${description.image}'),
+              backgroundImage: AssetImage( 'assets/${ description.image }' ),
             ),
 
             const SizedBox(
-              width: 30,
+              width:  30,
               height: 210,
-              child: 
-              VerticalDivider(thickness: 1, color: Colors.white)
-              ),
+              child:  VerticalDivider( thickness: 1, color: Colors.white )
+            ),
             
             Column(
+              key: const Key( "cdata" ),
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

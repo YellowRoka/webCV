@@ -35,3 +35,19 @@ class StateManagerEventToSchools extends StateManagerEvent {
 class StateManagerEventToSkills extends StateManagerEvent {
   const StateManagerEventToSkills();
 }
+
+class StateManagerEventSendMail extends StateManagerEvent {
+  const StateManagerEventSendMail();
+}
+
+class StateManagerEventCreatePDF extends StateManagerEvent {
+  const StateManagerEventCreatePDF();
+}
+
+class StateManagerEventCreatedPDF extends StateManagerEvent {
+  const StateManagerEventCreatedPDF();
+}
+
+class StateManagerEventPopPDFNotification extends StateManagerEvent {
+  const StateManagerEventPopPDFNotification();
+}

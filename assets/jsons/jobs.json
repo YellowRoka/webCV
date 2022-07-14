@@ -28,7 +28,7 @@
             "image":      "bb.jpg",
             "place":      "Budapest, Hungary",
             "date":       "Apr 2020 - Mar 2022, 2 years",
-            "tasks":      "- develope the software of the embedded medical devices\n - software bug fixes,\n- implement new features\n- working with legacy code\n- software maintenance\n- develope installer tools\n- develope new features for auto-tester tools(internal tools)\n- develepove matlab/simulink model & mathlab scripts\n- refact matlab model & mathlab scripts\n- check, create and develepove software requirements\n- create documentations\n- run smoke tests on develpoer side",
+            "tasks":      "- develope the software of the embedded medical devices\n- software bug fixes,\n- implement new features\n- working with legacy code\n- software maintenance\n- develope installer tools\n- develope new features for auto-tester tools(internal tools)\n- develepove matlab/simulink model & mathlab scripts\n- refact matlab model & mathlab scripts\n- check, create and develepove software requirements\n- create documentations\n- run smoke tests on develpoer side",
             "experinces": "VSCode, Eclipse, Git, SVN, Notepad++, Visual Studio, Atlassian - Crucible, Jira, MCD, Debian, matlab/simulink",
             "languages":  "C/C++, NSIS (Nullsoft Scriptable Install System), Java, Gherkin",
             "commit":     ""

@@ -5,32 +5,28 @@ import '../bloc/state_manager_bloc.dart';
 
 
 class DrawerBar extends StatelessWidget {
-  const DrawerBar({Key? key}) : super(key: key);
+  const DrawerBar( {Key? key} ) : super( key: key );
   
   @override
-  Widget build(BuildContext context) {
+  Widget build( BuildContext context ){
 
-  final ButtonStyle buttonTheme=ElevatedButton.styleFrom( primary: Colors.black.withOpacity(0) );
+  final ButtonStyle buttonTheme = ElevatedButton.styleFrom( primary: Colors.black.withOpacity( 0 ) );
 
     return Drawer(
-      width: 400,
-      backgroundColor:Colors.black.withOpacity( 0.3 ),
-      child: Center(
+      width:             400,
+      backgroundColor: Colors.black.withOpacity( 0.3 ),
+      child:             Center(
         child: SingleChildScrollView(
-          child: Builder(
-            builder: (context) {
-              return Column(
-                children: [
-                  ElevatedButton( style: buttonTheme, child: const Icon( Icons.person,           color: Colors.white, size: 100 ), onPressed: (){ callForPersonal( context ); } ),
-                  const SizedBox( height: 50 ),
-                  ElevatedButton( style: buttonTheme, child: const Icon( Icons.factory_outlined, color: Colors.white, size: 100 ), onPressed: (){ callForWorks( context );    } ),
-                  const SizedBox( height: 50 ),
-                  ElevatedButton( style: buttonTheme, child: const Icon( Icons.school_outlined,  color: Colors.white, size: 100 ), onPressed: (){ callForScools( context );   } ),
-                  const SizedBox( height: 50 ),
-                  ElevatedButton( style: buttonTheme, child: const Icon( Icons.add_chart_sharp,  color: Colors.white, size: 100 ), onPressed: (){ callForSkills( context );   } ),
-                ],
-              );
-            }
+          child: Column(
+            children: [
+              ElevatedButton( style: buttonTheme, child: const Icon( Icons.person,           color: Colors.white, size: 100 ), onPressed: (){ callForPersonal( context ); } ),
+              const SizedBox( height: 50 ),
+              ElevatedButton( style: buttonTheme, child: const Icon( Icons.factory_outlined, color: Colors.white, size: 100 ), onPressed: (){ callForWorks( context );    } ),
+              const SizedBox( height: 50 ),
+              ElevatedButton( style: buttonTheme, child: const Icon( Icons.school_outlined,  color: Colors.white, size: 100 ), onPressed: (){ callForScools( context );   } ),
+              const SizedBox( height: 50 ),
+              ElevatedButton( style: buttonTheme, child: const Icon( Icons.add_chart_sharp,  color: Colors.white, size: 100 ), onPressed: (){ callForSkills( context );   } ),
+            ],
           ),
         ),
       ),
@@ -38,22 +34,22 @@ class DrawerBar extends StatelessWidget {
   }
   
   void callForPersonal( BuildContext context ){
-    BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventToPersonal() );
-    Navigator.pop(context);
+    BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventToPersonal() );
+    Navigator.pop( context );
   }
   
   void callForWorks( BuildContext context ){
-    BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventToWorks() );
-    Navigator.pop(context);
+    BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventToWorks() );
+    Navigator.pop( context );
   }
 
   void callForScools( BuildContext context ){
-    BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventToSchools() );
-    Navigator.pop(context);
+    BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventToSchools() );
+    Navigator.pop( context );
   }
 
   void callForSkills( BuildContext context ){
-    BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventToSkills() );
-    Navigator.pop(context);
+    BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventToSkills() );
+    Navigator.pop( context) ;
   }
 }

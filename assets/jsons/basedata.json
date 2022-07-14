@@ -6,7 +6,7 @@
     "birth":     "1993.05.07.",
     "mobile":    "+36-20-517-80-33",
     "mail":      "fonadgergo@hotmail.com",
-    "languages": "Hungarian - Native or bilingual proficiency,\nEnglish - Limited working proficiency,\nGerman - Elementary proficiency ",
+    "languages": "Hungarian - Native or bilingual proficiency,\nEnglish - Limited working proficiency,\nGerman - Elementary proficiency",
 
     "schools":[
         {
@@ -30,34 +30,34 @@
 
     "trainings":[
         {
-            "name":"Certified Tester Foundation Level (CTFL)\nMasterfield Training Center\nCredential ID H19041208/CTFL "
+            "name":"Certified Tester Foundation Level (CTFL)\nMasterfield Training Center\nCredential ID: H19041208/CTFL "
         },
         {
-            "name":"Android developer foundation course (2 weeks)\nDr. Ekler Péter @webuni\nCredential ID 4G6ACGJT"
+            "name":"Android developer foundation course (2 weeks)\nDr. Ekler Péter @webuni\nCredential ID: 4G6ACGJT"
         },
         {
-            "name":"Android developer intensive basic training (8 weeks)\nDr. Ekler Péter @webuni\nCredential ID 44P2MXJX"
+            "name":"Android developer intensive basic training (8 weeks)\nDr. Ekler Péter @webuni\nCredential ID: 44P2MXJX"
         },
         {
-            "name":"Android developer advanced training (12 weeks)\nDr. Ekler Péter @webuni\nCredential ID ZRY645E3"
+            "name":"Android developer advanced training (12 weeks)\nDr. Ekler Péter @webuni\nCredential ID: ZRY645E3"
         },
         {
             "name":"Java backend foundation course (3 weeks)\nEkler-Antal Éva @webuni\nCredential ID: - "
         },
         {
-            "name":"Java Spring Boot backend developer training (12 weeks)\nImre Gábor @webuni\nCredential ID VL2F8MHV"
+            "name":"Java Spring Boot backend developer training (12 weeks)\nImre Gábor @webuni\nCredential ID: VL2F8MHV"
         },
         {
             "name":"Intensive Flutter foundation course (3 weeks)\nPásztor Dániel @webuni\nCredential ID: - "
         },
         {
-            "name":"Intensive Flutter basic training (12 weeks)\nPásztor Dániel @webuni\nCredential ID FU43CHUU"
+            "name":"Intensive Flutter basic training (12 weeks)\nPásztor Dániel @webuni\nCredential ID: FU43CHUU"
         },
         {
-            "name":"Electrician (6 months)\n@Fekete Felnőttképző Kft.\nCredential ID: -  "
+            "name":"Electrician (6 months)\n@Fekete Felnőttképző Kft.\nCredential ID: 242569/7/2021"
         },
         {
-            "name":"Electronic asset protection mechanic (6 months)\n@Oktat60 Kft.\nCredential ID: -  "
+            "name":"Electronic asset protection mechanic (6 months)\n@Oktat60 Kft.\nCredential ID: VR/187/6/2022"
         }
 
     ]
