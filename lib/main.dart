@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:cv_2022_06_30/bloc/state_manager_bloc.dart';
-import 'package:cv_2022_06_30/home_page_elements/pdf_alert_dialog.dart';
+import 'package:webCV/bloc/state_manager_bloc.dart';
+import 'package:webCV/home_page_elements/pdf_alert_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

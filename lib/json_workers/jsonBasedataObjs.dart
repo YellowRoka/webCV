@@ -39,11 +39,12 @@ class BaseDataConverter{
   final String          address2;
   final String          birth;
   final String          mobile;
+  final String          mail;
   final List<Schools>   schools;
   final List<Trainings> trainings;
   final String          languages;
 
-  BaseDataConverter(this.name, this.image, this.address1, this.address2, this.birth, this.mobile, this.schools, this.trainings, this.languages);
+  BaseDataConverter(this.name, this.image, this.address1, this.address2, this.birth, this.mobile, this.mail, this.schools, this.trainings, this.languages);
   dynamic toJson() => _$BaseDataConverterToJson(this);
   factory BaseDataConverter.fromJson(dynamic json) => _$BaseDataConverterFromJson(json);
   

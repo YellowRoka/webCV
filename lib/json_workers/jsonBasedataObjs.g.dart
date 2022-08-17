@@ -42,6 +42,7 @@ BaseDataConverter _$BaseDataConverterFromJson(Map<String, dynamic> json) =>
       json['address2'] as String,
       json['birth'] as String,
       json['mobile'] as String,
+      json['mail'] as String,
       (json['schools'] as List<dynamic>)
           .map((e) => Schools.fromJson(e))
           .toList(),
@@ -59,6 +60,7 @@ Map<String, dynamic> _$BaseDataConverterToJson(BaseDataConverter instance) =>
       'address2': instance.address2,
       'birth': instance.birth,
       'mobile': instance.mobile,
+      'mail': instance.mail,
       'schools': instance.schools,
       'trainings': instance.trainings,
       'languages': instance.languages,

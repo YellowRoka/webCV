@@ -40,6 +40,7 @@ class DataCard extends StatelessWidget {
                     Text( "Name:   ${description.name}",       style: headStyle ), const SizedBox( height: 15 ),
                     Text( "Birth:       ${description.birth}", style: textStyle ), const SizedBox( height: 15 ),
                     Text( "mobile:    ${description.mobile}",  style: textStyle ), const SizedBox( height: 15 ),
+                    Text( "email:       ${description.mail}",  style: textStyle ), const SizedBox( height: 15 ),
                     Text( "Address:  ${description.address1}", style: textStyle ), const SizedBox( height: 15 ),
                     Text( "Address:  ${description.address2}", style: textStyle ), const SizedBox( height: 15 )
                   ],

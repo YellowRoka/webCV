@@ -73,6 +73,7 @@ class PDFDataCard extends StatelessWidget {
             Text( "Name:   ${baseData.name}",       style: headStyle ), const SizedBox( height: 15 ),
             Text( "Birth:       ${baseData.birth}", style: textStyle ), const SizedBox( height: 15 ),
             Text( "mobile:    ${baseData.mobile}",  style: textStyle ), const SizedBox( height: 15 ),
+            Text( "email:       ${baseData.mail}",  style: textStyle ), const SizedBox( height: 15 ),
             Text( "Address:  ${baseData.address1}", style: textStyle ), const SizedBox( height: 15 ),
             Text( "Address:  ${baseData.address2}", style: textStyle ), const SizedBox( height: 15 )
           ],
