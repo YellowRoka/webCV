@@ -74,3 +74,7 @@ class StateManagerStateWideViewEnabled extends StateManagerState {
   @override
   List<Object> get props => [ isWideViewEnabled ];
 }
+
+class StateManagerStateFOBEnabled extends StateManagerState{
+  const StateManagerStateFOBEnabled();
+}

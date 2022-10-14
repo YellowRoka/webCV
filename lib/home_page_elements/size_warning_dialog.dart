@@ -8,7 +8,7 @@ class SizeWarningDialog extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(24.0),
       child:        AlertDialog(
-        title:     const Text( "View Change not enabled" ),
+        title:     const Text( "Changed to list view" ),
         content:   const Text( "Window size is too small\nfor larger view!" ),
         elevation: 40,
         actions:   [

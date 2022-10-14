@@ -3,14 +3,32 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/state_manager_bloc.dart';
 
-class FOB extends StatelessWidget{
+class FOB extends StatefulWidget{
   const FOB({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  State<FOB> createState() => _FOBState();
+}
+
+class _FOBState extends State<FOB> {
+
+  late bool isFOBShowed;
+
+  @override
+  void initState() {
+    isFOBShowed = false;
+    super.initState();
+  }
+  @override
+  Widget build( BuildContext context ){
     return BlocBuilder< StateManagerBloc, StateManagerState >(
-      builder: ( context, state ) {
-        if( state is StateManagerStateInit ){
+      builder: ( context, state ){
+
+        if( state is StateManagerStateFOBEnabled ){
+          isFOBShowed = true;
+        }
+        
+        if(isFOBShowed == false){
           return Container();
         }
         else{
@@ -95,7 +113,6 @@ class CreatePDF extends StatelessWidget {
     );
   }
 }
-
 
 class ChangeView extends StatelessWidget {
   const ChangeView({Key? key}) : super(key: key);

@@ -26,11 +26,13 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
   StateManagerBloc( this.itemScrollController, this.jobs, this.baseData ) : super( const StateManagerStateInit() ){
 
-    on<StateManagerEventInit>( (event, emit) async {
+    on<StateManagerEventInit>( (event, emit)  async {
       emit( const StateManagerStateInit() );
-      await readJSONData();
-      await Future.delayed( const Duration( milliseconds: 2000 ) );
+      readJSONData();
+      await Future.delayed( const Duration( milliseconds: 3000 ) );
       emit( const StateManagerStateJsonLoaded() );
+      await Future.delayed( const Duration( milliseconds: 1000 ) );
+      emit( const StateManagerStateFOBEnabled() );
     });
 
     on<StateManagerEventChangeView>( (event, emit){

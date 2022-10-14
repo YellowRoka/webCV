@@ -7,15 +7,29 @@ import '../bloc/state_manager_bloc.dart';
 import '../home_splash_screen/SplashSreen.dart';
 import 'home_page_list.dart';
 
-class HomePageHandler extends StatelessWidget {
+class HomePageHandler extends StatefulWidget {
   final ItemScrollController itemScrollController;
   
   const HomePageHandler( { Key? key, required this.itemScrollController } ) : super(key: key);
 
   @override
+  State<HomePageHandler> createState() => _HomePageHandlerState();
+}
+
+class _HomePageHandlerState extends State<HomePageHandler> { 
+  
+  late bool showFirst;
+
+  @override
+  void initState() {
+    showFirst = true;
+    super.initState();
+  }
+
+  @override
   Widget build( BuildContext context ){
 
-    if( MediaQuery.of( context ).size.width < 1420  ){
+    if( MediaQuery.of( context ).size.width < 1420 ){
       BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventWideViewEnabled( false ) );
     }
     else{
@@ -24,23 +38,22 @@ class HomePageHandler extends StatelessWidget {
 
     return BlocBuilder< StateManagerBloc, StateManagerState > (
       builder: ( (context, state ){
-        bool showFirst = false;
+        
 
         if( state is StateManagerStateInit ){ showFirst = true; }
         if( state is StateManagerStateJsonLoaded ){ showFirst = false; }
         
 
         return AnimatedCrossFade(
-          duration:       const Duration( milliseconds: 3000 ),
+          duration:       const Duration( milliseconds: 2000 ),
           firstChild:     const SplashSreen(),
-          secondChild:    HomePageChanger( itemScrollController: itemScrollController ),
+          secondChild:    HomePageChanger( itemScrollController: widget.itemScrollController ),
 
           crossFadeState: ( showFirst )?( CrossFadeState.showFirst ):( CrossFadeState.showSecond ),
         );
       })
     );
   }
-
 }
 
 
