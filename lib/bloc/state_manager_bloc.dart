@@ -7,6 +7,7 @@ import 'package:screenshot/screenshot.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../json_workers/jsonReaders.dart';
 import '../pdf/pdf_cards.dart';
 import '../json_workers/jsonBasedataObjs.dart';
 import '../json_workers/jsonJobsObjs.dart';
@@ -18,12 +19,40 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
   final ItemScrollController  itemScrollController;
   final JobConverter          jobs;
   final BaseDataConverter     baseData;
-        bool                  isPDFCreated = true; 
+        bool                  isPDFCreated      = true; 
+        bool                  isVideViewOn      = true;
+        bool                  isVideViewEnabled = true;
 
-  StateManagerBloc( this.itemScrollController, this.jobs, this.baseData ) : super( const StateManagerStateInit() ) {
-    on<StateManagerEventInit>( (event, emit) {
+
+  StateManagerBloc( this.itemScrollController, this.jobs, this.baseData ) : super( const StateManagerStateInit() ){
+
+    on<StateManagerEventInit>( (event, emit) async {
       emit( const StateManagerStateInit() );
+      await readJSONData();
+      await Future.delayed( const Duration( milliseconds: 2000 ) );
+      emit( const StateManagerStateJsonLoaded() );
     });
+
+    on<StateManagerEventChangeView>( (event, emit){
+      isVideViewOn = !isVideViewOn;
+      isVideViewOn = isVideViewOn & isVideViewEnabled;
+
+      emit( StateManagerStateChangeView( isVideViewOn ) );
+      if( isVideViewEnabled == false ){
+        emit( StateManagerStateWideViewEnabled( isVideViewEnabled ) );
+      }
+    });
+
+    on<StateManagerEventWideViewEnabled>( (event, emit ) {
+      isVideViewEnabled = event.isWideViewEnabled;
+      isVideViewOn      = isVideViewOn & isVideViewEnabled;
+
+      emit( StateManagerStateWideViewEnabled( isVideViewEnabled ) );
+      emit( StateManagerStateChangeView( isVideViewOn ) );
+    });
+
+
+
 
     on<StateManagerEventShowBar>( (event, emit) {
       emit( const StateManagerStateShowedBar() );
@@ -34,22 +63,22 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
     });
 
     on<StateManagerEventToPersonal>( (event, emit) {
-       itemScrollController.scrollTo(index: 0, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
+       itemScrollController.scrollTo( index: (isVideViewOn)?(0):(0), curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
       emit( const StateManagerStatePersonal() );
     });
 
     on<StateManagerEventToWorks>( (event, emit) {
-      itemScrollController.scrollTo(index: 2, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
+      itemScrollController.scrollTo( index: (isVideViewOn)?(3):(2), curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
       emit( const StateManagerStateWorks() );
     });
 
     on<StateManagerEventToSchools>( (event, emit) {
-      itemScrollController.scrollTo(index: 14, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
+      itemScrollController.scrollTo( index: (isVideViewOn)?(0):(14), curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
       emit( const StateManagerStateSchools() );
     });
 
     on<StateManagerEventToSkills>( (event, emit) {
-      itemScrollController.scrollTo(index: 18, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
+      itemScrollController.scrollTo( index: (isVideViewOn)?(0):(18), curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
       emit( const StateManagerStateSkills() );
     });
 
@@ -100,7 +129,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
     @override
     void onEvent( StateManagerEvent event){
-      print( event.toString() );
+      print( "event: ${event.toString()}" );
       super.onEvent(event);
     }
 }

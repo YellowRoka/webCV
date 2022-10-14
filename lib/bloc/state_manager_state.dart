@@ -52,3 +52,25 @@ class StateManagerStatePopPDFNotification extends StateManagerState {
   const StateManagerStatePopPDFNotification();
 }
 
+class StateManagerStateJsonLoaded extends StateManagerState{
+
+  const StateManagerStateJsonLoaded();
+}
+
+class StateManagerStateChangeView extends StateManagerState{
+  final bool isWideViewOn;
+
+  const StateManagerStateChangeView( this.isWideViewOn );
+
+  @override
+  List<Object> get props => [ isWideViewOn ];
+}
+
+class StateManagerStateWideViewEnabled extends StateManagerState {
+  final bool isWideViewEnabled;
+
+  const StateManagerStateWideViewEnabled( this.isWideViewEnabled );
+
+  @override
+  List<Object> get props => [ isWideViewEnabled ];
+}

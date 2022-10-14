@@ -51,3 +51,16 @@ class StateManagerEventCreatedPDF extends StateManagerEvent {
 class StateManagerEventPopPDFNotification extends StateManagerEvent {
   const StateManagerEventPopPDFNotification();
 }
+
+class StateManagerEventChangeView extends StateManagerEvent {
+  const StateManagerEventChangeView();
+}
+
+class StateManagerEventWideViewEnabled extends StateManagerEvent {
+  final bool isWideViewEnabled;
+  
+  const StateManagerEventWideViewEnabled( this.isWideViewEnabled );
+
+  @override
+  List<Object> get props => [ isWideViewEnabled ];
+}

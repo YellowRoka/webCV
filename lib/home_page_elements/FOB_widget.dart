@@ -8,14 +8,24 @@ class FOB extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment:  MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: const [
-        OpenDrawer(),
-        SendMail(),
-        CreatePDF()
-      ]
+    return BlocBuilder< StateManagerBloc, StateManagerState >(
+      builder: ( context, state ) {
+        if( state is StateManagerStateInit ){
+          return Container();
+        }
+        else{
+          return Column(
+            mainAxisAlignment:  MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              ChangeView(),
+              OpenDrawer(),
+              SendMail(),
+              CreatePDF()
+            ]
+          );
+        }
+      }
     );
   }
 }
@@ -83,5 +93,32 @@ class CreatePDF extends StatelessWidget {
         }
       ),
     );
+  }
+}
+
+
+class ChangeView extends StatelessWidget {
+  const ChangeView({Key? key}) : super(key: key);
+
+  @override
+  Widget build( BuildContext context ){
+    
+    return 
+      ( MediaQuery.of(context).size.width < 1420 )?
+      ( const SizedBox(width: 1, height: 1)      ):
+      ( SizedBox(
+        height: 100,
+        width:  100,
+        child:  FloatingActionButton(
+          key:             const Key( "FOBPCV" ),
+          tooltip:         "Change to Grid/List view",
+          backgroundColor: Colors.black.withOpacity( 0.70 ),
+          child:           const Icon( Icons.change_circle_outlined ),
+          
+          onPressed: (){
+            BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventChangeView() );
+          })
+        )
+      );
   }
 }

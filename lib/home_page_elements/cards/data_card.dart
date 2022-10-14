@@ -5,8 +5,10 @@ import 'base_card.dart';
 
 class DataCard extends StatelessWidget {
   final BaseDataConverter description;
+  final double? width;
+  final double? height;
 
-  const DataCard( { Key? key, required this.description } ) : super( key: key );
+  const DataCard( { Key? key, required this.description, this.width, this.height } ) : super( key: key );
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +17,8 @@ class DataCard extends StatelessWidget {
     const TextStyle headStyle = TextStyle( color: Colors.white, fontSize: 20, decoration: TextDecoration.none );
 
     return BaseCard(
-      heigt:    null,
-      width:    null,
+      heigt:    height,
+      width:    width,
       children: [
         Row(
           children: [

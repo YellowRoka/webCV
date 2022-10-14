@@ -59,6 +59,8 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^20.2.38-beta
   native_pdf_view: ^6.0.0+1
 
+  flutter_layout_grid: ^2.0.0
+
 
 dev_dependencies:
   integration_test:

@@ -6,8 +6,10 @@ import 'base_card.dart';
 
 class SchoolCard extends StatelessWidget{
   final Schools description;
+  final double? width;
+  final double? height;
 
-  const SchoolCard( { Key? key, required this.description } ) : super( key: key );
+  const SchoolCard( { Key? key, required this.description, this.width, this.height } ) : super( key: key );
   
   @override
   Widget build( BuildContext context ) {
@@ -16,8 +18,8 @@ class SchoolCard extends StatelessWidget{
     const TextStyle headStyle = TextStyle( color:  Colors.white, fontSize: 20, decoration: TextDecoration.none );
 
     return BaseCard( 
-      heigt:    null, 
-      width:    null,
+      heigt:    height, 
+      width:    width,
       children: [
         Column(
           key:                const Key("cschools"),
@@ -38,7 +40,7 @@ class SchoolCard extends StatelessWidget{
             const Text( "Brief:",                          style: textStyle ), const SizedBox( height: 5  ),
                   Text( description.brief,                 style: textStyle ), const SizedBox( height: 20 ),
             
-                  Text( description.commit??"",            style: textStyle ),
+                  Text( description.commit??"",            style: textStyle, maxLines: 10, overflow: TextOverflow.ellipsis ),
           ],
         )
       ]

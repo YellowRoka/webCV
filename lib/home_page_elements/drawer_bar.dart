@@ -10,7 +10,7 @@ class DrawerBar extends StatelessWidget {
   @override
   Widget build( BuildContext context ){
 
-  final ButtonStyle buttonTheme = ElevatedButton.styleFrom( primary: Colors.black.withOpacity( 0 ) );
+  final ButtonStyle buttonTheme = ElevatedButton.styleFrom( backgroundColor: Colors.black.withOpacity( 0 ) );
 
     return Drawer(
       width:             400,
