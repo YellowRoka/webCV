@@ -78,3 +78,7 @@ class StateManagerStateWideViewEnabled extends StateManagerState {
 class StateManagerStateFOBEnabled extends StateManagerState{
   const StateManagerStateFOBEnabled();
 }
+
+class StateManagerStatePopQRDialog extends StateManagerState {
+  const StateManagerStatePopQRDialog();
+}

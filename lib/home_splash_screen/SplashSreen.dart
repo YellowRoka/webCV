@@ -13,6 +13,7 @@ class SplashSreen extends StatelessWidget {
     final double width  = MediaQuery.of( context ).size.width;
 
     return Stack(
+      alignment: Alignment.center,
       children: [
 
         Container(
@@ -24,16 +25,18 @@ class SplashSreen extends StatelessWidget {
             fit:   BoxFit.cover),
           ),
         ),
-
+/*
          Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox( height: height * 0.3 ),
-              const FlutterLogo( size: 300 )
+              const FlutterLogo( size: 300 ),
             ],
           ),
         ),
-
+*/
         ClipRect(
           child: BackdropFilter(
             filter: ImageFilter.blur( sigmaX: 10, sigmaY: 10 ),
@@ -42,6 +45,25 @@ class SplashSreen extends StatelessWidget {
               width:  width,
               child:  Container()
             ),
+          ),
+        ),
+
+        Center(
+          child: Column(
+            mainAxisAlignment:  MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(),
+              Container( 
+                height: height * ( ( height < 600 )?( 1 ):( 0.43 ) ),
+                width:  width,
+                decoration: const BoxDecoration( 
+                  image: DecorationImage( 
+                    image: AssetImage('assets/my_images/logo_NT_big.png'),
+                    fit: BoxFit.contain)
+                ) 
+              ),
+            ],
           ),
         ),
 

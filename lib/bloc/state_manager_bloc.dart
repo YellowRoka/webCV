@@ -35,6 +35,10 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       emit( const StateManagerStateFOBEnabled() );
     });
 
+    on<StateManagerEventPopQRDialog>( (event, emit){
+      emit( const StateManagerStatePopQRDialog() );
+    });
+
     on<StateManagerEventChangeView>( (event, emit){
       isVideViewOn = !isVideViewOn;
       isVideViewOn = isVideViewOn & isVideViewEnabled;

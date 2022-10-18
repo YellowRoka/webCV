@@ -5,20 +5,23 @@ import '../bloc/state_manager_bloc.dart';
 
 class FOB extends StatefulWidget{
   const FOB({Key? key}) : super(key: key);
-
+  
   @override
   State<FOB> createState() => _FOBState();
 }
 
-class _FOBState extends State<FOB> {
+class _FOBState extends State< FOB >{
 
   late bool isFOBShowed;
 
+  static const double iconSize = 75;
+
   @override
-  void initState() {
+  void initState(){
     isFOBShowed = false;
     super.initState();
   }
+
   @override
   Widget build( BuildContext context ){
     return BlocBuilder< StateManagerBloc, StateManagerState >(
@@ -27,19 +30,57 @@ class _FOBState extends State<FOB> {
         if( state is StateManagerStateFOBEnabled ){
           isFOBShowed = true;
         }
-        
-        if(isFOBShowed == false){
+
+        if( isFOBShowed == false ){
           return Container();
         }
         else{
           return Column(
             mainAxisAlignment:  MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: const [
-              ChangeView(),
-              OpenDrawer(),
-              SendMail(),
-              CreatePDF()
+            children:           [
+              ( MediaQuery.of(context).size.width < 1420 )?
+              ( const SizedBox(width: 1, height: 1) ):
+              ( CommonFOBWidget(
+                size:    iconSize,
+                cbk:     () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventChangeView() ),
+                toolTip: "Change to Grid/List view",
+                icon:    Icons.change_circle_outlined,
+                //widgetKey: const Key( "FOBPCV" ),
+                )
+              ),
+              
+              CommonFOBWidget(
+                size:    iconSize,
+                cbk:     () => Scaffold.of( context ).openDrawer(),
+                toolTip: "Open navigation",
+                icon:    Icons.menu_book_sharp 
+                //widgetKey: const Key( "FOBD" ),
+              ),
+              
+              CommonFOBWidget(
+                size:    iconSize,
+                cbk:     () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventSendMail() ),
+                toolTip: "Send me an email if you want an offer from me :)",
+                icon:    Icons.outgoing_mail,
+                //widgetKey: const Key( "FOBM" ),
+                ),
+              
+              CommonFOBWidget(
+                size:    iconSize,
+                cbk:     () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventCreatePDF() ),
+                toolTip: "Create PDF from my CV",
+                icon:    Icons.picture_as_pdf_rounded,
+                //widgetKey: const Key( "FOBPDF" ),
+                ),
+              
+              CommonFOBWidget(
+                size:    iconSize, 
+                cbk:     () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventPopQRDialog() ), 
+                toolTip: "Get my conntects",
+                icon:    Icons.qr_code_2_rounded,
+                //widgetKey: const Key( "FOBQR" ),
+              )
             ]
           );
         }
@@ -48,94 +89,27 @@ class _FOBState extends State<FOB> {
   }
 }
 
-class OpenDrawer extends StatelessWidget {
-  const OpenDrawer({Key? key}) : super(key: key);
+class CommonFOBWidget extends StatelessWidget {
+  final double       size;
+  final String       toolTip;
+  final VoidCallback cbk;
+  final Key?         widgetKey;
+  final IconData     icon;
+
+  const CommonFOBWidget({Key? key, required this.size, required this.toolTip, required this.cbk, this.widgetKey, required this.icon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
-      width:  100,
+      height: size,
+      width:  size,
       child:  FloatingActionButton(
-        key:             const Key( "FOBD" ),
-        tooltip:         "Open menu",
+        key:             widgetKey,
+        tooltip:         toolTip,
         backgroundColor: Colors.black.withOpacity( 0.70 ),
-        child:           const Icon( Icons.menu_book_sharp ),
-        
-        onPressed: (){
-            Scaffold.of( context ).openDrawer();
-        }
+        onPressed:       cbk,
+        child:           Icon( icon, size: size*0.40 ),
       ),
     );
-  }
-}
-
-class SendMail extends StatelessWidget {
-  const SendMail({Key? key}) : super(key: key);
-
-  @override
-  Widget build( BuildContext context ) {
-    return SizedBox(
-      height: 100,
-      width:  100,
-      child:  FloatingActionButton(
-        key:             const Key( "FOBM" ),
-        tooltip:         "Send me an email if you want an offer from me :)",
-        backgroundColor: Colors.black.withOpacity( 0.70 ),
-        child:           const Icon( Icons.outgoing_mail ),
-        
-        onPressed: (){
-            BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventSendMail() );
-        }
-      ),
-    );
-  }
-}
-
-class CreatePDF extends StatelessWidget {
-  const CreatePDF( { Key? key } ) : super( key: key );
-
-  @override
-  Widget build( BuildContext context ) {
-    return SizedBox(
-      height: 100,
-      width:  100,
-      child:  FloatingActionButton(
-        key:             const Key( "FOBPDF" ),
-        tooltip:         "Create PDF from my CV",
-        backgroundColor: Colors.black.withOpacity( 0.70 ),
-        child:           const Icon( Icons.picture_as_pdf_rounded ),
-        
-        onPressed: (){
-          BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventCreatePDF() );
-        }
-      ),
-    );
-  }
-}
-
-class ChangeView extends StatelessWidget {
-  const ChangeView({Key? key}) : super(key: key);
-
-  @override
-  Widget build( BuildContext context ){
-    
-    return 
-      ( MediaQuery.of(context).size.width < 1420 )?
-      ( const SizedBox(width: 1, height: 1)      ):
-      ( SizedBox(
-        height: 100,
-        width:  100,
-        child:  FloatingActionButton(
-          key:             const Key( "FOBPCV" ),
-          tooltip:         "Change to Grid/List view",
-          backgroundColor: Colors.black.withOpacity( 0.70 ),
-          child:           const Icon( Icons.change_circle_outlined ),
-          
-          onPressed: (){
-            BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventChangeView() );
-          })
-        )
-      );
   }
 }

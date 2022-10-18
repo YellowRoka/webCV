@@ -41,8 +41,8 @@ dependencies:
   bloc_concurrency: ^0.2.0
 
   scrollable_positioned_list: ^0.3.2
-  pdf: ^3.8.1
-  printing: ^5.9.1
+  pdf: #3.7.4 #^3.8.1
+  printing: #^5.9.1
 
   mailto: ^2.0.0
   url_launcher: ^6.1.4
@@ -56,11 +56,15 @@ dependencies:
   particles_flutter: ^0.1.4
   parallax_rain: ^1.1.0
 
-  syncfusion_flutter_pdfviewer: ^20.2.38-beta
-  native_pdf_view: ^6.0.0+1
+  #syncfusion_flutter_pdfviewer: #^20.2.38-beta
+  #native_pdf_view: #^6.0.0+1
+  #qr:
+  #barcode: #^2.2.3
+  qr_flutter: #^3.0.0
 
-  flutter_layout_grid: ^2.0.0
-
+#dependency_overrides:
+#  barcode: ^2.2.3
+#  qr: ^1.1.0
 
 dev_dependencies:
   integration_test:
@@ -104,6 +108,7 @@ flutter:
     - assets/mzx.png
     - assets/masterfield.jpg
 
+    - assets/my_images/logo_NT_big.png
     - assets/jsons/
     - assets/jsons/jobs.json
     - assets/jsons/basedata.json

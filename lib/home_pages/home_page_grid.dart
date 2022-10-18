@@ -10,6 +10,7 @@ import '../home_page_elements/cards/job_card.dart';
 import '../home_page_elements/cards/school_card.dart';
 import '../home_page_elements/cards/skills_card.dart';
 import '../home_page_elements/pdf_alert_dialog.dart';
+import '../home_page_elements/qr_dialog.dart';
 import '../home_page_elements/size_warning_dialog.dart';
 import '../json_workers/jsonReaders.dart';
 
@@ -102,12 +103,20 @@ class HomePageGrid extends StatelessWidget {
               );
             } 
 
-            if( (state is StateManagerStateWideViewEnabled) && (state.isWideViewEnabled == false) ){
+            if( ( state is StateManagerStateWideViewEnabled ) && (state.isWideViewEnabled == false) ){
 
-            showDialog(
-              context: context, 
-              builder: (_) => const SizeWarningDialog()
-            );
+              showDialog(
+                context: context, 
+                builder: (_) => const SizeWarningDialog()
+              );
+            } 
+
+            if( ( state is StateManagerStatePopQRDialog ) ){
+
+              showDialog(
+                context: context, 
+                builder: (_) => const QRDialog()
+              );
             } 
 
           }

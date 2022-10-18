@@ -32,12 +32,12 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build( BuildContext context ){
 
     final ThemeData materialTheme = ThemeData(
         primaryColor:    Colors.black,
         backgroundColor: Colors.black,
-        scaffoldBackgroundColor: const Color.fromARGB(223, 44, 6, 92),
+        scaffoldBackgroundColor: const Color.fromARGB( 223, 44, 6, 92 ),
     );
     
     final ItemScrollController itemScrollController = ItemScrollController();
@@ -74,4 +74,3 @@ class MyApp extends StatelessWidget {
     }
   }
 }
-

@@ -64,3 +64,7 @@ class StateManagerEventWideViewEnabled extends StateManagerEvent {
   @override
   List<Object> get props => [ isWideViewEnabled ];
 }
+
+class StateManagerEventPopQRDialog extends StateManagerEvent{
+  const StateManagerEventPopQRDialog();
+}
