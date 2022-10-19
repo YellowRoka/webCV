@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,6 +14,9 @@ import '../pdf/pdf_cards.dart';
 import '../json_workers/jsonBasedataObjs.dart';
 import '../json_workers/jsonJobsObjs.dart';
 import '../pdf/pdfV2.dart';
+
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 part 'state_manager_event.dart';
 part 'state_manager_state.dart';
 
@@ -113,14 +118,17 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
         jobs:     jobs, 
         baseData: baseData
       );
-
-      final PDFCreator pdfCreator = 
+      
+      if( kIsWeb ){
+        final PDFCreator pdfCreator = 
         PDFCreator(
           childToImage:         pdfCards.widgets(),
           screenShotController: screenshotController
         );
 
-      isPDFCreated = await pdfCreator.creator();
+       isPDFCreated = await pdfCreator.creator();
+      } 
+
 
       emit( const StateManagerStateCreatedPDF() );
     });
@@ -129,6 +137,10 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       isPDFCreated = false;
       emit( const StateManagerStatePopPDFNotification() );
     });   
+
+    on<StateManagerEventQRGotIt>( (event, emit) {
+      emit( const StateManagerStateQRGotIt() );
+    });
   }
 
 

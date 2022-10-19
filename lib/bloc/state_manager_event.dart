@@ -68,3 +68,7 @@ class StateManagerEventWideViewEnabled extends StateManagerEvent {
 class StateManagerEventPopQRDialog extends StateManagerEvent{
   const StateManagerEventPopQRDialog();
 }
+
+class StateManagerEventQRGotIt extends StateManagerEvent{
+  const StateManagerEventQRGotIt();
+}

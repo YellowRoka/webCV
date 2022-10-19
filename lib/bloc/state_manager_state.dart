@@ -82,3 +82,7 @@ class StateManagerStateFOBEnabled extends StateManagerState{
 class StateManagerStatePopQRDialog extends StateManagerState {
   const StateManagerStatePopQRDialog();
 }
+
+class StateManagerStateQRGotIt extends StateManagerState{
+  const StateManagerStateQRGotIt();
+}

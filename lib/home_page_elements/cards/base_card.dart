@@ -9,7 +9,7 @@ class BaseCard extends StatelessWidget {
   const BaseCard( { Key? key, required this.children, required this.heigt, required this.width } ) : super( key: key );
 
   @override
-  Widget build( BuildContext context ) {
+  Widget build( BuildContext context ){
     return ClipRRect(
       borderRadius: BorderRadius.circular( 25 ),
       child:        BackdropFilter(

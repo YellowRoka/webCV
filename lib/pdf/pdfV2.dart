@@ -1,19 +1,20 @@
-import 'dart:io' as io;
-import 'dart:html' as html;
 
-import 'dart:convert';
-import 'dart:isolate';
-import 'dart:typed_data';
-import 'package:flutter/cupertino.dart';
+import 'package:universal_html/html.dart' as html;
+import 'package:universal_html/html.dart';
+
+//import 'dart:convert';
+//import 'dart:isolate';
+//import 'dart:typed_data';
+//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+//import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart ' as pw;
 import 'package:screenshot/screenshot.dart';
-import 'package:universal_html/html.dart';
 
-import '../bloc/state_manager_bloc.dart';
+
+//import '../bloc/state_manager_bloc.dart';
 //import 'package:image/image.dart';
 /*
 https://pub.dev/packages/image
@@ -155,11 +156,14 @@ https://stackoverflow.com/questions/70988967/about-pdf-file-opening-and-download
   Future<bool> downloadFileV2( pw.Document file ) async{
     ByteData  bytesLocal; 
     Blob blob;
+
+    /* try to load created cv.pdf */
     try {
       bytesLocal = await rootBundle.load('assets/pdf/cv.pdf');
       blob = html.Blob([bytesLocal], 'application/pdf');
     } 
     catch (e) {
+      /* if cv.pdf not exist try to create new one */
       Uint8List bytes = await file.save();
       blob = html.Blob([bytes], 'application/pdf');
     }

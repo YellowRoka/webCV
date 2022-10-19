@@ -21,16 +21,21 @@ class JobCard extends StatelessWidget {
       width:    width,
       children: [
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment:  MainAxisAlignment.start,
           children: [
-            Row(
+            Flex(
+              direction: ( MediaQuery.of(context).size.width > 660 )?( Axis.horizontal ):( Axis.vertical ),
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment:  MainAxisAlignment.start,
               children: [
                 CircleAvatar(  
-                  radius:          70,
+                  radius:          69,
                   backgroundImage: AssetImage( 'assets/${ description.image }' ),
                 ),
-                const SizedBox(width: 30),
+
+                const SizedBox(width: 30, height: 5),
+
                 Column(
                   key: const Key( "cjobs" ),
                   mainAxisAlignment:  MainAxisAlignment.start,

@@ -74,6 +74,7 @@ class HomePageList extends StatelessWidget {
             child: ParalaxRain()
           )
         ),
+
         //https://www.youtube.com/watch?v=xnpzxZNi5x0
         Center(
           child: SizedBox(
@@ -92,36 +93,13 @@ class HomePageList extends StatelessWidget {
 
         BlocListener< StateManagerBloc, StateManagerState >(
           child:    Container(),
-          listener: (context, state){
+          listener: ( context, state ){
             if( state is StateManagerStatePopPDFNotification ){
-
-              showDialog(
-                context: context, 
-                builder: (_) => const PDFAlertDialog()
-                /*builder:(_){
-                  //https://stackoverflow.com/questions/62295588/open-pdf-file-from-assets-flutter
-                  final pdfController = PdfController(
-                  document: PdfDocument.openAsset('assets/pdf/cv.pdf'),
-                );
-
-                return Scaffold(
-                  body: Center(
-                    child: PdfView(
-                      controller: pdfController,
-                    )
-                  ),
-                );
-                  //return SizedBox(height:1024, width: 1024,child: Scaffold(body: SfPdfViewer.asset('assets/pdf/cv.pdf')));
-                } */
-              );
+              showDialog( context: context, builder: (_) => const PDFAlertDialog() );
             } 
 
-            if( ( state is StateManagerStatePopQRDialog ) ){
-
-              showDialog(
-                context: context, 
-                builder: (_) => const QRDialog()
-              );
+            if( state is StateManagerStatePopQRDialog ){
+              showDialog( context: context, builder: (_) => const QRDialog() );
             } 
             
           }
