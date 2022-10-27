@@ -20,7 +20,16 @@ class BaseCard extends StatelessWidget {
           width:      width,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular( 30 ),
-            color:      Colors.black45
+            color:      Colors.black45,
+            boxShadow:  [
+              BoxShadow(
+                color:      const Color.fromARGB(255, 33, 100, 243).withOpacity(0.35), //New
+                blurRadius:   400.0,
+                offset:       Offset( 0, (MediaQuery.of(context).size.height) * (0.20) ),
+                spreadRadius: 1.0,
+                blurStyle:    BlurStyle.normal
+              )
+            ],
           ),
 
           child: Padding(

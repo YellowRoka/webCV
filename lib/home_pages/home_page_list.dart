@@ -59,6 +59,7 @@ class HomePageList extends StatelessWidget {
 
     return Stack(
       children: [
+        
         Container(
           width: double.infinity,
           decoration: const BoxDecoration(

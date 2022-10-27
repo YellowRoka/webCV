@@ -5,6 +5,7 @@ import '../bloc/state_manager_bloc.dart';
 
 
 class DrawerBar extends StatelessWidget {
+
   const DrawerBar( {Key? key} ) : super( key: key );
   
   @override
@@ -19,13 +20,13 @@ class DrawerBar extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.person,           color: Colors.white, size: 100 ), onPressed: (){ callForPersonal( context ); } ),
+              ElevatedButton( style: buttonTheme, child: const Icon( Icons.person,           color: Colors.white, size: 100 ), onPressed: () => callForPersonal( context ) ),
               const SizedBox( height: 50 ),
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.factory_outlined, color: Colors.white, size: 100 ), onPressed: (){ callForWorks( context );    } ),
+              ElevatedButton( style: buttonTheme, child: const Icon( Icons.factory_outlined, color: Colors.white, size: 100 ), onPressed: () => callForWorks( context )    ),
               const SizedBox( height: 50 ),
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.school_outlined,  color: Colors.white, size: 100 ), onPressed: (){ callForScools( context );   } ),
+              ElevatedButton( style: buttonTheme, child: const Icon( Icons.school_outlined,  color: Colors.white, size: 100 ), onPressed: () => callForScools( context )   ),
               const SizedBox( height: 50 ),
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.add_chart_sharp,  color: Colors.white, size: 100 ), onPressed: (){ callForSkills( context );   } ),
+              ElevatedButton( style: buttonTheme, child: const Icon( Icons.add_chart_sharp,  color: Colors.white, size: 100 ), onPressed: () => callForSkills( context )   ),
             ],
           ),
         ),
@@ -52,4 +53,5 @@ class DrawerBar extends StatelessWidget {
     BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventToSkills() );
     Navigator.pop( context) ;
   }
+
 }

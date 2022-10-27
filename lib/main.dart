@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 
-import 'home_page_elements/FOB_widget.dart';
+import 'home_page_elements/FOB/FOB_widget.dart';
 import 'home_page_elements/drawer_bar.dart';
 import 'home_pages/home_page_handler.dart';
 import 'json_workers/jsonReaders.dart';
@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
             return Scaffold(
               body:                 HomePageHandler( itemScrollController: itemScrollController ),
               drawer:               const DrawerBar(),
-              onDrawerChanged:      (isOpen) => drawerHandler( context, isOpen ),
+              onDrawerChanged:      (isOpen) => _drawerHandler( context, isOpen ),
               floatingActionButton: const FOB(),
             );
           }
@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  drawerHandler( BuildContext context, bool isOpen ){
+  void _drawerHandler( BuildContext context, bool isOpen ){
     if( isOpen ){
       BlocProvider.of< StateManagerBloc >( context ).add( const StateManagerEventShowBar() );
     }
