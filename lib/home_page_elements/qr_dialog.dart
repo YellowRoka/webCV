@@ -16,7 +16,7 @@ class QRDialog extends StatelessWidget{
         elevation:  40,
         actions:    [
           ElevatedButton(  
-            style:     ElevatedButton.styleFrom( backgroundColor: Colors.black, textStyle: const TextStyle( color: Colors.white ) ),
+            style:     ElevatedButton.styleFrom( primary: Colors.black, textStyle: const TextStyle( color: Colors.white ) ),
             child:     const Text( "Got it!" ),        
             onPressed: (){
               Navigator.pop( context ); 

@@ -11,7 +11,7 @@ class DrawerBar extends StatelessWidget {
   @override
   Widget build( BuildContext context ){
 
-  final ButtonStyle buttonTheme = ElevatedButton.styleFrom( backgroundColor: Colors.black.withOpacity( 0 ) );
+  final ButtonStyle buttonTheme = ElevatedButton.styleFrom( primary: Colors.black.withOpacity( 0 ) );
 
     return Drawer(
       width:             400,
@@ -20,13 +20,13 @@ class DrawerBar extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.person,           color: Colors.white, size: 100 ), onPressed: () => callForPersonal( context ) ),
-              const SizedBox( height: 50 ),
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.factory_outlined, color: Colors.white, size: 100 ), onPressed: () => callForWorks( context )    ),
-              const SizedBox( height: 50 ),
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.school_outlined,  color: Colors.white, size: 100 ), onPressed: () => callForScools( context )   ),
-              const SizedBox( height: 50 ),
-              ElevatedButton( style: buttonTheme, child: const Icon( Icons.add_chart_sharp,  color: Colors.white, size: 100 ), onPressed: () => callForSkills( context )   ),
+              SizedBox(width: 400,child: ElevatedButton( style: buttonTheme, child: const Icon( Icons.person,           color: Colors.white, size: 100 ), onPressed: () => callForPersonal( context ) )),
+              const SizedBox( height: 10 ),
+              SizedBox(width: 400,child: ElevatedButton( style: buttonTheme, child: const Icon( Icons.factory_outlined, color: Colors.white, size: 100 ), onPressed: () => callForWorks( context )    )),
+              const SizedBox( height: 10 ),
+              SizedBox(width: 400,child: ElevatedButton( style: buttonTheme, child: const Icon( Icons.school_outlined,  color: Colors.white, size: 100 ), onPressed: () => callForScools( context )   )),
+              const SizedBox( height: 10 ),
+              SizedBox(width: 400,child: ElevatedButton( style: buttonTheme, child: const Icon( Icons.add_chart_sharp,  color: Colors.white, size: 100 ), onPressed: () => callForSkills( context )   )),
             ],
           ),
         ),

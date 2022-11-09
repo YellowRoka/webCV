@@ -14,7 +14,7 @@ class SizeWarningDialog extends StatelessWidget {
         actions:   [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.black,
+              primary: Colors.black,
               textStyle:        const TextStyle( color: Colors.white )
             ),
 

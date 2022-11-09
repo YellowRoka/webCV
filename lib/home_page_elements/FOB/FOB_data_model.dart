@@ -8,6 +8,7 @@ class CommonFOBWidgetStruct{
   final Key?                widgetKey;
   final IconData?           icon;
   final AnimationController controller;
+  final Color?              color;
 
-  CommonFOBWidgetStruct({required this.size, required this.toolTip, required this.cbk, this.widgetKey, required this.icon, required this.controller});
+  CommonFOBWidgetStruct({required this.size, required this.toolTip, required this.cbk, this.widgetKey, required this.icon, required this.controller, this.color });
 }

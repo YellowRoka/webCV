@@ -20,8 +20,6 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
   late AnimationController controller;
   late bool                isFOBShowed;
 
-  
-
   @override
   void initState(){
     isFOBShowed = false;
@@ -65,6 +63,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
                 toolTip:    "",
                 icon:       null,
                 controller: controller,
+                color:      Colors.black.withOpacity( 0.70 ),
                 //widgetKey: const Key( "FOBPCV" ),
                 )
               ):
@@ -74,6 +73,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
                 toolTip:    "Change to Grid / List view",
                 icon:       Icons.change_circle_outlined,
                 controller: controller,
+                color:      Colors.black.withOpacity( 0.70 ),
                 //widgetKey: const Key( "FOBPCV" ),
                 )
               ),
@@ -84,6 +84,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
                 toolTip:    "Open navigation",
                 icon:       Icons.menu_book_sharp,
                 controller: controller,
+                color:      Colors.black.withOpacity( 0.70 ),
                 //widgetKey: const Key( "FOBD" ),
               ),
               
@@ -93,6 +94,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
                 toolTip:    "Send me an email if you want an offer from me :)",
                 icon:       Icons.outgoing_mail,
                 controller: controller,
+                color:      Colors.black.withOpacity( 0.70 ),
                 //widgetKey: const Key( "FOBM" ),
                 ),
               
@@ -102,6 +104,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
                 toolTip:    "Create PDF from my CV",
                 icon:       Icons.picture_as_pdf_rounded,
                 controller: controller,
+                color:      Colors.black.withOpacity( 0.70 ),
                 //widgetKey: const Key( "FOBPDF" ),
                 ),
               
@@ -111,6 +114,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
                 toolTip:    "Get my conntects",
                 icon:       Icons.qr_code_2_rounded,
                 controller: controller,
+                color:      Colors.black.withOpacity( 0.70 ),
                 //widgetKey: const Key( "FOBQR" ),
               ),
 
@@ -120,6 +124,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
                 toolTip:    "Open / Close menu",
                 icon:       Icons.menu,
                 controller: controller,
+                color:      Colors.black,
                 //widgetKey: const Key( "FOBQR" ),
               )
 
@@ -140,7 +145,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
         elevation:       10,
         key:             fobData.widgetKey,
         tooltip:         fobData.toolTip,
-        backgroundColor: Colors.black.withOpacity( 0.70 ),
+        backgroundColor: fobData.color,
         child:           Icon( fobData.icon, size: fobData.size*0.40 ),
 
         onPressed: (){
