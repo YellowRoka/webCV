@@ -59,8 +59,9 @@ class SplashSreen extends StatelessWidget {
                 width:  width,
                 decoration: const BoxDecoration( 
                   image: DecorationImage( 
-                    image: AssetImage('assets/my_images/logo_NT_big.png'),
-                    fit: BoxFit.contain)
+                    image: AssetImage('assets/my_images/logo_NT_big_2.png'),
+                    fit: BoxFit.contain
+                  )
                 ) 
               ),
             ],

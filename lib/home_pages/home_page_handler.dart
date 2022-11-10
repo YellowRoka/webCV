@@ -4,7 +4,7 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:webCV/home_pages/home_page_grid.dart';
 
 import '../bloc/state_manager_bloc.dart';
-import '../home_splash_screen/SplashSreen.dart';
+import '../home_splash_screen/splash_sreen.dart';
 import 'home_page_list.dart';
 
 class HomePageHandler extends StatefulWidget {
