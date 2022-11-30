@@ -1,0 +1,64 @@
+{
+    "name":      "Fónad Gergő",
+    "address1":  "Liget út 5, 3070 Bátonyterenye",
+    "address2":  "Népszínház út 47, 1081 Budapest",
+    "image":     "me.jpg",
+    "birth":     "1993.05.07.",
+    "mobile":    "+36-20-517-80-33",
+    "mail":      "fonadgergo@hotmail.com",
+    "languages": "Magyar - anyanyelvi szintű,\nangol - munkavégzési szintű,\nnémet - alapfokú nyelvtudás",
+
+    "schools":[
+        {
+            "name":                "Óbuda Egyetem - Neumann János Informatikai Kar MSc.",
+            "date":                "2018 - 2020",
+            "general_subjects":    "- alkalmazott matematika\n- beágyazott rendszerek\n- képfeldolgozás\n- vezérléstechnika\n- felhő számítási rendszerek\n- párhuzamos programozás\n- adatbázisfejlesztés alapjai",
+            "vocational_subjects": "- gépi tanulás\n- robotrendszerek programozása\n- robotok vezérlése\n- ipari és szolgáltató robotok\n- robotok kinematikája és dinamikája",
+            "thesis":              "Többcélú alkalmazási keretrendszer tervezése és megvalósítása a CruzR humán szolgáltató robothoz",
+            "brief":               "A feladat célja egy olyan program elkészítése volt, amely a vevői igények alapján személyre szabott, majd azt később bővítve további ügyfelek számára az igényeik szerint testreszabható. A megvalósított alkalmazás Java programozási nyelven készült. Az applikáció célja, hogy tartsa a kapcsolatot a felhasználókkal és a robot környezetével is."
+        },
+        {
+            "name":                "Óbuda Egyetem - Kandó Kálmán Villamosmérnöki Kar BSc.",
+            "date":                "2013 - 2017",
+            "general_subjects":    "- matematika\n- fizika\n- jogi és társadalomtudományok",
+            "vocational_subjects": "- elektrotechnika\n- elektromos anyagismeret\n- elektronika\n- digitális technika\n- jel- és képfeldolgozás\n- programozás\n- beágyazott rendszerek\n- automatizálás",
+            "thesis":              "Humanoid robot kar",
+            "brief":               "Újrahasznosított alkatrészekből összerakott, C programozási nyelven írt STM32L476RG (ARM Cortex M4) Mikrokontroller alapú robotkar PC-vel támogatott program, amely C# programozási nyelven íródott. A robot mozgásérzékelővel is betanítható és vezérelhető.",
+            "commit":              "Tevékenységek és közösség: A többi hallgatót C és Assembly programozási nyelvből, beágyazott rendszerek fejlesztéséből és automatizálási tantárgyakból támogattam."
+        }
+    ],
+
+    "trainings":[
+        {
+            "name":"Certified Tester Foundation Level (CTFL)\nMasterfield Training Center\nHitelesítési azonosító: H19041208/CTFL "
+        },
+        {
+            "name":"Android fejlesztő alapozó tanfolyam (2 hét)\nDr. Ekler Péter @webuni\nHitelesítési azonosító: 4G6ACGJT"
+        },
+        {
+            "name":"Android fejlesztő intenzív alap képzés (8 hét)\nDr. Ekler Péter @webuni\nHitelesítési azonosító: 44P2MXJX"
+        },
+        {
+            "name":"Android fejlesztő haladó képzés (12 hét)\nDr. Ekler Péter @webuni\nHitelesítési azonosító: ZRY645E3"
+        },
+        {
+            "name":"Java backend alapozó képzés (3 hét)\nEkler-Antal Éva @webuni\nHitelesítési azonosító: - "
+        },
+        {
+            "name":"Java Spring Boot backend fejlesztő képzés (12 hét)\nImre Gábor @webuni\nHitelesítési azonosító: : VL2F8MHV"
+        },
+        {
+            "name":"Intenzív Flutter alapozó tanfolyam (3 hét)\nPásztor Dániel @webuni\nHitelesítési azonosító: - "
+        },
+        {
+            "name":"Intenzív Flutter alap képzés (12 hét)\nPásztor Dániel @webuni\nHitelesítési azonosító: FU43CHUU"
+        },
+        {
+            "name":"Villanyszerelő (6 hónap)\n@Fekete Felnőttképző Kft.\nHitelesítési azonosító: 242569/7/2021"
+        },
+        {
+            "name":"Vagyonvédelmi rendszer telepítő (6 hónap)\n@Oktat60 Kft.\nHitelesítési azonosító: VR/187/6/2022"
+        }
+
+    ]
+}

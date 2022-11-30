@@ -1,0 +1,159 @@
+{
+    "@@local": "en",
+
+    "name": "Name:",
+    "@name": {
+      "description": ""
+    },
+
+    "birth": "Birth:",
+    "@birth": {
+      "description": ""
+    },
+
+    "mobile": "Mobile:",
+    "@name": {
+      "description": ""
+    },
+
+    "email": "Email:",
+    "@email": {
+      "description": ""
+    },
+
+    "address": "Address:",
+    "@address": {
+      "description": ""
+    },
+
+    "company": "Company:",
+    "@company": {
+      "description": ""
+    },
+
+    "position": "Position:",
+    "@position": {
+      "description": ""
+    },
+
+    "date": "Date:",
+    "@date": {
+      "description": ""
+    },
+
+    "place": "Place:",
+    "@place": {
+      "description": ""
+    },
+
+    "tasks": "Tasks:",
+    "@tasks": {
+      "description": ""
+    },
+
+    "experiences": "Experiences:",
+    "@experiences": {
+      "description": ""
+    },
+
+    "progLang": "Programming languages:",
+    "@progLang": {
+      "description": ""
+    },
+
+    "university": "University:",
+    "@university": {
+      "description": ""
+    },
+
+    "generalSubs": "General Subjects:",
+    "@tasks": {
+      "description": ""
+    },
+
+    "vocationalSubs": "Vocational Subjects:",
+    "@vocationalSubs": {
+      "description": ""
+    },
+
+    "thesis": "Thesis:",
+    "@thesis": {
+      "description": ""
+    },
+
+    "brief": "Brief:",
+    "@brief": {
+      "description": ""
+    },
+
+    "langauges": "Langauges:",
+    "@langauges": {
+      "description": ""
+    },
+
+    "trainings": "Trainings:",
+    "@trainings": {
+      "description": ""
+    },
+
+
+    "genPdf": "Generate PDF...",
+    "@genPdf": {
+      "description": ""
+    },
+    
+    "plsPatient": "Please be patient!\nIt need ~10-30 secunds to load.",
+    "@plsPatient": {
+      "description": ""
+    },
+
+    "savePage": "Save my page:",
+    "@savePage": {
+      "description": ""
+    },
+    
+    "gotIt": "Got it!",
+    "@gotIt": {
+      "description": ""
+    },
+    "changedToLV": "Changed to list view",
+    "@changedToLV": {
+      "description": ""
+    },    
+    
+    "winIsSmall": "Window size is too small\nfor larger view!",
+    "@winIsSmall": {
+      "description": ""
+    },
+
+    "hintChangeLG": "Change to Grid / List view",
+    "@hintChangeLG": {
+      "description": ""
+    },
+
+    "hintOpenNav": "Open navigation",
+    "@hintOpenNav": {
+      "description": ""
+    },
+
+    "hintSendMail": "Send me an email if you want an offer from me :)",
+    "@hintSendMail": {
+      "description": ""
+    },
+    
+    "hintCreatePDF": "Create PDF from my CV",
+    "@hintCreatePDF": {
+      "description": ""
+    },
+
+    "hintGetConntects": "Get my conntects",
+    "@hintGetConntects": {
+      "description": ""
+    },
+
+    "hintOCMenu": "Open / Close menu",
+    "@hintOCMenu": {
+      "description": ""
+    }
+    
+}

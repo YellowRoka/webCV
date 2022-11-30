@@ -1,5 +1,4 @@
-import 'dart:io';
-
+import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -22,14 +21,15 @@ part 'state_manager_state.dart';
 
 class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
   final ItemScrollController  itemScrollController;
-  final JobConverter          jobs;
-  final BaseDataConverter     baseData;
+  final JobConverter          jobsEN;
+  final BaseDataConverter     baseDataEN;
         bool                  isPDFCreated      = true; 
         bool                  isVideViewOn      = true;
         bool                  isVideViewEnabled = true;
+        bool                  isLanguageEng     = true;
 
 
-  StateManagerBloc( this.itemScrollController, this.jobs, this.baseData ) : super( const StateManagerStateInit() ){
+  StateManagerBloc( this.itemScrollController, this.jobsEN, this.baseDataEN ) : super( const StateManagerStateInit() ){
 
     on<StateManagerEventInit>( (event, emit)  async {
       emit( const StateManagerStateInit() );
@@ -38,6 +38,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       emit( const StateManagerStateJsonLoaded() );
       await Future.delayed( const Duration( milliseconds: 1000 ) );
       emit( const StateManagerStateFOBEnabled() );
+
     });
 
     on<StateManagerEventPopQRDialog>( (event, emit){
@@ -66,7 +67,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
 
     on<StateManagerEventShowBar>( (event, emit) {
-      emit( const StateManagerStateShowedBar() );
+      emit( StateManagerStateShowedBar( isLanguageEng ) );
     });
 
     on<StateManagerEventHideBar>( (event, emit) {
@@ -115,8 +116,8 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       ScreenshotController screenshotController = ScreenshotController();
 
       PDFCards pdfCards = PDFCards( 
-        jobs:     jobs, 
-        baseData: baseData
+        jobs:     jobsEN, 
+        baseData: baseDataEN
       );
       
       if( kIsWeb ){
@@ -141,6 +142,16 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
     on<StateManagerEventQRGotIt>( (event, emit) {
       emit( const StateManagerStateQRGotIt() );
     });
+
+    on<StateManagerEventLanguageChange>( (event, emit) {
+      
+      isLanguageEng = !isLanguageEng;
+      //SingleTonData().globIsLanguageEng = isLanguageEng;
+      final loc = (isLanguageEng)?( const Locale('en') ):( const Locale('hu') );        
+      
+      emit( StateManagerStateLanguageChange( loc ));
+    });
+
   }
 
 

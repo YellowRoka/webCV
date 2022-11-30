@@ -5,7 +5,7 @@ import '../../bloc/state_manager_bloc.dart';
 import 'FOB_animation_delegate.dart';
 import 'FOB_data_model.dart';
 
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FOB extends StatefulWidget{
   const FOB({Key? key}) : super(key: key);
@@ -19,12 +19,13 @@ class FOB extends StatefulWidget{
 class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
   late AnimationController controller;
   late bool                isFOBShowed;
+  late AppLocalizations    localizations;
 
   @override
   void initState(){
-    isFOBShowed = false;
-    controller  = AnimationController(vsync: this, duration: const Duration( milliseconds: 250) );
     super.initState();
+    isFOBShowed   = false;
+    controller    = AnimationController(vsync: this, duration: const Duration( milliseconds: 250) );
   }
 
   @override
@@ -35,6 +36,8 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
 
   @override
   Widget build( BuildContext context ){
+    
+    localizations = AppLocalizations.of(context);
     return BlocBuilder< StateManagerBloc, StateManagerState >(
       builder: ( context, state ){
 
@@ -49,7 +52,8 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
           return Flow(
             //mainAxisAlignment:  MainAxisAlignment.center,
             //crossAxisAlignment: CrossAxisAlignment.center,
-            delegate: FlowMenuDelegate( 
+            clipBehavior: Clip.none,
+            delegate:     FlowMenuDelegate( 
               iconSize:     widget.iconSize,
               controller:   controller,
               windowHeight: MediaQuery.of(context).size.height, 
@@ -70,7 +74,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
               ( CommonFOBWidgetStruct(
                 size:       widget.iconSize,
                 cbk:        ()=> BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventChangeView() ),
-                toolTip:    "Change to Grid / List view",
+                toolTip:    localizations.hintChangeLG,
                 icon:       Icons.change_circle_outlined,
                 controller: controller,
                 color:      Colors.black.withOpacity( 0.70 ),
@@ -81,7 +85,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
               CommonFOBWidgetStruct(
                 size:       widget.iconSize,
                 cbk:        () => Scaffold.of( context ).openDrawer(),
-                toolTip:    "Open navigation",
+                toolTip:    localizations.hintOpenNav,
                 icon:       Icons.menu_book_sharp,
                 controller: controller,
                 color:      Colors.black.withOpacity( 0.70 ),
@@ -91,7 +95,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
               CommonFOBWidgetStruct(
                 size:       widget.iconSize,
                 cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventSendMail() ),
-                toolTip:    "Send me an email if you want an offer from me :)",
+                toolTip:    localizations.hintSendMail,
                 icon:       Icons.outgoing_mail,
                 controller: controller,
                 color:      Colors.black.withOpacity( 0.70 ),
@@ -101,7 +105,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
               CommonFOBWidgetStruct(
                 size:       widget.iconSize,
                 cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventCreatePDF() ),
-                toolTip:    "Create PDF from my CV",
+                toolTip:    localizations.hintCreatePDF,
                 icon:       Icons.picture_as_pdf_rounded,
                 controller: controller,
                 color:      Colors.black.withOpacity( 0.70 ),
@@ -111,7 +115,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
               CommonFOBWidgetStruct(
                 size:       widget.iconSize, 
                 cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventPopQRDialog() ), 
-                toolTip:    "Get my conntects",
+                toolTip:    localizations.hintGetConntects,
                 icon:       Icons.qr_code_2_rounded,
                 controller: controller,
                 color:      Colors.black.withOpacity( 0.70 ),
@@ -121,7 +125,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
               CommonFOBWidgetStruct(
                 size:       widget.iconSize, 
                 cbk:        (){}, 
-                toolTip:    "Open / Close menu",
+                toolTip:    localizations.hintOCMenu,
                 icon:       Icons.menu,
                 controller: controller,
                 color:      Colors.black,

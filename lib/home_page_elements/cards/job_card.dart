@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../json_workers/jsonJobsObjs.dart';
 import 'base_card.dart';
+import 'parts/separated_text_table.dart';
+import 'parts/separated_text_table_column.dart';
+
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class JobCard extends StatelessWidget {
   final JobData description; 
@@ -13,8 +17,10 @@ class JobCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    const TextStyle textStyle = TextStyle( color: Colors.white, fontSize: 18, decoration: TextDecoration.none );
     const TextStyle headStyle = TextStyle( color: Colors.white, fontSize: 20, decoration: TextDecoration.none );
+    const TextStyle textStyle = TextStyle( color: Colors.white, fontSize: 18, decoration: TextDecoration.none );
+
+    AppLocalizations localizations = AppLocalizations.of(context);
 
     return BaseCard(
       heigt:    height,
@@ -25,7 +31,8 @@ class JobCard extends StatelessWidget {
           mainAxisAlignment:  MainAxisAlignment.start,
           children: [
             Flex(
-              direction: ( MediaQuery.of(context).size.width > 660 )?( Axis.horizontal ):( Axis.vertical ),
+
+              direction:          ( MediaQuery.of(context).size.width > 660 )?( Axis.horizontal ):( Axis.vertical ),
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment:  MainAxisAlignment.start,
               children: [
@@ -41,10 +48,23 @@ class JobCard extends StatelessWidget {
                   mainAxisAlignment:  MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:[
-                    Text( "Company:  ${description.company}",       style: headStyle ), const SizedBox( height: 15 ),
-                    Text( "Position:      ${description.position}", style: textStyle ), const SizedBox( height: 15 ),
-                    Text( "Date:            ${description.date}",   style: textStyle ), const SizedBox( height: 15 ),
-                    Text( "Place:          ${description.place}",   style: textStyle ), const SizedBox( height: 15 ),
+
+                  SeparatedTextTableColumn(
+                    firstLineTextStyle: headStyle,
+                    otherLinesTextStyle:textStyle,
+                    firstTextList: [
+                      localizations.company, 
+                      localizations.position,
+                      localizations.date,    
+                      localizations.place,   
+                    ],
+                    secundsTextList: [
+                      description.company, 
+                      description.position,
+                      description.date,    
+                      description.place,   
+                    ]
+                  ),
                   ]
                 )
               ],
@@ -52,17 +72,19 @@ class JobCard extends StatelessWidget {
             
             const SizedBox( height: 20 ),
 
-            Column(
-              mainAxisAlignment:  MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text( "Tasks:",                 style: headStyle ), const SizedBox( height: 10 ), Text( description.tasks,      style: textStyle ), const SizedBox( height: 30 ),
-                const Text( "Experiences:",           style: headStyle ), const SizedBox( height: 10 ), Text( description.experinces, style: textStyle ), const SizedBox( height: 30 ),
-                const Text( "Programming languages:", style: headStyle ), const SizedBox( height: 10 ), Text( description.languages,  style: textStyle ), const SizedBox( height: 30 ),
+            SizedBox(
+              child: Column(
+                mainAxisAlignment:  MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text( localizations.tasks,        style: headStyle ), const SizedBox( height: 10 ), Text( description.tasks,      style: textStyle, maxLines: 10, overflow: TextOverflow.clip ), const SizedBox( height: 30 ),
+                  Text( localizations.experiences,  style: headStyle ), const SizedBox( height: 10 ), Text( description.experinces, style: textStyle, maxLines: 10, overflow: TextOverflow.clip ), const SizedBox( height: 30 ),
+                  Text( localizations.progLang,     style: headStyle ), const SizedBox( height: 10 ), Text( description.languages,  style: textStyle, maxLines: 10, overflow: TextOverflow.clip ), const SizedBox( height: 30 ),
+                  
+                  Text( description.commit??"",  style: textStyle, maxLines: 10, overflow: TextOverflow.ellipsis )
+                ],
                 
-                Text( description.commit??"",  style: textStyle, maxLines: 10, overflow: TextOverflow.ellipsis )
-              ],
-              
+              ),
             )
           ],
         )

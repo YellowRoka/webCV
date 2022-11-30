@@ -3,21 +3,26 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:webCV/bloc/state_manager_bloc.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class QRDialog extends StatelessWidget{
   const QRDialog({Key? key}) : super(key: key);
 
   @override
   Widget build( BuildContext context ){
+
+    AppLocalizations localizations = AppLocalizations.of(context);
+
     return ClipRRect(
       borderRadius: BorderRadius.circular( 24.0 ),
       child:        AlertDialog(
-        title:      const Text( "Save my page:" ),
+        title:      Text( localizations.savePage ),
         content:    const QRWindow(),
         elevation:  40,
         actions:    [
           ElevatedButton(  
-            style:     ElevatedButton.styleFrom( primary: Colors.black, textStyle: const TextStyle( color: Colors.white ) ),
-            child:     const Text( "Got it!" ),        
+            style:     ElevatedButton.styleFrom( backgroundColor: Colors.black, textStyle: const TextStyle( color: Colors.white ) ),
+            child:     Text( localizations.gotIt ),        
             onPressed: (){
               Navigator.pop( context ); 
               BlocProvider.of<StateManagerBloc>(context).add(const StateManagerEventQRGotIt() );  

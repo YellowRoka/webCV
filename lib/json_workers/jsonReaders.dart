@@ -5,19 +5,30 @@ import 'package:flutter/services.dart';
 import 'jsonBasedataObjs.dart';
 import 'jsonJobsObjs.dart';
 
-late JobConverter      jobs;
-late BaseDataConverter baseData;
+late JobConverter      jobsEN;
+late BaseDataConverter baseDataEN;
+
+late JobConverter      jobsHU;
+late BaseDataConverter baseDataHU;
 
 Future <bool> readJSONData() async {
   bool isLoaded = false;
 
-  var jsonString = await rootBundle.loadString('assets/jsons/jobs.json'); //ON LINUX & WINDOWS
+  var jsonString = await rootBundle.loadString('assets/jsons/jobs_en.json'); //ON LINUX & WINDOWS
   var jsonModel  = json.decode(jsonString);
-  jobs           = JobConverter.fromJson(jsonModel);
+  jobsEN         = JobConverter.fromJson(jsonModel);
 
-  jsonString = await rootBundle.loadString('assets/jsons/basedata.json'); //ON LINUX & WINDOWS
+  jsonString = await rootBundle.loadString('assets/jsons/basedata_en.json'); //ON LINUX & WINDOWS
   jsonModel  = json.decode(jsonString);
-  baseData   = BaseDataConverter.fromJson(jsonModel);
+  baseDataEN = BaseDataConverter.fromJson(jsonModel);
+
+  jsonString = await rootBundle.loadString('assets/jsons/jobs_hu.json'); //ON LINUX & WINDOWS
+  jsonModel  = json.decode(jsonString);
+  jobsHU     = JobConverter.fromJson(jsonModel);
+
+  jsonString = await rootBundle.loadString('assets/jsons/basedata_hu.json'); //ON LINUX & WINDOWS
+  jsonModel  = json.decode(jsonString);
+  baseDataHU = BaseDataConverter.fromJson(jsonModel);
 
   isLoaded = true;
   

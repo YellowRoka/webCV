@@ -1,0 +1,74 @@
+Date : 2022-11-17 10:51:23
+Directory : c:\PROJECTS\webCV\lib
+Total : 36 files,  1876 codes, 151 comments, 513 blanks, all 2540 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         35 |      1,873 |        150 |        511 |      2,534 |
+| YAML     |          1 |          3 |          1 |          2 |          6 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                            | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                               |         36 |      1,876 |        151 |        513 |      2,540 |
+| animated_backgrounds                                                            |          2 |         54 |          5 |          6 |         65 |
+| bloc                                                                            |          3 |        251 |          2 |         92 |        345 |
+| home_page_elements                                                              |         12 |        551 |         20 |        122 |        693 |
+| home_page_elements\FOB                                                          |          3 |        179 |         10 |         37 |        226 |
+| home_page_elements\cards                                                        |          5 |        219 |          9 |         55 |        283 |
+| home_page_elements\popup_dialogs                                                |          3 |        101 |          1 |         13 |        115 |
+| home_pages                                                                      |          3 |        274 |          7 |         87 |        368 |
+| home_splash_screen                                                              |          1 |         53 |         12 |         10 |         75 |
+| json_workers                                                                    |          5 |        164 |         12 |         44 |        220 |
+| l10n                                                                            |          1 |          3 |          1 |          2 |          6 |
+| local_changer                                                                   |          3 |         67 |          5 |         30 |        102 |
+| pdf                                                                             |          5 |        384 |         78 |        102 |        564 |
+| pdf\not                                                                         |          3 |        150 |          1 |         27 |        178 |
++---------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                        | language | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\PROJECTS\webCV\lib\animated_backgrounds\particles.dart                       | Dart     |         31 |          2 |          3 |         36 |
+| c:\PROJECTS\webCV\lib\animated_backgrounds\rain.dart                            | Dart     |         23 |          3 |          3 |         29 |
+| c:\PROJECTS\webCV\lib\bloc\state_manager_bloc.dart                              | Dart     |        120 |          2 |         41 |        163 |
+| c:\PROJECTS\webCV\lib\bloc\state_manager_event.dart                             | Dart     |         58 |          0 |         21 |         79 |
+| c:\PROJECTS\webCV\lib\bloc\state_manager_state.dart                             | Dart     |         73 |          0 |         30 |        103 |
+| c:\PROJECTS\webCV\lib\home_page_elements\FOB\FOB_animation_delegate.dart        | Dart     |         32 |          1 |          9 |         42 |
+| c:\PROJECTS\webCV\lib\home_page_elements\FOB\FOB_data_model.dart                | Dart     |         11 |          0 |          4 |         15 |
+| c:\PROJECTS\webCV\lib\home_page_elements\FOB\FOB_widget.dart                    | Dart     |        136 |          9 |         24 |        169 |
+| c:\PROJECTS\webCV\lib\home_page_elements\cards\base_card.dart                   | Dart     |         31 |          9 |          6 |         46 |
+| c:\PROJECTS\webCV\lib\home_page_elements\cards\data_card.dart                   | Dart     |         54 |          0 |         11 |         65 |
+| c:\PROJECTS\webCV\lib\home_page_elements\cards\job_card.dart                    | Dart     |         62 |          0 |         13 |         75 |
+| c:\PROJECTS\webCV\lib\home_page_elements\cards\school_card.dart                 | Dart     |         37 |          0 |         13 |         50 |
+| c:\PROJECTS\webCV\lib\home_page_elements\cards\skills_card.dart                 | Dart     |         35 |          0 |         12 |         47 |
+| c:\PROJECTS\webCV\lib\home_page_elements\drawer_bar.dart                        | Dart     |         52 |          0 |         17 |         69 |
+| c:\PROJECTS\webCV\lib\home_page_elements\popup_dialogs\pdf_alert_dialog.dart    | Dart     |         26 |          0 |          4 |         30 |
+| c:\PROJECTS\webCV\lib\home_page_elements\popup_dialogs\qr_dialog.dart           | Dart     |         49 |          1 |          5 |         55 |
+| c:\PROJECTS\webCV\lib\home_page_elements\popup_dialogs\size_warning_dialog.dart | Dart     |         26 |          0 |          4 |         30 |
+| c:\PROJECTS\webCV\lib\home_pages\home_page_grid.dart                            | Dart     |        112 |          5 |         33 |        150 |
+| c:\PROJECTS\webCV\lib\home_pages\home_page_handler.dart                         | Dart     |         74 |          0 |         24 |         98 |
+| c:\PROJECTS\webCV\lib\home_pages\home_page_list.dart                            | Dart     |         88 |          2 |         30 |        120 |
+| c:\PROJECTS\webCV\lib\home_splash_screen\splash_sreen.dart                      | Dart     |         53 |         12 |         10 |         75 |
+| c:\PROJECTS\webCV\lib\json_workers\jsonBasedataObjs.dart                        | Dart     |         38 |          2 |         12 |         52 |
+| c:\PROJECTS\webCV\lib\json_workers\jsonBasedataObjs.g.dart                      | Dart     |         55 |          4 |          9 |         68 |
+| c:\PROJECTS\webCV\lib\json_workers\jsonJobsObjs.dart                            | Dart     |         24 |          2 |          8 |         34 |
+| c:\PROJECTS\webCV\lib\json_workers\jsonJobsObjs.g.dart                          | Dart     |         30 |          4 |          7 |         41 |
+| c:\PROJECTS\webCV\lib\json_workers\jsonReaders.dart                             | Dart     |         17 |          0 |          8 |         25 |
+| c:\PROJECTS\webCV\lib\l10n\l10n.yaml                                            | YAML     |          3 |          1 |          2 |          6 |
+| c:\PROJECTS\webCV\lib\local_changer\language_changer.dart                       | Dart     |         45 |          1 |         17 |         63 |
+| c:\PROJECTS\webCV\lib\local_changer\locale_provider.dart                        | Dart     |         15 |          4 |         11 |         30 |
+| c:\PROJECTS\webCV\lib\local_changer\support_locale.dart                         | Dart     |          7 |          0 |          2 |          9 |
+| c:\PROJECTS\webCV\lib\main.dart                                                 | Dart     |         75 |          9 |         18 |        102 |
+| c:\PROJECTS\webCV\lib\pdf\not\pdf.dart                                          | Dart     |         32 |          1 |          8 |         41 |
+| c:\PROJECTS\webCV\lib\pdf\not\pdf_api.dart                                      | Dart     |         29 |          0 |         10 |         39 |
+| c:\PROJECTS\webCV\lib\pdf\not\pdf_paragraph_api.dart                            | Dart     |         89 |          0 |          9 |         98 |
+| c:\PROJECTS\webCV\lib\pdf\pdfV2.dart                                            | Dart     |         67 |         77 |         36 |        180 |
+| c:\PROJECTS\webCV\lib\pdf\pdf_cards.dart                                        | Dart     |        167 |          0 |         39 |        206 |
+| Total                                                                           |          |      1,876 |        151 |        513 |      2,540 |
++---------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

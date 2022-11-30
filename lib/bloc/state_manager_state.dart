@@ -13,7 +13,12 @@ class StateManagerStateInit extends StateManagerState {
 }
 
 class StateManagerStateShowedBar extends StateManagerState {
-  const StateManagerStateShowedBar();
+  final bool isLanguageEng;
+  
+  const StateManagerStateShowedBar( this.isLanguageEng );
+
+  @override
+  List<Object> get props => [ isLanguageEng ];
 }
 
 class StateManagerStateHidedBar extends StateManagerState {
@@ -85,4 +90,13 @@ class StateManagerStatePopQRDialog extends StateManagerState {
 
 class StateManagerStateQRGotIt extends StateManagerState{
   const StateManagerStateQRGotIt();
+}
+
+class StateManagerStateLanguageChange extends StateManagerState{
+  final Locale loc;
+  
+  const StateManagerStateLanguageChange(this.loc);
+
+  @override
+  List<Object> get props => [ loc ];
 }

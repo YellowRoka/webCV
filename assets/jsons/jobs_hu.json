@@ -1,0 +1,70 @@
+{
+    "jobs":[
+        {
+            "company":    "Organic Only Vending Franchise Magyarország Kft.",
+            "position":   "Rendszer és Software Mérnök - Contractor",
+            "image":      "vendo.png",
+            "place":      "Budapest, Magyarország",
+            "date":       "Mar 2022 - jelenleg",
+            "tasks":      "- rendszer architektúra létrehozása\n- Alkalmazásszintű tervezés és fejlesztés a termékkövetelmények alapján\n- a rendszer hardverrészeinek kiválasztása\n- UI tervezés létrehozása és megvalósítása\n- állapotgépek tervezése és létrehozása\n- helyi adatbázisok létrehozása és megvalósítása\n - a megrendelői követelmények megvalósítása\n- kapcsolattartás a megrendelő többi fejlesztői csapatával\n- ütemterv készítése és a projekt részeinek koordinálása\n- alap kiadási folyamatok létrehozása\n- animációk és videók létrehozása\n- kódgenerátor írása\n- refaktorálás\n- teljesítményoptimalizálás",
+            "experinces": "Flutter, Debian, Windows, Web, Raspberry Pi4, ORM, Hive, BLOC, REST-API, TCP Socket, Blender, Asana, Git, JSON, embedded sytem, front end, graphical design,",
+            "languages":  "Dart, C/C++, python, java",
+            "commit":     "A cégnél eltöltött idő alatt én vagyok a fő felelős a központi komponens fejlesztéséért. Ez az összetevő összekapcsolja az alap hardver funkciókat a felhő funkcióval, és tartja a kapcsolatot a felhasználóval. Én menedzselem a projekt ezen részét."
+        },
+        {
+            "company":    "MuzixGroup / MZX Robotics",
+            "position":   "Robotikai Software Mérnök - Contractor",
+            "image":      "mzx.png",
+            "place":      "Budapest, Magyarország",
+            "date":       "Marc 2021 - jelenleg",
+            "tasks":      "- szoftverkarbantartás\n- Robot alkalmazás szintű tervezése és fejlesztése az ügyfelek igényeire szabva\n- Írott szoftverek funkcionális tesztelése\n- a robotrendszer helyszíni monitorozása és azonnali hibajavítás\n- szoftver és hardver hibaelhárítás akár eseményeken is \n- kapcsolattartás a vevővel és a beszállítóval",
+            "experinces": "Android Studio, Android OS, Google DialogFlow, Grandle Build Tool, XML, FireBase",
+            "languages":  "Java, Kotlin",
+            "commit":     "A szakdolgozatom alapján létrejött pályázat nyertes projekt karbantartása és továbbfejlesztése.\n(https://mzxrobotics.com/palyazat)"
+        },
+        {
+            "company":    "B. Braun Group",
+            "position":   "Software Mérnök",
+            "image":      "bb.jpg",
+            "place":      "Budapest, Magyarország",
+            "date":       "Apr 2020 - Mar 2022, 2 év",
+            "tasks":      "- a beágyazott orvosi eszközök szoftverének fejlesztése\n- szoftverhiba-javítások,\n- új funkciók bevezetése\n- legacy kód karbantartása\n- szoftverkarbantartás\n- telepítőeszközök fejlesztése\n- új funkciók fejlesztése az automatikus tesztelő tool számára (belső tool)\n- Matlab/simulink modell és mathlab szkriptek fejlesztése\n- Matlab modell és mathlab szkriptek refaktrolása\n- szoftverkövetelmények ellenőrzése, létrehozása és fejlesztése\n- dokumentációk létrehozása\n- smoke tesztek futtatása a fejlesztői oldalon" ,
+            "experinces": "VSCode, Eclipse, Git, SVN, Notepad++, Visual Studio, Atlassian - Crucible, Jira, MCD, Debian, matlab/simulink",
+            "languages":  "C/C++, NSIS (Nullsoft Scriptable Install System), Java, Gherkin",
+            "commit":     ""
+        },
+        {
+            "company":    "MuzixGroup",
+            "position":   "Robotikai Software Mérnök",
+            "image":      "mza.jpg",
+            "place":      "Budapest, Magyarország",
+            "date":       "Jun 2019 - Dec 2019, 6 hónap",
+            "tasks":      "- tárolt adatok / termékek specifikációk karbantartás, visszakeresés, ellenőrzés,\n- Robot alkalmazás szintű tervezése és fejlesztése az ügyfelek igényeire szabva\n- Írott szoftverek funkcionális tesztelése\n- a robotrendszer helyszíni monitorozása és a hibák azonnali kijavítása\n- szoftver és hardver hibaelhárítás\n- kapcsolattartás a vevővel és a szállítóval",
+            "experinces": "Android Studio, Android OS, Google DialogFlow, Grandle Build Tool, XML,",
+            "languages":  "Java",
+            "commit":     ""
+        },
+        {
+            "company":    "Mentor Graphics",
+            "position":   "Software Mérnök",
+            "image":      "mentor.jpg",
+            "place":      "Budapest, Magyarország",
+            "date":       "Feb 2019 - May 2019, 3 hónap",
+            "tasks":      "- modul and software tesztelés\n- forráskód módosítás",
+            "experinces": "QAC, AUTOSAR, Git,Junit, Eclipse, Notepad++, (AR)XML, Jira, SiL, Jenkins,",
+            "languages":  "C/C++, Java",
+            "commit":     "A cégnél eltöltött idő alatt a Masterfield vizsgaközpont ISTQB - Foundation szintű vizsgáját tettem le. A diplomamunkám miatt azonban még a próba időszak alatt céget kellett váltanom."
+        },
+        {
+            "company":    "evosoft Hungary",
+            "position":   "Software Mérnök",
+            "image":      "evosoft.jpg",
+            "place":      "Budapest, Magyarország",
+            "date":       "Feb 2017 - Jan 2019 2 év",
+            "tasks":      "- mérések kiértékelése\n- fejlesztői oldali mérések összeállítása, futtatása és értékelése\n- tesztkörnyezetek fejlesztése\n- modultesztek fejlesztése\n- szoftverfejlesztés\n- szoftverhiba-javítások\n- fejlesztések megvalósítása  kód és modell szint\n- modell alapú fejlesztés (ARXML szerkesztés)\n- dokumentáció\n- hardver karbantartás\n- modulok, funkciók reaktorálása\n- UML grafika szerkesztése\n- Követelmények feldolgozása és megvalósítása\n- tesztelés\n- QAC hibák ellenőrzése és javítása\n- részvétel a review-kon",
+            "experinces": "INCA, Vector, QAC, AUTOSAR, GIT, RTRT modul testing, Trace32, Eclipse, Visual Studio, Notepad++, (AR)XML, tickets, Jenkins, miniHiL,",
+            "languages":  "Ada, C/C++,",
+            "commit":     ""
+        }
+    ]
+}

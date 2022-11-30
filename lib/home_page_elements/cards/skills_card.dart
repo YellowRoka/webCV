@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 import '../../json_workers/jsonBasedataObjs.dart';
 import 'base_card.dart';
 
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 class SkillsCard extends StatelessWidget {
   final BaseDataConverter description;
-  final double? width;
-  final double? height;
+  final double?           width;
+  final double?           height;
 
   const SkillsCard( { Key? key, required this.description, this.width, this.height } ) : super( key: key );
 
@@ -17,6 +19,7 @@ class SkillsCard extends StatelessWidget {
     const TextStyle textStyle = TextStyle( color:  Colors.white, fontSize: 18, decoration: TextDecoration.none );
     const TextStyle headStyle = TextStyle( color:  Colors.white, fontSize: 22, decoration: TextDecoration.none );
 
+    AppLocalizations localizations = AppLocalizations.of(context);
     return BaseCard(
       heigt:    height,
       width:    width,
@@ -27,12 +30,11 @@ class SkillsCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
 
           children: [
-            //const SizedBox( width: 600 ),
+            const SizedBox( width: 900 ),
 
-            const Text( "Langauges:",          style: headStyle ), const SizedBox( height: 10 ),
-                  Text( description.languages, style: textStyle ), const SizedBox( height: 30 ),
-
-            const Text( "Trainings:",          style: headStyle ), const SizedBox( height: 10 ),
+            Text( localizations.langauges, style: headStyle ), const SizedBox( height: 10 ),
+            Text( description.languages,   style: textStyle ), const SizedBox( height: 30 ),
+            Text( localizations.trainings, style: headStyle ), const SizedBox( height: 10 ),
 
             for( var it in description.trainings )...[
               Text( it.name, style: textStyle ), 

@@ -72,3 +72,7 @@ class StateManagerEventPopQRDialog extends StateManagerEvent{
 class StateManagerEventQRGotIt extends StateManagerEvent{
   const StateManagerEventQRGotIt();
 }
+
+class StateManagerEventLanguageChange extends StateManagerEvent{
+  const StateManagerEventLanguageChange();
+}
