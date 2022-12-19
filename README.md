@@ -1,19 +1,28 @@
-# cv_2022_06_30
+# webCV
 
-A new Flutter project.
+Flutter based online CV.
 
-## Getting Started
+## Description:
 
-This project is a starting point for a Flutter application.
+This project is an online interactive savable CV.
 
-A few resources to get you started if this is your first Flutter project:
+## Main features:
+    - responsive
+    - supported languages: hun, eng,
+    - show QR code for save conntact
+    - downloadable PDF from data
+    - send mail for creator
+    - it has an interactive main page
+    - it has an interactive referencies page  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Used highlighted packages:
+    - json
+    - router
+    - animations
+    - provider
+    - bloc
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Flutter specific data:
 
-Builded with flutter 3.0.1
-Designed for web
+Builded with flutter 3.3.8
+Designed for web and mobil(Android)

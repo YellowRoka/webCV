@@ -26,19 +26,31 @@ class StateManagerStateHidedBar extends StateManagerState {
 }
 
 class StateManagerStatePersonal extends StateManagerState {
-  const StateManagerStatePersonal();
+  final int index;
+  @override
+  List<Object> get props => [ index ];
+  const StateManagerStatePersonal({required this.index});
 }
 
 class StateManagerStateWorks extends StateManagerState {
-  const StateManagerStateWorks();
+  final int index;
+  @override
+  List<Object> get props => [ index ];
+  const StateManagerStateWorks({required this.index});
 }
 
 class StateManagerStateSchools extends StateManagerState {
-  const StateManagerStateSchools();
+  final int index;
+  @override
+  List<Object> get props => [ index ];
+  const StateManagerStateSchools({required this.index});
 }
 
 class StateManagerStateSkills extends StateManagerState {
-  const StateManagerStateSkills();
+  final int index;
+  @override
+  List<Object> get props => [ index ];
+  const StateManagerStateSkills({required this.index});
 }
 
 class StateManagerStateSendedMail extends StateManagerState {
@@ -99,4 +111,18 @@ class StateManagerStateLanguageChange extends StateManagerState{
 
   @override
   List<Object> get props => [ loc ];
+}
+
+class StateManagerStateToSplashPage extends StateManagerState{
+  const StateManagerStateToSplashPage();
+}
+class StateManagerStateToMainPage extends StateManagerState{
+  const StateManagerStateToMainPage();
+}
+class StateManagerStateToReferencesPage extends StateManagerState{
+  const StateManagerStateToReferencesPage();
+}
+
+class StateManagerStateBackToMain extends StateManagerState{
+  const StateManagerStateBackToMain();
 }

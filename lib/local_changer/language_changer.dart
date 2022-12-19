@@ -23,7 +23,6 @@ class _LanguageChangerState extends State<LanguageChanger> {
   @override
   void initState() {
     super.initState();
-    //locLang = SingleTonData().globIsLanguageEng;
     locLang = ( context.read<LocaleProvider>().locale == const Locale('en') )? ( true ):( false );
   }
 

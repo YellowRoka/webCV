@@ -76,3 +76,17 @@ class StateManagerEventQRGotIt extends StateManagerEvent{
 class StateManagerEventLanguageChange extends StateManagerEvent{
   const StateManagerEventLanguageChange();
 }
+
+class StateManagerEventToSplashPage extends StateManagerEvent{
+  const StateManagerEventToSplashPage();
+}
+class StateManagerEventToMainPage extends StateManagerEvent{
+  const StateManagerEventToMainPage();
+}
+class StateManagerEvenToReferencesPage extends StateManagerEvent{
+  const StateManagerEvenToReferencesPage();
+}
+
+class StateManagerEventBackToMain extends StateManagerEvent{
+  const StateManagerEventBackToMain();
+}

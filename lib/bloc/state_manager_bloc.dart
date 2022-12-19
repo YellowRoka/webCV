@@ -1,17 +1,14 @@
-import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:mailto/mailto.dart';
 import 'package:screenshot/screenshot.dart';
-import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../json_workers/jsonReaders.dart';
+
+import '../common/json_workers/json_readers.dart';
 import '../pdf/pdf_cards.dart';
-import '../json_workers/jsonBasedataObjs.dart';
-import '../json_workers/jsonJobsObjs.dart';
 import '../pdf/pdfV2.dart';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
@@ -20,22 +17,21 @@ part 'state_manager_event.dart';
 part 'state_manager_state.dart';
 
 class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
-  final ItemScrollController  itemScrollController;
-  final JobConverter          jobsEN;
-  final BaseDataConverter     baseDataEN;
         bool                  isPDFCreated      = true; 
         bool                  isVideViewOn      = true;
         bool                  isVideViewEnabled = true;
         bool                  isLanguageEng     = true;
 
 
-  StateManagerBloc( this.itemScrollController, this.jobsEN, this.baseDataEN ) : super( const StateManagerStateInit() ){
+  StateManagerBloc() : super( const StateManagerStateInit() ){
 
     on<StateManagerEventInit>( (event, emit)  async {
+      emit( const StateManagerStateToSplashPage() );
       emit( const StateManagerStateInit() );
       readJSONData();
       await Future.delayed( const Duration( milliseconds: 3000 ) );
       emit( const StateManagerStateJsonLoaded() );
+      emit( const StateManagerStateToMainPage() );
       await Future.delayed( const Duration( milliseconds: 1000 ) );
       emit( const StateManagerStateFOBEnabled() );
 
@@ -75,23 +71,19 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
     });
 
     on<StateManagerEventToPersonal>( (event, emit) {
-       itemScrollController.scrollTo( index: (isVideViewOn)?(0):(0), curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-      emit( const StateManagerStatePersonal() );
+      emit( StateManagerStatePersonal(index: (isVideViewOn)?(0):(0)) );
     });
 
     on<StateManagerEventToWorks>( (event, emit) {
-      itemScrollController.scrollTo( index: (isVideViewOn)?(3):(2), curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-      emit( const StateManagerStateWorks() );
+      emit( StateManagerStateWorks(index: (isVideViewOn)?(3):(2)) );
     });
 
     on<StateManagerEventToSchools>( (event, emit) {
-      itemScrollController.scrollTo( index: (isVideViewOn)?(0):(14), curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-      emit( const StateManagerStateSchools() );
+      emit( StateManagerStateSchools(index: (isVideViewOn)?(0):(14)) );
     });
 
     on<StateManagerEventToSkills>( (event, emit) {
-      itemScrollController.scrollTo( index: (isVideViewOn)?(0):(18), curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-      emit( const StateManagerStateSkills() );
+      emit( StateManagerStateSkills(index: (isVideViewOn)?(0):(18)) );
     });
 
     on<StateManagerEventSendMail>((event, emit) async{
@@ -122,14 +114,13 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       
       if( kIsWeb ){
         final PDFCreator pdfCreator = 
-        PDFCreator(
-          childToImage:         pdfCards.widgets(),
-          screenShotController: screenshotController
-        );
+          PDFCreator(
+            childToImage:         pdfCards.widgets(),
+            screenShotController: screenshotController
+          );
 
        isPDFCreated = await pdfCreator.creator();
       } 
-
 
       emit( const StateManagerStateCreatedPDF() );
     });
@@ -146,19 +137,32 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
     on<StateManagerEventLanguageChange>( (event, emit) {
       
       isLanguageEng = !isLanguageEng;
-      //SingleTonData().globIsLanguageEng = isLanguageEng;
       final loc = (isLanguageEng)?( const Locale('en') ):( const Locale('hu') );        
       
       emit( StateManagerStateLanguageChange( loc ));
     });
 
+    on<StateManagerEventToSplashPage>( (event, emit) {
+      emit( const StateManagerStateToSplashPage() );
+    });
+
+    on<StateManagerEventToMainPage>( (event, emit) {
+      emit( const StateManagerStateToMainPage() );
+    });
+
+    on<StateManagerEvenToReferencesPage>( (event, emit) {
+      emit( const StateManagerStateToReferencesPage() );
+    });
+    on<StateManagerEventBackToMain>( (event, emit) {
+      emit( const StateManagerStateBackToMain() );
+    });
+
   }
 
 
-
-    @override
-    void onEvent( StateManagerEvent event){
-      print( "event: ${event.toString()}" );
-      super.onEvent(event);
-    }
+  @override
+  void onEvent( StateManagerEvent event){
+    print( "event: ${event.toString()}" );
+    super.onEvent(event);
+  }
 }

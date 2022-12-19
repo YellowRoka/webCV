@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../json_workers/jsonBasedataObjs.dart';
-import '../json_workers/jsonJobsObjs.dart';
+import '../common/json_workers/json_basedata_objs.dart';
+import '../common/json_workers/json_jobs_objs.dart';
 
 
 const TextStyle headStyle = TextStyle( color: Colors.black, fontSize: 14, decoration: TextDecoration.none );
@@ -152,10 +152,10 @@ class PDFSchoolCard extends StatelessWidget {
                     Text( "Date:      ${school.date}",  style: textStyle ), const SizedBox( height: 20 ),
               
               const Text( "General Subjects:",          style: textStyle ), const SizedBox( height: 10 ),
-                    Text( school.general_subjects,      style: textStyle ), const SizedBox( height: 20 ),
+                    Text( school.generalSubjects,      style: textStyle ), const SizedBox( height: 20 ),
 
               const Text( "Vocational Subjects:",       style: textStyle ), const SizedBox( height: 10 ),
-                    Text( school.vocational_subjects,   style: textStyle ), const SizedBox( height: 20 ),
+                    Text( school.vocationalSubjects,   style: textStyle ), const SizedBox( height: 20 ),
               
               const Text( "Thesis:",                    style: textStyle ), const SizedBox( height: 10 ),
                     Text( school.thesis,                style: textStyle, maxLines: 20, overflow: TextOverflow.ellipsis ), const SizedBox( height: 20 ),

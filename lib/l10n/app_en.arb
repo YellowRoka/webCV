@@ -154,6 +154,66 @@
     "hintOCMenu": "Open / Close menu",
     "@hintOCMenu": {
       "description": ""
+    },
+
+    "hintBackToMain": "Back To Main page",
+    "@hintBackToMain": {
+      "description": ""
+    },
+
+    "referencies": "Referencies",
+    "@referencies": {
+      "description": ""
+    },
+
+    "cruzrForMZX": "CruzR App For MZX",
+    "@cruzrForMZX": {
+      "description": ""
+    },
+
+    "diverzumTestJob": "Diverzum Test App",
+    "@diverzumTestJob": {
+      "description": ""
+    },
+
+    "ffnextTestJob": "ff.Next Test App",
+    "@ffnextTestJob": {
+      "description": ""
+    },
+
+    "referenciesVideos": "Referencies videos",
+    "@referenciesVideos": {
+      "description": ""
+    },    
+
+    "ote": "Help App for ÖTE",
+    "@ote": {
+      "description": ""
+    }, 
+
+    "czurPlanet": "CruzR App on Planet 2021",
+    "@czurPlanet": {
+      "description": ""
+    }, 
+
+    "cruzrMVM": "CruzR App on 52.th MVM Conferenc",
+    "@cruzrMVM": {
+      "description": ""
+    },
+
+    "webLinks": "Links:",
+    "@cruzrMVM": {
+      "description": ""
+    },
+
+    "mediaLinks": "Media:",
+    "@mediaLinks": {
+      "description": ""
+    },
+
+    "gitLinks": "Git Projects:",
+    "@gitLinks": {
+      "description": ""
     }
-    
+
 }

@@ -1,4 +1,4 @@
-name: webCV
+name: web_cv
 description: Web based CV wit flutter.
 
 # The following line prevents the package from being accidentally published to
@@ -52,13 +52,13 @@ dependencies:
   printing: #^5.9.1
 
   mailto: ^2.0.0
-  url_launcher: ^6.1.4
   open_file: ^3.2.1
   path_provider: ^2.0.11
   universal_html: ^2.0.8
   screenshot: ^1.2.3
   image_picker: ^0.8.5+3
   image_picker_web: ^2.1.1
+  image_network: ^2.5.1
 
   particles_flutter: ^0.1.4
   parallax_rain: ^1.1.0
@@ -70,6 +70,12 @@ dependencies:
   qr_flutter: #^3.0.0
 
   measured_size: ^1.0.0
+
+  #local_hero: ^0.2.0
+
+  carousel_slider: ^4.2.1
+  video_player: ^2.4.10
+  url_launcher: ^6.1.7
 
 #dependency_overrides:
 #  barcode: ^2.2.3
@@ -109,23 +115,14 @@ flutter:
     - assets/
     - assets/bg.jpg
     - assets/me.jpg
-    - assets/mentor.jpg
-    - assets/mza.jpg
-    - assets/evosoft.jpg
-    - assets/bb.jpg
-    - assets/vendo.png
-    - assets/mzx.png
     - assets/masterfield.jpg
 
-    - assets/my_images/logo_NT_big.png
-    - assets/my_images/logo_NT_big_2.png
     - assets/jsons/
-    - assets/jsons/jobs_en.json
-    - assets/jsons/basedata_en.json
-    - assets/jsons/jobs_hu.json
-    - assets/jsons/basedata_hu.json
 
     - assets/pdf/
+    - assets/my_images/
+    #- assets/ref_medias/
+    - assets/companies_images/
 
     #- assets/l10n/
     #- assets/l10n/app_en.arb
