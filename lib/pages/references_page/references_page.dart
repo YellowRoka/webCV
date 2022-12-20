@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../common/background/background.dart';
-import '../../common/drawer/drawer_controller.dart';
+import '../../common/drawer_handler/drawer_handler.dart';
 import 'parts/drawer/drawer_ref.dart';
 import 'parts/fob/fob_ref.dart';
 import 'parts/cards/ref_card_links.dart';
 import 'data_structs/references_list_items.dart';
-import 'parts/cards/video_card_box.dart';
+import 'parts/cards/ref_card_video.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'parts/ref_card_head.dart';
+import 'parts/ref_head.dart';
 import 'parts/slider_builder.dart';
 
 class ReferencesPage extends StatelessWidget {
@@ -46,35 +46,35 @@ class ReferencesPageBody extends StatelessWidget {
             
             children: [
 
-              RefCardHead( text: localizations.referencies ),
+              RefHead( text: localizations.references ),
 
-              RefCardHead( text:  localizations.cruzrForMZX ),
-              SliderBuilder( referenciesList: referenciesList1 ),
+              RefHead( text:  localizations.cruzrForMZX ),
+              SliderBuilder( referencesList: referencesList1 ),
 
-              RefCardHead( text: localizations.diverzumTestJob ),
-              SliderBuilder( referenciesList: referenciesList2 ),              
+              RefHead( text: localizations.diverzumTestJob ),
+              SliderBuilder( referencesList: referencesList2 ),              
               
-              RefCardHead( text: localizations.ffnextTestJob ),
-              SliderBuilder( referenciesList: referenciesList3 ),
+              RefHead( text: localizations.ffnextTestJob ),
+              SliderBuilder( referencesList: referencesList3 ),
               
-              RefCardHead( text: localizations.referenciesVideos ),
-              SliderBuilder( referenciesList: [
+              RefHead( text: localizations.referencesVideos ),
+              SliderBuilder( referencesList: [
 
-                  VideoCardBox(
+                  RefCardVideo(
                     headText: localizations.ote,
                     videoUrl: 
                     "https://drive.google.com/uc?export=view&id=1umt44PWimSKh6ejsKqT28rQ515fvXFzE",
                     //'assets/ref_medias/videos/flutter_help_btn_1.mp4',
                   ),
 
-                  VideoCardBox(
+                  RefCardVideo(
                     headText:  localizations.czurPlanet,
                     videoUrl: 
                     "https://drive.google.com/uc?export=view&id=1ZnwOSqAzlGLSr-zMkC-oIl9zG4xCOSHu",
                     //'assets/ref_medias/videos/cruzr_2021_planet.mp4',
                   ),
 
-                  VideoCardBox(
+                  RefCardVideo(
                     headText: localizations.cruzrMVM,
                     videoUrl: 
                     "https://drive.google.com/uc?export=view&id=1VyYtoGT-H203LIxBYD-hYvPeNHxuFaGQ",

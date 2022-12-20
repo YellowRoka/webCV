@@ -7,9 +7,9 @@ import 'cards/parts/index_markers.dart';
 //help: https://blog.codemagic.io/how-to-improve-the-performance-of-your-flutter-app./
 
 class SliderBuilder extends StatefulWidget {
-  final List<Widget> referenciesList;
+  final List<Widget> referencesList;
   
-  const SliderBuilder({Key? key, required this.referenciesList}) : super(key: key);
+  const SliderBuilder({Key? key, required this.referencesList}) : super(key: key);
 
   @override
   State<SliderBuilder> createState() => _SliderBuilderState();
@@ -61,7 +61,7 @@ class _SliderBuilderState extends State<SliderBuilder> {
       children: [
 
         CarouselSlider(
-          items:              widget.referenciesList,
+          items:              widget.referencesList,
           carouselController: buttonCarouselController,
           options:            carouselOptions
         ),
@@ -72,7 +72,7 @@ class _SliderBuilderState extends State<SliderBuilder> {
 
             return Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children:          widget.referenciesList.asMap().entries.map( 
+              children:          widget.referencesList.asMap().entries.map( 
                 (entry) => IndexMarkers( 
                   activeIndex: value as int , 
                   id:          entry.key, 

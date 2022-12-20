@@ -4,9 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../bloc/state_manager_bloc.dart';
-import '../../../../common/fob/fob_animation_delegate.dart';
-import '../../../../common/fob/fob_builder.dart';
-import '../../../../common/fob/fob_data_model.dart';
+import '../../../home_page/parts/fob/fob_animation_delegate.dart';
+import '../../../home_page/parts/fob/fob_builder.dart';
+import '../../../home_page/parts/fob/fob_data_model.dart';
 
 class FOBRef extends StatefulWidget{
   const FOBRef({Key? key}) : super(key: key);

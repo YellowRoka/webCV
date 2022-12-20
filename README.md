@@ -13,7 +13,7 @@ This project is an online interactive savable CV.
     - downloadable PDF from data
     - send mail for creator
     - it has an interactive main page
-    - it has an interactive referencies page  
+    - it has an interactive references page  
 
 ## Used highlighted packages:
     - json

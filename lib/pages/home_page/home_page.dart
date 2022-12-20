@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../bloc/state_manager_bloc.dart';
 
-import '../../common/drawer/drawer_bar.dart';
-import '../../common/drawer/drawer_controller.dart';
-import '../../common/fob/fob_widget.dart';
+import 'parts/drawer/drawer_bar.dart';
+import '../../common/drawer_handler/drawer_handler.dart';
+import 'parts/fob/fob_widget.dart';
 import 'parts/home_page_bodies/page_handler.dart';
 
 class HomePage extends StatefulWidget{

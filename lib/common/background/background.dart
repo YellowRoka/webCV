@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class Background extends StatelessWidget {
@@ -18,13 +16,13 @@ class Background extends StatelessWidget {
           width:      width,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/bg.jpg'), 
+              image: AssetImage('assets/bgb.jpg'), 
               fit:   BoxFit.cover
             ),
           ),
         ),
 
-        ClipRect(
+        /*ClipRect(
           child: BackdropFilter(
             filter: ImageFilter.blur( sigmaX: 3, sigmaY: 3 ),
             child:   SizedBox(
@@ -33,7 +31,7 @@ class Background extends StatelessWidget {
               child:  Container()
             ),
           ),
-        ),
+        ),*/
 
       ],
     );

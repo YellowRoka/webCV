@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_cv/common/fob/fob_data_model.dart';
+import 'fob_data_model.dart';
 
 Widget commonFOBWidget( Object object ){
     final fobData = object as CommonFOBWidgetStruct;

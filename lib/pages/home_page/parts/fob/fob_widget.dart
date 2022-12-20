@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../bloc/state_manager_bloc.dart';
+import '../../../../bloc/state_manager_bloc.dart';
 import 'fob_animation_delegate.dart';
 import 'fob_builder.dart';
 import 'fob_data_model.dart';
@@ -9,9 +9,9 @@ import 'fob_data_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FOB extends StatefulWidget{
-  const FOB({Key? key}) : super(key: key);
-
   final double iconSize = 75;
+
+  const FOB({Key? key}) : super(key: key);
 
   @override
   State<FOB> createState() => _FOBState();
@@ -19,14 +19,12 @@ class FOB extends StatefulWidget{
 
 class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
   late AnimationController controller;
-  //late bool                isFOBShowed;
   late AppLocalizations    localizations;
 
   @override
   void initState(){
     super.initState();
-    //isFOBShowed   = true;
-    controller    = AnimationController(vsync: this, duration: const Duration( milliseconds: 250) );
+    controller    = AnimationController( vsync: this, duration: const Duration( milliseconds: 250 ) );
   }
 
   @override

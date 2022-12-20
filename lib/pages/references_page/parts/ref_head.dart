@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class RefCardHead extends StatelessWidget {
+class RefHead extends StatelessWidget {
   final String text;
 
-  const RefCardHead({Key? key, required this.text}) : super(key: key);
+  const RefHead({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

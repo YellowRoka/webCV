@@ -10,7 +10,7 @@ List<Size> referencesSizes = const [
   Size(500, 1000),
 ];
 
-List<Widget> referenciesList1 = [
+List<Widget> referencesList1 = [
     //"https://drive.google.com/uc?export=view&id=1EAENyLdeSVFeEdPbg56wpiO9K1Aqsowv",
     "cruzr_1.jpg",
     //"https://drive.google.com/uc?export=view&id=19Bh-N8NE9HHND02XSGewV9tRBLDXgmH5",
@@ -23,7 +23,7 @@ List<Widget> referenciesList1 = [
     "cruzr_5.jpg",
   ].map(_formatter).toList();
 
-List<Widget> referenciesList2 = [
+List<Widget> referencesList2 = [
     //"https://drive.google.com/uc?export=view&id=1esuVRmYj6qPNQ2avDKdQ8lZL7x32VNCF",
     "diverzum_login_1.png",
     //"https://drive.google.com/uc?export=view&id=1aF1PGRKSgFcvV43TC_2JkCzcatIG8a9a",
@@ -32,7 +32,7 @@ List<Widget> referenciesList2 = [
     "diverzum_input_3.png",
   ].map(_formatter).toList();
 
-List<Widget> referenciesList3 = [
+List<Widget> referencesList3 = [
     //"https://drive.google.com/uc?export=view&id=1QVmCjHImIim4gwtwBaAqaH4Xsfx4Rwz-",
     "ff_recipes_1.png",
     //"https://drive.google.com/uc?export=view&id=1lNBxMbFVi3Iwz7V3eVrmGsMWt5es5M9c",

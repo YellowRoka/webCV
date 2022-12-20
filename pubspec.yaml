@@ -114,6 +114,7 @@ flutter:
   assets:
     - assets/
     - assets/bg.jpg
+    - assets/bgb.jpg
     - assets/me.jpg
     - assets/masterfield.jpg
 

@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../../common/widgets/base_card.dart';
 import 'parts/ref_video_player.dart';
 
-class VideoCardBox extends StatelessWidget {
+class RefCardVideo extends StatelessWidget {
   final String headText;
   final String videoUrl;
   
-  const VideoCardBox({Key? key, required this.headText, required this.videoUrl}) : super(key: key);
+  const RefCardVideo({Key? key, required this.headText, required this.videoUrl}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
