@@ -121,8 +121,9 @@ flutter:
 
     - assets/pdf/
     - assets/my_images/
-    #- assets/ref_medias/
     - assets/companies_images/
+    - assets/ref_medias/images/
+    #- assets/ref_medias/videos/
 
     #- assets/l10n/
     #- assets/l10n/app_en.arb

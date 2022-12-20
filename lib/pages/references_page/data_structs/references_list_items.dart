@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../common/widgets/base_card.dart';
-import 'package:image_network/image_network.dart';
-//import 'package:url_launcher/url_launcher.dart';
-//import 'dart:html' as html;
+//import 'package:image_network/image_network.dart';
 
 //html.window.open('https://www.fluttercampus.com',"_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");
 List<Size> referencesSizes = const [
@@ -13,24 +11,36 @@ List<Size> referencesSizes = const [
 ];
 
 List<Widget> referenciesList1 = [
-    "https://drive.google.com/uc?export=view&id=1EAENyLdeSVFeEdPbg56wpiO9K1Aqsowv",//"cruzr_1.jpg",
-    "https://drive.google.com/uc?export=view&id=19Bh-N8NE9HHND02XSGewV9tRBLDXgmH5",//"cruzr_2.jpg",
-    "https://drive.google.com/uc?export=view&id=1LJ097LJnXHcw6AA5qE9ugYOHteuW7Cwt",//"cruzr_3.jpg",
-    "https://drive.google.com/uc?export=view&id=11n95CpbJxAyZK9_agLFw7wa3Ynur-tot",//"cruzr_4.jpg",
-    "https://drive.google.com/uc?export=view&id=1acqKmjXxJ_tRBX5HaVcypOZhnabBga8r",//"cruzr_5.jpg",
+    //"https://drive.google.com/uc?export=view&id=1EAENyLdeSVFeEdPbg56wpiO9K1Aqsowv",
+    "cruzr_1.jpg",
+    //"https://drive.google.com/uc?export=view&id=19Bh-N8NE9HHND02XSGewV9tRBLDXgmH5",
+    "cruzr_2.jpg",
+    //"https://drive.google.com/uc?export=view&id=1LJ097LJnXHcw6AA5qE9ugYOHteuW7Cwt",
+    "cruzr_3.jpg",
+    //"https://drive.google.com/uc?export=view&id=11n95CpbJxAyZK9_agLFw7wa3Ynur-tot",
+    "cruzr_4.jpg",
+    //"https://drive.google.com/uc?export=view&id=1acqKmjXxJ_tRBX5HaVcypOZhnabBga8r",
+    "cruzr_5.jpg",
   ].map(_formatter).toList();
 
 List<Widget> referenciesList2 = [
-    "https://drive.google.com/uc?export=view&id=1esuVRmYj6qPNQ2avDKdQ8lZL7x32VNCF",//"diverzum_login_1.png",
-    "https://drive.google.com/uc?export=view&id=1aF1PGRKSgFcvV43TC_2JkCzcatIG8a9a",//"diverzum_list_2.png",
-    "https://drive.google.com/uc?export=view&id=1AUCzy0gXdD2-Q0CQ16jyiTBYF0u3tudr",//"diverzum_input_3.png",
+    //"https://drive.google.com/uc?export=view&id=1esuVRmYj6qPNQ2avDKdQ8lZL7x32VNCF",
+    "diverzum_login_1.png",
+    //"https://drive.google.com/uc?export=view&id=1aF1PGRKSgFcvV43TC_2JkCzcatIG8a9a",
+    "diverzum_list_2.png",
+    //"https://drive.google.com/uc?export=view&id=1AUCzy0gXdD2-Q0CQ16jyiTBYF0u3tudr",
+    "diverzum_input_3.png",
   ].map(_formatter).toList();
 
 List<Widget> referenciesList3 = [
-    "https://drive.google.com/uc?export=view&id=1QVmCjHImIim4gwtwBaAqaH4Xsfx4Rwz-",//"ff_recipes_1.png",
-    "https://drive.google.com/uc?export=view&id=1lNBxMbFVi3Iwz7V3eVrmGsMWt5es5M9c",//"ff_recipes_2.png",
-    "https://drive.google.com/uc?export=view&id=1u-NjRYy_ljPSkHRPTTGcFrAwYW4BW66f",//"ff_recipes_3.png",
-    "https://drive.google.com/uc?export=view&id=1ipKButSZnI3NUclSQ6Gmjmc9uxqqIRE7",//"ff_recipes_4.png",
+    //"https://drive.google.com/uc?export=view&id=1QVmCjHImIim4gwtwBaAqaH4Xsfx4Rwz-",
+    "ff_recipes_1.png",
+    //"https://drive.google.com/uc?export=view&id=1lNBxMbFVi3Iwz7V3eVrmGsMWt5es5M9c",
+    "ff_recipes_2.png",
+    //"https://drive.google.com/uc?export=view&id=1u-NjRYy_ljPSkHRPTTGcFrAwYW4BW66f",
+    "ff_recipes_3.png",
+    //"https://drive.google.com/uc?export=view&id=1ipKButSZnI3NUclSQ6Gmjmc9uxqqIRE7",
+    "ff_recipes_4.png",
   ].map(_formatter).toList();
 
 
@@ -40,8 +50,8 @@ Widget _formatter( String data ) =>
       return BaseCard( 
         height:    700,//MediaQuery.of( context ).size.height, 
         width:     1000,//MediaQuery.of( context ).size.width, 
-        //children: [ Image( height: 500, width: 800, fit:BoxFit.contain, image: AssetImage( "assets/ref_medias/*/$data" )) ] 
-        children: [ 
+        children: [ Image( height: 500, width: 800, fit:BoxFit.contain, image: AssetImage( "assets/ref_medias/images/$data" )) ] 
+        /*children: [ 
           ImageNetwork( 
             //imageCache: CachedNetworkImageProvider(data),
             image:         data, 
@@ -51,7 +61,7 @@ Widget _formatter( String data ) =>
             fitWeb:        BoxFitWeb.contain,
             //fit:BoxFit.contain
           ) 
-        ] 
+        ] */
       );
     }
   );

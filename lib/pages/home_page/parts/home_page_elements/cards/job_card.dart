@@ -37,7 +37,7 @@ class JobCard extends StatelessWidget {
               children: [
                 CircleAvatar(  
                   radius:          69,
-                  backgroundImage: AssetImage( 'companies_images/${ description.image }' ),
+                  backgroundImage: AssetImage( 'assets/companies_images/${ description.image }' ),
                 ),
 
                 const SizedBox(width: 30, height: 5),
