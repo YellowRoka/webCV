@@ -46,3 +46,9 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Otheres:
+/assets/blender
+/assets/ref_medias/videos/
+/assets/ref_medias/orig_vids/
+/lib/pdf/not_working/
