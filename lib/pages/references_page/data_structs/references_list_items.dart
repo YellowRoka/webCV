@@ -1,6 +1,9 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 import '../../../common/widgets/base_card.dart';
+import '../parts/cards/ref_image_card.dart';
 //import 'package:image_network/image_network.dart';
 
 //html.window.open('https://www.fluttercampus.com',"_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");
@@ -47,21 +50,31 @@ List<Widget> referencesList3 = [
 Widget _formatter( String data ) =>
   Builder(
     builder: (context) {
-      return BaseCard( 
-        height:    700,//MediaQuery.of( context ).size.height, 
-        width:     1000,//MediaQuery.of( context ).size.width, 
-        children: [ Image( height: 500, width: 800, fit:BoxFit.contain, image: AssetImage( "assets/ref_medias/images/$data" )) ] 
-        /*children: [ 
-          ImageNetwork( 
-            //imageCache: CachedNetworkImageProvider(data),
-            image:         data, 
-            height:        500, 
-            width:         500, 
-            fitAndroidIos: BoxFit.contain,
-            fitWeb:        BoxFitWeb.contain,
-            //fit:BoxFit.contain
-          ) 
-        ] */
+      return RefImageCard( 
+        height:    700,
+        width:     900,
+        //child: 
+          //Container(
+            //width:     800, 
+            //alignment: Alignment.center,
+            child:     Image( 
+              height: 500, 
+              width:  800, 
+              fit:    BoxFit.contain, 
+              image:  AssetImage( "assets/ref_medias/images/$data" )
+            ),
+          //) 
+        
+        /*child: ImageNetwork( 
+          //imageCache: CachedNetworkImageProvider(data),
+          image:         data, 
+          height:        500, 
+          width:         500, 
+          fitAndroidIos: BoxFit.contain,
+          fitWeb:        BoxFitWeb.contain,
+          //fit:BoxFit.contain
+        ) 
+        */
       );
     }
   );

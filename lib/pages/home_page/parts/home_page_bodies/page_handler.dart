@@ -12,7 +12,6 @@ import '../home_page_elements/page_data_structs/grid_data_widgets.dart';
 import '../home_page_elements/page_data_structs/list_data_widgets.dart';
 import 'grid_body_view.dart';
 import 'list_body_view.dart';
-import '../scroll_provider/scroll_controller_provider.dart';
 
 class PageHandler extends StatefulWidget {
   const PageHandler( { Key? key} ) : super(key: key);
@@ -20,7 +19,6 @@ class PageHandler extends StatefulWidget {
   @override
   State< PageHandler > createState() => _PageHandlerState();
 }
-
 
 class _PageHandlerState extends State<PageHandler>{
   late bool   isSizeWarnShowed;
@@ -48,12 +46,10 @@ class _PageHandlerState extends State<PageHandler>{
             if( state is StateManagerStateLanguageChange     ){ context.read<LocaleProvider>().setLocale( state.loc );                  }
             if( state is StateManagerStatePopPDFNotification ){ showDialog( context: context, builder: (_) => const PDFAlertDialog() ); } 
             if( state is StateManagerStatePopQRDialog        ){ showDialog( context: context, builder: (_) => const QRDialog() );       } 
-            if( state is StateManagerStatePersonal           ){ context.read<ScrollControllerProvider>().setIndex( state.index );       }
-            if( state is StateManagerStateSchools            ){ context.read<ScrollControllerProvider>().setIndex( state.index );       }
-            if( state is StateManagerStateSkills             ){ context.read<ScrollControllerProvider>().setIndex( state.index );       }
-            if( state is StateManagerStateWorks              ){ context.read<ScrollControllerProvider>().setIndex( state.index );       }
-
-            if( (state is StateManagerStateWideViewEnabled) && (state.isWideViewEnabled == true) ){ isSizeWarnShowed = false; }
+            
+            if( (state is StateManagerStateWideViewEnabled) && (state.isWideViewEnabled == true) ){ 
+              isSizeWarnShowed = false; 
+            }
 
             if( (state is StateManagerStateWideViewEnabled) && (state.isWideViewEnabled == false) ){
               if( (isSizeWarnShowed == false) && (isWideViewOn == true) ){
@@ -64,18 +60,16 @@ class _PageHandlerState extends State<PageHandler>{
 
             if( state is StateManagerStateChangeView ){
               isWideViewOn = state.isWideViewOn;
-              context.read<ScrollControllerProvider>().reinit();
             }
-
           },
 
           builder: ( context, state ){
             if( (state is StateManagerStateChangeView) || (state is StateManagerStateLanguageChange) ){
               if( isWideViewOn ){
-                newChild = GridBodyView( dataPack: ( context.read<LocaleProvider>().locale == L10n.localeEN )?( dataLinesEN ):( dataLinesHU ) );
+                newChild = GridBodyView( dataPack: ( context.read<LocaleProvider>().locale == L10n.localeEN )?( dataLinesEN(context) ):( dataLinesHU(context) ) );
               }
               else{
-                newChild = ListBodyView( dataPack: ( context.read<LocaleProvider>().locale == L10n.localeEN )?( dataCardsEN ):( dataCardsHU ) );
+                newChild = ListBodyView( dataPack: ( context.read<LocaleProvider>().locale == L10n.localeEN )?( dataCardsEN(context) ):( dataCardsHU(context) ) );
               }
             }
 

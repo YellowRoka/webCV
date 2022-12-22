@@ -8,9 +8,9 @@ class PraticleBG extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircularParticle(
       key:                   UniqueKey(),
-      awayRadius:            100,
+      awayRadius:            10,
       numberOfParticles:     500,
-      speedOfParticles:      0.5,
+      speedOfParticles:      0.3,
       height:                2000,
       width:                 2000,
       onTapAnimation:        true,
@@ -20,8 +20,10 @@ class PraticleBG extends StatelessWidget {
       isRandSize:            true,
       isRandomColor:         true,
       randColorList: [
-        Colors.blue.withAlpha(210),
-        Colors.purple.withAlpha(210),
+        ///Colors.blue.withAlpha(210),
+        ///Colors.purple.withAlpha(210),
+        Colors.blue.withOpacity( 0.9 ),
+        Colors.grey.withOpacity( 0.9 ),
         //Colors.yellow.withAlpha(210),
         //Colors.green.withAlpha(210)
       ],
@@ -29,7 +31,7 @@ class PraticleBG extends StatelessWidget {
       enableHover:        true,
       hoverColor:       Colors.white,
       hoverRadius:        90,
-      connectDots:        false, //not recommended
+      connectDots:        true, //not recommended
     );
   }
 }

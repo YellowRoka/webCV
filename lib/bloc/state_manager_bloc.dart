@@ -6,7 +6,6 @@ import 'package:mailto/mailto.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-
 import '../common/json_workers/json_readers.dart';
 import '../pdf/pdf_cards.dart';
 import '../pdf/pdfV2.dart';
@@ -17,24 +16,24 @@ part 'state_manager_event.dart';
 part 'state_manager_state.dart';
 
 class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
-        bool                  isPDFCreated      = true; 
-        bool                  isVideViewOn      = true;
-        bool                  isVideViewEnabled = true;
-        bool                  isLanguageEng     = true;
+  bool isPDFCreated      = true; 
+  bool isVideViewOn      = true;
+  bool isVideViewEnabled = true;
+  bool isLanguageEng     = true;
 
+  JsonReaders jsonhandler = JsonReaders();
 
   StateManagerBloc() : super( const StateManagerStateInit() ){
+    jsonhandler.readJSONData();
 
     on<StateManagerEventInit>( (event, emit)  async {
       emit( const StateManagerStateToSplashPage() );
+      await Future.delayed( const Duration( milliseconds: 10000 ) );
       emit( const StateManagerStateInit() );
-      readJSONData();
-      await Future.delayed( const Duration( milliseconds: 3000 ) );
       emit( const StateManagerStateJsonLoaded() );
       emit( const StateManagerStateToMainPage() );
       await Future.delayed( const Duration( milliseconds: 1000 ) );
       emit( const StateManagerStateFOBEnabled() );
-
     });
 
     on<StateManagerEventPopQRDialog>( (event, emit){
@@ -58,8 +57,6 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       emit( StateManagerStateWideViewEnabled( isVideViewEnabled ) );
       emit( StateManagerStateChangeView( isVideViewOn ) );
     });
-
-
 
 
     on<StateManagerEventShowBar>( (event, emit) {
@@ -108,8 +105,8 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       ScreenshotController screenshotController = ScreenshotController();
 
       PDFCards pdfCards = PDFCards( 
-        jobs:     jobsEN, 
-        baseData: baseDataEN
+        jobs:     jsonhandler.jobsEN, 
+        baseData: jsonhandler.baseDataEN
       );
       
       if( kIsWeb ){

@@ -1,9 +1,7 @@
-
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 import '../../common/background/background.dart';
+import 'parts/opener_video_player.dart';
 
 class SplashSreen extends StatelessWidget {
   const SplashSreen({Key? key}) : super(key: key);
@@ -19,6 +17,12 @@ class SplashSreen extends StatelessWidget {
       children: [
 
         Background( height: height, width: width ),
+
+        Container(
+          height: height,
+          width:  width,
+          color: Colors.black,
+        ),
 /*
          Center(
           child: Column(
@@ -31,6 +35,7 @@ class SplashSreen extends StatelessWidget {
           ),
         ),
 */
+/*
         ClipRect(
           child: BackdropFilter(
             filter: ImageFilter.blur( sigmaX: 10, sigmaY: 10 ),
@@ -41,8 +46,10 @@ class SplashSreen extends StatelessWidget {
             ),
           ),
         ),
+*/
 
-        Center(
+        const Center( child: OpenerVideoPlayer( videoLink: 'assets/blender/videos/opener.mp4') )
+        /*Center(
           child: Column(
             mainAxisAlignment:  MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -60,7 +67,7 @@ class SplashSreen extends StatelessWidget {
               ),
             ],
           ),
-        ),
+        ),*/
 
       ],
     );

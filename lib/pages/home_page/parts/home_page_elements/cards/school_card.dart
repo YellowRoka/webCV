@@ -45,9 +45,9 @@ class SchoolCard extends StatelessWidget{
               ],
             ),
 
-            Text( localizations.generalSubs,       style: textStyle ), const SizedBox( height: 10 ),
+            Text( localizations.generalSubs,      style: textStyle ), const SizedBox( height: 10 ),
             Text( description.generalSubjects,    style: textStyle ), const SizedBox( height: 20 ),
-            Text( localizations.vocationalSubs,    style: textStyle ), const SizedBox( height: 10 ),
+            Text( localizations.vocationalSubs,   style: textStyle ), const SizedBox( height: 10 ),
             Text( description.vocationalSubjects, style: textStyle ), const SizedBox( height: 20 ),
 
             Text( "${localizations.thesis} ${description.thesis}",   style: textStyle ), const SizedBox( height: 20 ),

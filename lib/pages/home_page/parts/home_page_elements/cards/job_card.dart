@@ -80,7 +80,7 @@ class JobCard extends StatelessWidget {
                   Text( localizations.experiences,  style: headStyle ), const SizedBox( height: 10 ), Text( description.experinces, style: textStyle, maxLines: 10, overflow: TextOverflow.clip ), const SizedBox( height: 30 ),
                   Text( localizations.progLang,     style: headStyle ), const SizedBox( height: 10 ), Text( description.languages,  style: textStyle, maxLines: 10, overflow: TextOverflow.clip ), const SizedBox( height: 30 ),
                   
-                  Text( description.commit??"",  style: textStyle, maxLines: 10, overflow: TextOverflow.ellipsis )
+                  Text( description.commit??"", style: textStyle, maxLines: 10, overflow: TextOverflow.ellipsis )
                 ],
                 
               ),

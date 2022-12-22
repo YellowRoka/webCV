@@ -1,63 +1,82 @@
 import 'package:flutter/material.dart';
-//import 'package:local_hero/local_hero.dart';
+import 'package:provider/provider.dart';
 
-import '../../../../../common/json_workers/json_readers.dart';
+import '../../../../../common/json_workers/data_struct/json_data_struct.dart';
+import '../../../../../common/json_workers/json_provider/json_provider.dart';
 import '../cards/data_card.dart';
 import '../cards/job_card.dart';
 import '../cards/school_card.dart';
 import '../cards/skills_card.dart';
 
 
+List<Widget> dataLinesEN( BuildContext context ){
 
-final List<Widget> dataLinesEN = [
-  const SizedBox( height: 10 ),
-
-  _CardLineOf2(
-    child1: Column(
-      children:[
-         /*LocalHero( tag: 'id1', child: */DataCard( description: baseDataEN , width: 800 )/*)*/, 
-
-        const SizedBox( height: 10 ),
-
-        _CardLineOf2( 
-          child1:  /*LocalHero( tag: 'id2', child: */SchoolCard( description: baseDataEN.schools[ 0 ], width: 400 )/*)*/, 
-          child2:  /*LocalHero( tag: 'id3', child: */SchoolCard( description: baseDataEN.schools[ 1 ], width: 400 )/*)*/,
-        )
-      ]
-    ), 
-    child2:  /*LocalHero( tag: 'id4', child: */SkillsCard( description: baseDataEN, width: 600 )/*)*/,
-  ),
+  JsonDataStruct? jsonDataPack = context.read<JsonDataProvider>().readAllData();
   
-  const SizedBox( height: 10 ), _CardLineOf2( child1:  /*LocalHero( tag: 'id5', child: */JobCard( description: jobsEN.jobs[ 0 ], width: 700 )/*)*/, child2:  /*LocalHero( tag: 'id6',  child: */JobCard( description: jobsEN.jobs[ 1 ], width: 700 ) )/*)*/,
-  const SizedBox( height: 10 ), _CardLineOf2( child1:  /*LocalHero( tag: 'id7', child: */JobCard( description: jobsEN.jobs[ 2 ], width: 700 )/*)*/, child2:  /*LocalHero( tag: 'id8',  child: */JobCard( description: jobsEN.jobs[ 3 ], width: 700 ) )/*)*/,
-  const SizedBox( height: 10 ), _CardLineOf2( child1:  /*LocalHero( tag: 'id9', child: */JobCard( description: jobsEN.jobs[ 4 ], width: 700 )/*)*/, child2:  /*LocalHero( tag: 'id10', child: */JobCard( description: jobsEN.jobs[ 5 ], width: 700 ) )/*)*/,
-  const SizedBox( height: 10 ),
-];
+  if(jsonDataPack == null ){
+    return[Container()];
+  }
 
-final List<Widget> dataLinesHU = [
-  const SizedBox( height: 10 ),
+  return [
+    const SizedBox( height: 10 ),
 
-  _CardLineOf2(
-    child1: Column(
-      children:[
-         /*LocalHero( tag: 'id1', child: */DataCard( description: baseDataHU , width: 800 )/*)*/, 
+    _CardLineOf2(
+      child1: Column(
+        children:[
+          DataCard( description: jsonDataPack.baseDataEN, width: 800 ), 
 
-        const SizedBox( height: 10 ),
+          const SizedBox( height: 10 ),
 
-        _CardLineOf2( 
-          child1:  /*LocalHero( tag: 'id2', child: */SchoolCard( description: baseDataHU.schools[ 0 ], width: 400 )/*)*/, 
-          child2:  /*LocalHero( tag: 'id3', child: */SchoolCard( description: baseDataHU.schools[ 1 ], width: 400 )/*)*/,
-        )
-      ]
-    ), 
-    child2:  /*LocalHero( tag: 'id4', child:*/ SkillsCard( description: baseDataHU, width: 600 )/*)*/,
-  ),
+          _CardLineOf2( 
+            child1: SchoolCard( description: jsonDataPack.baseDataEN.schools[ 0 ], width: 400 ), 
+            child2: SchoolCard( description: jsonDataPack.baseDataEN.schools[ 1 ], width: 400 ),
+          )
+        ]
+      ), 
+      child2:  SkillsCard( description: jsonDataPack.baseDataEN, width: 600 ),
+    ),
+    
+    const SizedBox( height: 10 ), _CardLineOf2( child1: JobCard( description: jsonDataPack.jobsEN.jobs[ 0 ], width: 700 ), child2: JobCard( description: jsonDataPack.jobsEN.jobs[ 1 ], width: 700 ) ),
+    const SizedBox( height: 10 ), _CardLineOf2( child1: JobCard( description: jsonDataPack.jobsEN.jobs[ 2 ], width: 700 ), child2: JobCard( description: jsonDataPack.jobsEN.jobs[ 3 ], width: 700 ) ),
+    const SizedBox( height: 10 ), _CardLineOf2( child1: JobCard( description: jsonDataPack.jobsEN.jobs[ 4 ], width: 700 ), child2: JobCard( description: jsonDataPack.jobsEN.jobs[ 5 ], width: 700 ) ),
+    const SizedBox( height: 10 ),
+  ];
+}
+
+List<Widget> dataLinesHU( BuildContext context ){
+
+  JsonDataStruct? jsonDataPack = context.read<JsonDataProvider>().readAllData();
   
-  const SizedBox( height: 10 ), _CardLineOf2( child1:  /*LocalHero( tag: 'id5', child: */JobCard( description: jobsHU.jobs[ 0 ], width: 700 )/*)*/, child2:  /*LocalHero( tag: 'id6',  child: */JobCard( description: jobsHU.jobs[ 1 ], width: 700 ) )/*)*/,
-  const SizedBox( height: 10 ), _CardLineOf2( child1:  /*LocalHero( tag: 'id7', child: */JobCard( description: jobsHU.jobs[ 2 ], width: 700 )/*)*/, child2:  /*LocalHero( tag: 'id8',  child: */JobCard( description: jobsHU.jobs[ 3 ], width: 700 ) )/*)*/,
-  const SizedBox( height: 10 ), _CardLineOf2( child1:  /*LocalHero( tag: 'id9', child: */JobCard( description: jobsHU.jobs[ 4 ], width: 700 )/*)*/, child2:  /*LocalHero( tag: 'id10', child: */JobCard( description: jobsHU.jobs[ 5 ], width: 700 ) )/*)*/,
-  const SizedBox( height: 10 ),
-];
+  if(jsonDataPack == null ){
+    return[Container()];
+  }
+  
+  return [
+    const SizedBox( height: 10 ),
+
+    _CardLineOf2(
+      child1: Column(
+        children:[
+          DataCard( description: jsonDataPack.baseDataHU , width: 800 ), 
+
+          const SizedBox( height: 10 ),
+
+          _CardLineOf2( 
+            child1: SchoolCard( description: jsonDataPack.baseDataHU.schools[ 0 ], width: 400 ), 
+            child2: SchoolCard( description: jsonDataPack.baseDataHU.schools[ 1 ], width: 400 ),
+          )
+        ]
+      ), 
+      child2: SkillsCard( description: jsonDataPack.baseDataHU, width: 600 ),
+    ),
+    
+    const SizedBox( height: 10 ), _CardLineOf2( child1: JobCard( description: jsonDataPack.jobsHU.jobs[ 0 ], width: 700 ), child2: JobCard( description: jsonDataPack.jobsHU.jobs[ 1 ], width: 700 ) ),
+    const SizedBox( height: 10 ), _CardLineOf2( child1: JobCard( description: jsonDataPack.jobsHU.jobs[ 2 ], width: 700 ), child2: JobCard( description: jsonDataPack.jobsHU.jobs[ 3 ], width: 700 ) ),
+    const SizedBox( height: 10 ), _CardLineOf2( child1: JobCard( description: jsonDataPack.jobsHU.jobs[ 4 ], width: 700 ), child2: JobCard( description: jsonDataPack.jobsHU.jobs[ 5 ], width: 700 ) ),
+    const SizedBox( height: 10 ),
+  ];
+}
+
 
 class _CardLineOf2 extends StatelessWidget {
   final Widget child1;
@@ -70,7 +89,7 @@ class _CardLineOf2 extends StatelessWidget {
     return Row(
       mainAxisAlignment:  MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [ child1, const SizedBox(width: 10), child2 ],
+      children:           [ child1, const SizedBox( width: 10 ), child2 ],
     );
   }
 }

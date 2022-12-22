@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:provider/provider.dart';
 
-import '../../../../common/json_workers/json_readers.dart';
+import '../../../../common/json_workers/data_struct/json_data_struct.dart';
+import '../../../../common/json_workers/json_provider/json_provider.dart';
 import '../../../../common/widgets/base_card.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'parts/link_line_builder.dart';
 
 class RefCardLinks extends StatelessWidget {
   final String headText;
@@ -13,7 +16,8 @@ class RefCardLinks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AppLocalizations localizations = AppLocalizations.of(context);
+    AppLocalizations localizations  = AppLocalizations.of(context);
+    JsonDataStruct?  jsonDataStruct = context.read<JsonDataProvider>().readAllData();
 
     return BaseCard(
       children: [
@@ -37,8 +41,8 @@ class RefCardLinks extends StatelessWidget {
               child:   Column(
                 mainAxisAlignment:  MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:           webLinks.mediaLinks.asMap().entries.map(
-                  (entry) => LinkBox(link: entry.value )
+                children:           jsonDataStruct!.webLinks.mediaLinks.asMap().entries.map(
+                  (entry) => LinkLineBuilder(link: entry.value )
                 ).toList(),
               ),
             ),
@@ -55,8 +59,8 @@ class RefCardLinks extends StatelessWidget {
               child:   Column(
                 mainAxisAlignment:  MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:           webLinks.githubLinks.asMap().entries.map(
-                  (entry) => LinkBox(link: entry.value )
+                children:           jsonDataStruct.webLinks.githubLinks.asMap().entries.map(
+                  (entry) => LinkLineBuilder(link: entry.value )
                 ).toList(),
               ),
             ),
@@ -65,47 +69,5 @@ class RefCardLinks extends StatelessWidget {
         ),
       ],
     );
-  }
-}
-
-class LinkBox extends StatefulWidget {
-  final String link;
-  const LinkBox({Key? key, required this.link}) : super(key: key);
-
-  @override
-  State<LinkBox> createState() => _LinkBoxState();
-}
-
-class _LinkBoxState extends State<LinkBox> {
-  late TextDecoration textUnderLine;
-  
-  @override
-  void initState() {
-    super.initState();
-    textUnderLine = TextDecoration.none;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(0,5,0,5),
-      child: SizedBox(
-        child:  MouseRegion(
-          onEnter: (PointerEvent details) => setState( () { textUnderLine = TextDecoration.underline; } ),
-          onExit:  (PointerEvent details) => setState( () { textUnderLine = TextDecoration.none;      } ),
-          child:   GestureDetector(   
-            onTap: ()=>_openUri(widget.link),
-            child: Text( widget.link, overflow: TextOverflow.ellipsis, maxLines: 10, style: TextStyle( color: Colors.white, fontSize: 24, decoration: textUnderLine) )),
-        ),
-      ),
-    );
-  }
-
-  Future<void> _openUri(String link) async {
-    final linkUri = Uri.parse(link);
-
-    if(!await launchUrl(linkUri)) {
-      throw 'Could not launch $link';
-    }
   }
 }

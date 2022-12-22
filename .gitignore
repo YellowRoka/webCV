@@ -48,7 +48,7 @@ app.*.map.json
 /android/app/release
 
 # Otheres:
-/assets/blender
+/assets/blender/blends/
 /assets/ref_medias/videos/
 /assets/ref_medias/orig_vids/
 /lib/pdf/not_working/

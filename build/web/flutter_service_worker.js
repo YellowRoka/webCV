@@ -3,9 +3,12 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "5819abd2227fe4777b70a3e9392e2183",
+  "assets/AssetManifest.json": "aae10f4df7ee265b050737c84c0d0bff",
 "assets/assets/bg.jpg": "9add6610748b5f1fc5e3f40aafa6733f",
 "assets/assets/bgb.jpg": "1130a18b9e1abe5d35b60ac8408ebcef",
+"assets/assets/bg_honeycomb.jpg": "490879a0d027d7fa831e50e5f77d8df2",
+"assets/assets/bg_honeycomb_b.jpg": "f60edb1b1b6f4d2432b284a95fc53fe1",
+"assets/assets/blender/videos/opener.mp4": "c23d40b6590514774c77287910f3ca64",
 "assets/assets/companies_images/bb.jpg": "2b2ce76b50d822a9ede167d646de7a80",
 "assets/assets/companies_images/evosoft.jpg": "dfd4bbacb14cd1da899bc3667ac55acb",
 "assets/assets/companies_images/mentor.jpg": "5a3c3b0dae34299f258a01b8a04696a7",
@@ -52,9 +55,9 @@ const RESOURCES = {
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "b6bdc81a80c817020cd4f3e378eeb9d7",
-"/": "b6bdc81a80c817020cd4f3e378eeb9d7",
-"main.dart.js": "bfd25605f3a2b42298ad1003489442aa",
+"index.html": "ff3a828dc0c2ccb6f1a96ee9b928b6a4",
+"/": "ff3a828dc0c2ccb6f1a96ee9b928b6a4",
+"main.dart.js": "03dee7c23bc0b4e7ecc3ff69cfd027db",
 "manifest.json": "8a4fe73f6de4d4c2a4d188a032b7de5d",
 "version.json": "493e3dd114bc38996027421d9aad5409"
 };

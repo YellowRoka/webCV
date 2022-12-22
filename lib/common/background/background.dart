@@ -16,7 +16,7 @@ class Background extends StatelessWidget {
           width:      width,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/bgb.jpg'), 
+              image: AssetImage('assets/bg_honeycomb_b.jpg'), 
               fit:   BoxFit.cover
             ),
           ),

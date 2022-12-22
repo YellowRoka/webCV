@@ -115,6 +115,9 @@ flutter:
     - assets/
     - assets/bg.jpg
     - assets/bgb.jpg
+    - assets/bg_honeycomb.jpg
+    - assets/bg_honeycomb_b.jpg
+
     - assets/me.jpg
     - assets/masterfield.jpg
 
@@ -124,6 +127,8 @@ flutter:
     - assets/my_images/
     - assets/companies_images/
     - assets/ref_medias/images/
+
+    - assets/blender/videos/opener.mp4
     #- assets/ref_medias/videos/
 
     #- assets/l10n/

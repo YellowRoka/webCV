@@ -13,14 +13,14 @@ class BaseCard extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular( 25 ),
       child:        BackdropFilter(
-        filter: ImageFilter.blur( sigmaX: 15, sigmaY: 15 ),
+        filter: ImageFilter.blur( sigmaX: 3, sigmaY: 3 ),//15,15
 
         child:  Container(
           height:     height,
           width:      width,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular( 30 ),
-            color:      Colors.black45,
+            color:      Colors.black45.withOpacity(0.7),
             /*boxShadow:  [
               BoxShadow(
                 color:      const Color.fromARGB(255, 33, 100, 243).withOpacity(0.35), //New
@@ -35,7 +35,7 @@ class BaseCard extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all( 25 ),
             child: Column(
-              //mainAxisAlignment:  MainAxisAlignment.center,
+              mainAxisAlignment:  MainAxisAlignment.start,
               //crossAxisAlignment: CrossAxisAlignment.start,
               children: children,
             ),

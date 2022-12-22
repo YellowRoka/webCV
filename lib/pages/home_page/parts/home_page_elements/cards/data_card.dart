@@ -21,7 +21,7 @@ class DataCard extends StatelessWidget{
     AppLocalizations localizations = AppLocalizations.of(context);
 
     return BaseCard(
-      height:    height,
+      height:   height,
       width:    width,
       children: [
         Flex(
