@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bloc/state_manager_bloc.dart';
 import 'common/json_workers/json_provider/json_provider.dart';
-import 'common/json_workers/json_readers.dart';
 import 'dynamic_routes/dynamic_routes.dart';
 import 'dynamic_routes/dynamic_routes_handler.dart';
 

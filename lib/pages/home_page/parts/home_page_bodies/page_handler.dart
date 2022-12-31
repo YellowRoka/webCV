@@ -6,6 +6,7 @@ import '../../../../common/background/background.dart';
 import '../../../../common/popup_dialogs/pdf_alert_dialog.dart';
 import '../../../../common/popup_dialogs/qr_dialog.dart';
 import '../../../../common/popup_dialogs/size_warning_dialog.dart';
+import '../../../../local_changer/language_changer.dart';
 import '../../../../local_changer/locale_provider.dart';
 import '../../../../local_changer/support_locale.dart';
 import '../home_page_elements/page_data_structs/grid_data_widgets.dart';
@@ -81,6 +82,8 @@ class _PageHandlerState extends State<PageHandler>{
             
           }
         ),
+
+        const LanguageChanger(),
 
       ],
     );

@@ -21,7 +21,7 @@ class DrawerBarRef extends StatelessWidget {
           child: Column(
             children: [
 
-              const LanguageChanger(),
+              //const LanguageChanger(),
               const SizedBox( height: 10 ),
               SizedBox(width: widgetWidth, child: ElevatedButton( style: buttonTheme, child: const Icon( Icons.align_horizontal_left, color: Colors.white, size: 100 ), onPressed: () => callForBackToHome( context )   )),
               const SizedBox( height: 10 ),

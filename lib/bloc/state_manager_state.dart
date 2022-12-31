@@ -14,11 +14,12 @@ class StateManagerStateInit extends StateManagerState {
 
 class StateManagerStateShowedBar extends StateManagerState {
   final bool isLanguageEng;
+  final bool isWideViewOn;
   
-  const StateManagerStateShowedBar( this.isLanguageEng );
+  const StateManagerStateShowedBar( this.isLanguageEng, this.isWideViewOn );
 
   @override
-  List<Object> get props => [ isLanguageEng ];
+  List<Object> get props => [ isLanguageEng, isWideViewOn ];
 }
 
 class StateManagerStateHidedBar extends StateManagerState {

@@ -9,7 +9,7 @@ import 'fob_data_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FOB extends StatefulWidget{
-  final double iconSize = 75;
+  final double iconSize = 65;
 
   const FOB({Key? key}) : super(key: key);
 
@@ -110,6 +110,16 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
           widgetKey:  const Key( "MFOBQR" ),
         ),
 
+        CommonFOBWidgetStruct(
+          size:       widget.iconSize,
+          cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEvenToReferencesPage() ), 
+          toolTip:    localizations.hintGoToRef,
+          icon:       Icons.add_task_rounded,
+          controller: controller,
+          color:      Colors.black.withOpacity( 0.70 ),
+          //widgetKey: const Key( "FOBPCV" ),
+        ),
+        
         CommonFOBWidgetStruct(
           size:       widget.iconSize, 
           cbk:        (){}, 

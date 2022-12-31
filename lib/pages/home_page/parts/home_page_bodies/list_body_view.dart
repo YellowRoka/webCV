@@ -30,17 +30,19 @@ class ListBodyView extends StatelessWidget {
         ),
 
         //https://www.youtube.com/watch?v=xnpzxZNi5x0
-        BlocListener< StateManagerBloc, StateManagerState >(
-          listener: (context, state) {
+        Padding(
+          padding: const EdgeInsets.only(top:0.0),
+          child:   BlocListener< StateManagerBloc, StateManagerState >(
+            listener: (context, state) {
 
-            if(
-              ( state is StateManagerStatePersonal ) ||
-              ( state is StateManagerStateSchools  ) ||
-              ( state is StateManagerStateSkills   ) ||
-              ( state is StateManagerStateWorks    )
-            ){ 
-              itemScrollController.scrollTo(index: state.props[0] as int, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-            }
+              if(
+                ( state is StateManagerStatePersonal ) ||
+                ( state is StateManagerStateSchools  ) ||
+                ( state is StateManagerStateSkills   ) ||
+                ( state is StateManagerStateWorks    )
+              ){ 
+                itemScrollController.scrollTo(index: state.props[0] as int, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
+              }
             },
             child: Center(
               child: SizedBox(
@@ -53,8 +55,9 @@ class ListBodyView extends StatelessWidget {
                   itemBuilder:           ( context, index ) => dataPack?[ index ]??Container()
                 ),
               ),
-            
             )
+
+          ),
         ), 
 
       ]

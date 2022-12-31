@@ -35,31 +35,34 @@ class GridBodyView extends StatelessWidget {
         ),
           
         //https://www.youtube.com/watch?v=xnpzxZNi5x0
-        BlocListener< StateManagerBloc, StateManagerState >(
-          listener: (context, state) {
-            if(
-              ( state is StateManagerStatePersonal ) ||
-              ( state is StateManagerStateSchools  ) ||
-              ( state is StateManagerStateSkills   ) ||
-              ( state is StateManagerStateWorks    )
-            ){ 
-              itemScrollController.scrollTo( index: state.props[0] as int, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
-            }
-            },
+        Padding(
+          padding: const EdgeInsets.only(top:0.0),
+          child:   BlocListener< StateManagerBloc, StateManagerState >(
+            listener: (context, state) {
+              if(
+                ( state is StateManagerStatePersonal ) ||
+                ( state is StateManagerStateSchools  ) ||
+                ( state is StateManagerStateSkills   ) ||
+                ( state is StateManagerStateWorks    )
+              ){ 
+                itemScrollController.scrollTo( index: state.props[0] as int, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
+              }
+              },
 
-          child: Center(
-            child: SizedBox(
-              height: MediaQuery.of( context ).size.height,
-              //width:  1420,
-              child: ScrollablePositionedList.builder(
-                padding:               EdgeInsets.fromLTRB( 248*paddingRation*3.9, 10, 248*paddingRation*1, 10 ),
-                key:                   const Key("maingrid"),
-                itemCount:             dataPack?.length??0,
-                itemScrollController:  itemScrollController,
-                itemBuilder:           ( context, index ) => dataPack?[ index ]??Container()
+            child: Center(
+              child: SizedBox(
+                height: MediaQuery.of( context ).size.height,
+                //width:  1420,
+                child: ScrollablePositionedList.builder(
+                  padding:               EdgeInsets.fromLTRB( 248*paddingRation*3.9, 10, 248*paddingRation*1, 10 ),
+                  key:                   const Key("maingrid"),
+                  itemCount:             dataPack?.length??0,
+                  itemScrollController:  itemScrollController,
+                  itemBuilder:           ( context, index ) => dataPack?[ index ]??Container()
+                ),
               ),
-            ),
-          )
+            )
+          ),
         )
 
       ]

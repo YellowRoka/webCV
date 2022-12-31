@@ -28,7 +28,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
     on<StateManagerEventInit>( (event, emit)  async {
       emit( const StateManagerStateToSplashPage() );
-      await Future.delayed( const Duration( milliseconds: 10000 ) );
+      await Future.delayed( const Duration( milliseconds: 9500 ) );
       emit( const StateManagerStateInit() );
       emit( const StateManagerStateJsonLoaded() );
       emit( const StateManagerStateToMainPage() );
@@ -60,7 +60,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
 
     on<StateManagerEventShowBar>( (event, emit) {
-      emit( StateManagerStateShowedBar( isLanguageEng ) );
+      emit( StateManagerStateShowedBar( isLanguageEng, isVideViewOn ) );
     });
 
     on<StateManagerEventHideBar>( (event, emit) {

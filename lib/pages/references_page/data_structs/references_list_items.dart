@@ -2,7 +2,6 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-import '../../../common/widgets/base_card.dart';
 import '../parts/cards/ref_image_card.dart';
 //import 'package:image_network/image_network.dart';
 
@@ -24,6 +23,7 @@ List<Widget> referencesList1 = [
     "cruzr_4.jpg",
     //"https://drive.google.com/uc?export=view&id=1acqKmjXxJ_tRBX5HaVcypOZhnabBga8r",
     "cruzr_5.jpg",
+    "cruzr_6.jpg"
   ].map(_formatter).toList();
 
 List<Widget> referencesList2 = [

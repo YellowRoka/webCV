@@ -214,6 +214,11 @@
     "gitLinks": "Git Projects:",
     "@gitLinks": {
       "description": ""
+    },
+
+    "hintGoToRef": "Go to References",
+    "@hintGokToRef": {
+      "description": ""
     }
 
 }
