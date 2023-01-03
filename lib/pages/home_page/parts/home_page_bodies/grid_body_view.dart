@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -38,7 +37,7 @@ class GridBodyView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top:0.0),
           child:   BlocListener< StateManagerBloc, StateManagerState >(
-            listener: (context, state) {
+            listener: ( context, state ){
               if(
                 ( state is StateManagerStatePersonal ) ||
                 ( state is StateManagerStateSchools  ) ||
@@ -47,7 +46,7 @@ class GridBodyView extends StatelessWidget {
               ){ 
                 itemScrollController.scrollTo( index: state.props[0] as int, curve: Curves.easeInOut, duration: const Duration( milliseconds: 2000 ) );
               }
-              },
+            },
 
             child: Center(
               child: SizedBox(
@@ -56,9 +55,9 @@ class GridBodyView extends StatelessWidget {
                 child: ScrollablePositionedList.builder(
                   padding:               EdgeInsets.fromLTRB( 248*paddingRation*3.9, 10, 248*paddingRation*1, 10 ),
                   key:                   const Key("maingrid"),
-                  itemCount:             dataPack?.length??0,
+                  itemCount:             dataPack?.length ?? 0,
                   itemScrollController:  itemScrollController,
-                  itemBuilder:           ( context, index ) => dataPack?[ index ]??Container()
+                  itemBuilder:           ( context, index ) => dataPack?[ index ] ?? Container()
                 ),
               ),
             )

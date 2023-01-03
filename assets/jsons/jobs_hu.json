@@ -8,7 +8,7 @@
             "date":       "Mar 2022 - jelenleg",
             "tasks":      "- rendszer architektúra létrehozása\n- Alkalmazásszintű tervezés és fejlesztés a termékkövetelmények alapján\n- a rendszer hardverrészeinek kiválasztása\n- UI tervezés létrehozása és megvalósítása\n- állapotgépek tervezése és létrehozása\n- helyi adatbázisok létrehozása és megvalósítása\n - a megrendelői követelmények megvalósítása\n- kapcsolattartás a megrendelő többi fejlesztői csapatával\n- ütemterv készítése és a projekt részeinek koordinálása\n- alap kiadási folyamatok létrehozása\n- animációk és videók létrehozása\n- kódgenerátor írása\n- refaktorálás\n- teljesítményoptimalizálás",
             "experinces": "Flutter, Debian, Windows, Web, Raspberry Pi4, ORM, Hive, BLOC, REST-API, TCP Socket, Blender, Asana, Git, JSON, embedded sytem, front end, graphical design,",
-            "languages":  "Dart, C/C++, python, java",
+            "languages":  "Dart, (C/C++, python, java)",
             "commit":     "A cégnél eltöltött idő alatt én vagyok a fő felelős a központi komponens fejlesztéséért. Ez az összetevő összekapcsolja az alap hardver funkciókat a felhő funkcióval, és tartja a kapcsolatot a felhasználóval. Én menedzselem a projekt ezen részét."
         },
         {
@@ -60,7 +60,7 @@
             "position":   "Software Mérnök",
             "image":      "evosoft.jpg",
             "place":      "Budapest, Magyarország",
-            "date":       "Feb 2017 - Jan 2019 2 év",
+            "date":       "Feb 2017 - Jan 2019, 2 év",
             "tasks":      "- mérések kiértékelése\n- fejlesztői oldali mérések összeállítása, futtatása és értékelése\n- tesztkörnyezetek fejlesztése\n- modultesztek fejlesztése\n- szoftverfejlesztés\n- szoftverhiba-javítások\n- fejlesztések megvalósítása  kód és modell szint\n- modell alapú fejlesztés (ARXML szerkesztés)\n- dokumentáció\n- hardver karbantartás\n- modulok, funkciók reaktorálása\n- UML grafika szerkesztése\n- Követelmények feldolgozása és megvalósítása\n- tesztelés\n- QAC hibák ellenőrzése és javítása\n- részvétel a review-kon",
             "experinces": "INCA, Vector, QAC, AUTOSAR, GIT, RTRT modul testing, Trace32, Eclipse, Visual Studio, Notepad++, (AR)XML, tickets, Jenkins, miniHiL,",
             "languages":  "Ada, C/C++,",

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../common/drawer_handler/drawer_handler.dart';
-import '../../../../local_changer/language_changer.dart';
+import '../../../../local_changer/language_changer_with_info.dart';
 
 class DrawerBarRef extends StatelessWidget {
 

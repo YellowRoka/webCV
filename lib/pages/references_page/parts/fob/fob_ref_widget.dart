@@ -4,14 +4,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../bloc/state_manager_bloc.dart';
-import '../../../home_page/parts/fob/fob_animation_delegate.dart';
-import '../../../home_page/parts/fob/fob_builder.dart';
-import '../../../home_page/parts/fob/fob_data_model.dart';
+import '../../../home_page/parts/fob/parts/fob_animation_delegate.dart';
+import '../../../home_page/parts/fob/parts/fob_builder.dart';
+import '../../../home_page/parts/fob/parts/fob_data_model.dart';
+
 
 class FOBRef extends StatefulWidget{
   const FOBRef({Key? key}) : super(key: key);
 
-  final double iconSize = 75;
+  final double iconSize = 65;
 
   @override
   State<FOBRef> createState() => _FOBRefState();
@@ -19,14 +20,12 @@ class FOBRef extends StatefulWidget{
 
 class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
   late AnimationController controller;
-  //late bool                isFOBShowed;
   late AppLocalizations    localizations;
 
   @override
   void initState(){
     super.initState();
-    //isFOBShowed   = true;
-    controller    = AnimationController(vsync: this, duration: const Duration( milliseconds: 250) );
+    controller = AnimationController(vsync: this, duration: const Duration( milliseconds: 250) );
   }
 
   @override
@@ -56,7 +55,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
           icon:       Icons.menu_book_sharp,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
-          //widgetKey: const Key( "FOBD" ),
+          widgetKey: const Key( "RFOBD" ),
         ),
         
         CommonFOBWidgetStruct(
@@ -66,8 +65,8 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
           icon:       Icons.outgoing_mail,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
-          //widgetKey: const Key( "FOBM" ),
-          ),
+          widgetKey: const Key( "RFOBM" ),
+        ),
         
         CommonFOBWidgetStruct(
           size:       widget.iconSize,
@@ -76,8 +75,8 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
           icon:       Icons.picture_as_pdf_rounded,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
-          //widgetKey: const Key( "FOBPDF" ),
-          ),
+          widgetKey: const Key( "RFOBPDF" ),
+        ),
         
         CommonFOBWidgetStruct(
           size:       widget.iconSize, 
@@ -86,7 +85,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
           icon:       Icons.qr_code_2_rounded,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
-          //widgetKey: const Key( "FOBQR" ),
+          widgetKey: const Key( "RFOBQR" ),
         ),
 
         ( CommonFOBWidgetStruct(
@@ -96,7 +95,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
           icon:       Icons.arrow_back_ios_rounded,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
-          //widgetKey: const Key( "FOBPCV" ),
+          widgetKey: const Key( "RFOBPCV" ),
           )
         ),
 
@@ -107,7 +106,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
           icon:       Icons.menu,
           controller: controller,
           color:      Colors.black,
-          //widgetKey: const Key( "FOBQR" ),
+          widgetKey: const Key( "RFOBQR" ),
         )
 
       ].map<Widget>( commonFOBWidget ).toList()  

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:web_cv/bloc/state_manager_bloc.dart';
 
-import '../../../../local_changer/language_changer.dart';
 import '../../../../common/drawer_handler/drawer_handler.dart';
 
 class DrawerBar extends StatefulWidget {
@@ -36,7 +35,6 @@ class _DrawerBarState extends State<DrawerBar> {
               child: Column(
                 children: [
 
-                  //const LanguageChanger(),
                   const SizedBox( height: 10 ),
 
                   SizedBox(width: widgetWidth, child: ElevatedButton( style: buttonTheme, child: const Icon( Icons.person,           color: Colors.white, size: 100 ), onPressed: () => callForPersonal( context ) )),

@@ -1,0 +1,116 @@
+Date : 2023-01-03 17:26:05
+Directory : c:\PROJECTS\webCV\lib
+Total : 55 files,  205 codes, 72 comments, 59 blanks, all 336 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         55 |        205 |         72 |         59 |        336 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                             | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                |         55 |        205 |         72 |         59 |        336 |
+| bloc                                                                                                             |          3 |         17 |          0 |          1 |         18 |
+| common                                                                                                           |         17 |        -76 |         13 |         -6 |        -69 |
+| common\animated_backgrounds                                                                                      |          2 |         -2 |          5 |          0 |          3 |
+| common\background                                                                                                |          1 |        -11 |         10 |         -1 |         -2 |
+| common\drawer                                                                                                    |          2 |        -70 |         -1 |        -21 |        -92 |
+| common\drawer_handler                                                                                            |          1 |         36 |          1 |         11 |         48 |
+| common\fob                                                                                                       |          4 |       -177 |         -5 |        -33 |       -215 |
+| common\info_line_parts                                                                                           |          2 |         47 |          0 |         12 |         59 |
+| common\json_workers                                                                                              |          3 |         49 |          3 |         14 |         66 |
+| common\json_workers\data_struct                                                                                  |          1 |         11 |          0 |          3 |         14 |
+| common\json_workers\json_provider                                                                                |          1 |         20 |          3 |         11 |         34 |
+| common\popup_dialogs                                                                                             |          1 |         51 |          1 |         12 |         64 |
+| common\widgets                                                                                                   |          1 |          1 |         -1 |          0 |          0 |
+| dynamic_routes                                                                                                   |          2 |         -2 |          9 |         -2 |          5 |
+| local_changer                                                                                                    |          2 |          8 |          0 |         -5 |          3 |
+| pages                                                                                                            |         27 |        417 |         55 |        101 |        573 |
+| pages\home_page                                                                                                  |         13 |        316 |         -2 |         70 |        384 |
+| pages\home_page\parts                                                                                            |         13 |        316 |         -2 |         70 |        384 |
+| pages\home_page\parts\drawer                                                                                     |          1 |         48 |          0 |         16 |         64 |
+| pages\home_page\parts\fob                                                                                        |          4 |        185 |          4 |         38 |        227 |
+| pages\home_page\parts\fob\parts                                                                                  |          3 |         69 |          1 |         16 |         86 |
+| pages\home_page\parts\home_page_bodies                                                                           |          3 |         19 |         -4 |         -2 |         13 |
+| pages\home_page\parts\home_page_elements                                                                         |          5 |         64 |         -2 |         18 |         80 |
+| pages\home_page\parts\home_page_elements\cards                                                                   |          3 |          0 |          0 |          1 |          1 |
+| pages\home_page\parts\home_page_elements\cards\parts                                                             |          2 |          0 |          0 |          0 |          0 |
+| pages\home_page\parts\home_page_elements\page_data_structs                                                       |          2 |         64 |         -2 |         17 |         79 |
+| pages\references_page                                                                                            |         12 |         82 |         22 |         22 |        126 |
+| pages\references_page\data_structs                                                                               |          1 |         38 |         21 |          6 |         65 |
+| pages\references_page\parts                                                                                      |         10 |         39 |         -7 |         13 |         45 |
+| pages\references_page\parts\cards                                                                                |          5 |         34 |          0 |         12 |         46 |
+| pages\references_page\parts\cards\parts                                                                          |          1 |         37 |          0 |          9 |         46 |
+| pages\references_page\parts\drawer                                                                               |          1 |         -1 |          1 |          0 |          0 |
+| pages\references_page\parts\fob                                                                                  |          2 |          6 |         -8 |          1 |         -1 |
+| pages\splash_screen                                                                                              |          2 |         19 |         35 |          9 |         63 |
+| pages\splash_screen\parts                                                                                        |          1 |         42 |          4 |         10 |         56 |
+| pdf                                                                                                              |          3 |       -150 |         -1 |        -27 |       -178 |
+| pdf\not                                                                                                          |          3 |       -150 |         -1 |        -27 |       -178 |
++------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                         | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\PROJECTS\webCV\lib\bloc\state_manager_bloc.dart                                                               | Dart     |          7 |          0 |         -2 |          5 |
+| c:\PROJECTS\webCV\lib\bloc\state_manager_event.dart                                                              | Dart     |          3 |          0 |          1 |          4 |
+| c:\PROJECTS\webCV\lib\bloc\state_manager_state.dart                                                              | Dart     |          7 |          0 |          2 |          9 |
+| c:\PROJECTS\webCV\lib\common\animated_backgrounds\particles.dart                                                 | Dart     |          0 |          2 |          0 |          2 |
+| c:\PROJECTS\webCV\lib\common\animated_backgrounds\rain.dart                                                      | Dart     |         -2 |          3 |          0 |          1 |
+| c:\PROJECTS\webCV\lib\common\background\background.dart                                                          | Dart     |        -11 |         10 |         -1 |         -2 |
+| c:\PROJECTS\webCV\lib\common\drawer\drawer_bar.dart                                                              | Dart     |        -34 |          0 |        -10 |        -44 |
+| c:\PROJECTS\webCV\lib\common\drawer\drawer_controller.dart                                                       | Dart     |        -36 |         -1 |        -11 |        -48 |
+| c:\PROJECTS\webCV\lib\common\drawer_handler\drawer_handler.dart                                                  | Dart     |         36 |          1 |         11 |         48 |
+| c:\PROJECTS\webCV\lib\common\fob\fob_animation_delegate.dart                                                     | Dart     |        -32 |         -1 |         -7 |        -40 |
+| c:\PROJECTS\webCV\lib\common\fob\fob_builder.dart                                                                | Dart     |        -26 |          0 |         -5 |        -31 |
+| c:\PROJECTS\webCV\lib\common\fob\fob_data_model.dart                                                             | Dart     |        -11 |          0 |         -3 |        -14 |
+| c:\PROJECTS\webCV\lib\common\fob\fob_widget.dart                                                                 | Dart     |       -108 |         -4 |        -18 |       -130 |
+| c:\PROJECTS\webCV\lib\common\info_line_parts\info_button.dart                                                    | Dart     |         18 |          0 |          4 |         22 |
+| c:\PROJECTS\webCV\lib\common\info_line_parts\local_switcher.dart                                                 | Dart     |         29 |          0 |          8 |         37 |
+| c:\PROJECTS\webCV\lib\common\json_workers\data_struct\json_data_struct.dart                                      | Dart     |         11 |          0 |          3 |         14 |
+| c:\PROJECTS\webCV\lib\common\json_workers\json_provider\json_provider.dart                                       | Dart     |         20 |          3 |         11 |         34 |
+| c:\PROJECTS\webCV\lib\common\json_workers\json_readers.dart                                                      | Dart     |         18 |          0 |          0 |         18 |
+| c:\PROJECTS\webCV\lib\common\popup_dialogs\info_card_dialog.dart                                                 | Dart     |         51 |          1 |         12 |         64 |
+| c:\PROJECTS\webCV\lib\common\widgets\base_card.dart                                                              | Dart     |          1 |         -1 |          0 |          0 |
+| c:\PROJECTS\webCV\lib\dynamic_routes\dynamic_routes.dart                                                         | Dart     |         -4 |          9 |         -1 |          4 |
+| c:\PROJECTS\webCV\lib\dynamic_routes\dynamic_routes_handler.dart                                                 | Dart     |          2 |          0 |         -1 |          1 |
+| c:\PROJECTS\webCV\lib\local_changer\language_changer.dart                                                        | Dart     |        -45 |          0 |        -17 |        -62 |
+| c:\PROJECTS\webCV\lib\local_changer\language_changer_with_info.dart                                              | Dart     |         53 |          0 |         12 |         65 |
+| c:\PROJECTS\webCV\lib\main.dart                                                                                  | Dart     |         -9 |         -4 |         -3 |        -16 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\drawer\drawer_bar.dart                                               | Dart     |         48 |          0 |         16 |         64 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\fob\fob_main_widget.dart                                             | Dart     |        116 |          3 |         22 |        141 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\fob\parts\fob_animation_delegate.dart                                | Dart     |         32 |          1 |          8 |         41 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\fob\parts\fob_builder.dart                                           | Dart     |         26 |          0 |          5 |         31 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\fob\parts\fob_data_model.dart                                        | Dart     |         11 |          0 |          3 |         14 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\home_page_bodies\grid_body_view.dart                                 | Dart     |         15 |         -1 |         -1 |         13 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\home_page_bodies\list_body_view.dart                                 | Dart     |         15 |         -3 |          1 |         13 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\home_page_bodies\page_handler.dart                                   | Dart     |        -11 |          0 |         -2 |        -13 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\home_page_elements\cards\parts\separated_text_table_column copy.dart | Dart     |        -62 |         -3 |        -14 |        -79 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\home_page_elements\cards\parts\separated_text_table_column_copy.dart | Dart     |         62 |          3 |         14 |         79 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\home_page_elements\cards\skills_card.dart                            | Dart     |          0 |          0 |          1 |          1 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\home_page_elements\page_data_structs\grid_data_widgets.dart          | Dart     |         50 |         -1 |         11 |         60 |
+| c:\PROJECTS\webCV\lib\pages\home_page\parts\home_page_elements\page_data_structs\list_data_widgets.dart          | Dart     |         14 |         -1 |          6 |         19 |
+| c:\PROJECTS\webCV\lib\pages\references_page\data_structs\references_list_items.dart                              | Dart     |         38 |         21 |          6 |         65 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\cards\parts\link_line_builder.dart                             | Dart     |         37 |          0 |          9 |         46 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\cards\ref_card_links.dart                                      | Dart     |        -32 |          0 |         -6 |        -38 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\cards\ref_card_video.dart                                      | Dart     |         24 |          0 |          8 |         32 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\cards\ref_image_card.dart                                      | Dart     |         29 |          0 |          9 |         38 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\cards\video_card_box.dart                                      | Dart     |        -24 |          0 |         -8 |        -32 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\drawer\drawer_ref.dart                                         | Dart     |         -1 |          1 |          0 |          0 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\fob\fob_ref.dart                                               | Dart     |        -91 |         -8 |        -19 |       -118 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\fob\fob_ref_widget.dart                                        | Dart     |         97 |          0 |         20 |        117 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\ref_card_head.dart                                             | Dart     |        -12 |          0 |         -4 |        -16 |
+| c:\PROJECTS\webCV\lib\pages\references_page\parts\ref_head.dart                                                  | Dart     |         12 |          0 |          4 |         16 |
+| c:\PROJECTS\webCV\lib\pages\references_page\references_page.dart                                                 | Dart     |          5 |          8 |          3 |         16 |
+| c:\PROJECTS\webCV\lib\pages\splash_screen\parts\opener_video_player.dart                                         | Dart     |         42 |          4 |         10 |         56 |
+| c:\PROJECTS\webCV\lib\pages\splash_screen\splash_sreen.dart                                                      | Dart     |        -23 |         31 |         -1 |          7 |
+| c:\PROJECTS\webCV\lib\pdf\not\pdf.dart                                                                           | Dart     |        -32 |         -1 |         -8 |        -41 |
+| c:\PROJECTS\webCV\lib\pdf\not\pdf_api.dart                                                                       | Dart     |        -29 |          0 |        -10 |        -39 |
+| c:\PROJECTS\webCV\lib\pdf\not\pdf_paragraph_api.dart                                                             | Dart     |        -89 |          0 |         -9 |        -98 |
+| Total                                                                                                            |          |        205 |         72 |         59 |        336 |
++------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

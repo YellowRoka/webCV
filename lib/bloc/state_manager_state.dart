@@ -12,6 +12,10 @@ class StateManagerStateInit extends StateManagerState {
   const StateManagerStateInit();
 }
 
+class StateManagerStateStandBy extends StateManagerState {
+  const StateManagerStateStandBy();
+}
+
 class StateManagerStateShowedBar extends StateManagerState {
   final bool isLanguageEng;
   final bool isWideViewOn;
@@ -126,4 +130,8 @@ class StateManagerStateToReferencesPage extends StateManagerState{
 
 class StateManagerStateBackToMain extends StateManagerState{
   const StateManagerStateBackToMain();
+}
+
+class StateManagerStateOpenInfoCard extends StateManagerState{
+  const StateManagerStateOpenInfoCard();
 }

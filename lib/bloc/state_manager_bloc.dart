@@ -26,9 +26,9 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
   StateManagerBloc() : super( const StateManagerStateInit() ){
     jsonhandler.readJSONData();
 
-    on<StateManagerEventInit>( (event, emit)  async {
+    on<StateManagerEventInit>( (event, emit) async {
       emit( const StateManagerStateToSplashPage() );
-      await Future.delayed( const Duration( milliseconds: 9500 ) );
+      await Future.delayed( const Duration( milliseconds: 5000 ) );
       emit( const StateManagerStateInit() );
       emit( const StateManagerStateJsonLoaded() );
       emit( const StateManagerStateToMainPage() );
@@ -38,6 +38,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
     on<StateManagerEventPopQRDialog>( (event, emit){
       emit( const StateManagerStatePopQRDialog() );
+      emit( const StateManagerStateStandBy() );
     });
 
     on<StateManagerEventChangeView>( (event, emit){
@@ -67,23 +68,23 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       emit( const StateManagerStateHidedBar() );
     });
 
-    on<StateManagerEventToPersonal>( (event, emit) {
-      emit( StateManagerStatePersonal(index: (isVideViewOn)?(0):(0)) );
+    on<StateManagerEventToPersonal>( (event, emit){
+      emit( StateManagerStatePersonal( index: (isVideViewOn)?(0):(0) ) );
     });
 
-    on<StateManagerEventToWorks>( (event, emit) {
-      emit( StateManagerStateWorks(index: (isVideViewOn)?(3):(2)) );
+    on<StateManagerEventToWorks>( (event, emit){
+      emit( StateManagerStateWorks( index: (isVideViewOn)?(3):(2) ) );
     });
 
-    on<StateManagerEventToSchools>( (event, emit) {
-      emit( StateManagerStateSchools(index: (isVideViewOn)?(0):(14)) );
+    on<StateManagerEventToSchools>( (event, emit){
+      emit( StateManagerStateSchools(index: (isVideViewOn)?(0):(14) ) );
     });
 
-    on<StateManagerEventToSkills>( (event, emit) {
-      emit( StateManagerStateSkills(index: (isVideViewOn)?(0):(18)) );
+    on<StateManagerEventToSkills>( (event, emit){
+      emit( StateManagerStateSkills( index: (isVideViewOn)?(0):(18) ) );
     });
 
-    on<StateManagerEventSendMail>((event, emit) async{
+    on<StateManagerEventSendMail>( (event, emit) async {
 
       final mailtoLink = Mailto(
         //cc: ['cc1@example.com', 'cc2@example.com'],
@@ -96,7 +97,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       emit( const StateManagerStateSendedMail() );
     });
 
-    on<StateManagerEventCreatePDF>((event, emit) async {
+    on<StateManagerEventCreatePDF>( (event, emit) async {
       emit( const StateManagerStatePopPDFNotification() );
       if(!isPDFCreated) return;
       emit( const StateManagerStateCreatePDF() );
@@ -125,6 +126,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
     on<StateManagerEventPopPDFNotification>( (event, emit) {
       isPDFCreated = false;
       emit( const StateManagerStatePopPDFNotification() );
+      emit( const StateManagerStateStandBy() );
     });   
 
     on<StateManagerEventQRGotIt>( (event, emit) {
@@ -150,8 +152,14 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
     on<StateManagerEvenToReferencesPage>( (event, emit) {
       emit( const StateManagerStateToReferencesPage() );
     });
+
     on<StateManagerEventBackToMain>( (event, emit) {
       emit( const StateManagerStateBackToMain() );
+    });
+
+    on<StateManagerEventOpenInfoCard>( (event, emit) {
+      emit( const StateManagerStateOpenInfoCard() );
+      emit( const StateManagerStateStandBy() );
     });
 
   }

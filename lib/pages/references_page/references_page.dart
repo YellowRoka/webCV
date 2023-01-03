@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../common/background/background.dart';
 import '../../common/drawer_handler/drawer_handler.dart';
-import '../../local_changer/language_changer.dart';
+import '../../local_changer/language_changer_with_info.dart';
 import 'parts/drawer/drawer_ref.dart';
-import 'parts/fob/fob_ref.dart';
+import 'parts/fob/fob_ref_widget.dart';
 import 'parts/cards/ref_card_links.dart';
 import 'data_structs/references_list_items.dart';
 import 'parts/cards/ref_card_video.dart';
@@ -97,7 +97,7 @@ class ReferencesPageBody extends StatelessWidget {
           ),
         ),
 
-         const LanguageChanger(),
+         const LanguageChangerWithInfo(),
          
       ],
     );

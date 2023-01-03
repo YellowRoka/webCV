@@ -52,3 +52,4 @@ app.*.map.json
 /assets/ref_medias/videos/
 /assets/ref_medias/orig_vids/
 /lib/pdf/not_working/
+/assets/pdf/old/

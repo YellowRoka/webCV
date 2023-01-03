@@ -8,7 +8,7 @@
             "date":       "Mar 2022 - now",
             "tasks":      "- create system architect\n- Application-level design and development based on product requirement\n- select the system hardware parts\n- create and implement UI design\n- design and create statemachines\n- create and implement local databases\n- implement costumers requirements\n- keep in touch with costumer's other developer teams\n- make time table and coordinate the parts of the project\n- create the base release processes\n- create animations\n- write code generator\n- refactoring\n- make performance optimalizations",
             "experinces": "Flutter, Debian, Windows, Web, Raspberry Pi4, ORM, Hive, BLOC, REST-API, TCP Socket, Blender, Asana, Git, JSON, embedded sytem, front end, graphical design,",
-            "languages":  "Dart, C/C++, python, java",
+            "languages":  "Dart, (C/C++, python, java)",
             "commit":     "During my time at the company, I am the main responsible of the developing of the central component. This component connect the base hardware functions with the cloud function, and keep in touch with the user. I manage this part of the project."
         },
         {
@@ -60,7 +60,7 @@
             "position":   "Software Engineer",
             "image":      "evosoft.jpg",
             "place":      "Budapest, Hungary",
-            "date":       " Feb 2017 - Jan 2019 2 years",
+            "date":       " Feb 2017 - Jan 2019, 2 years",
             "tasks":      "- evaluation of measurements\n- compile, run and evaluate developer side measurements\n- development of test environments\n- development of module tests\n- software development\n- software bug fixes\n- implementation of improvements at code and model level\n- model based development (ARXML editing)\n- documentation\n- maintenance of hardware\n- refactoring of modules, functions\n- Editing UML graphics\n- Processing and implementation of requirements\n- testing\n- Checking and fixing QAC errors\n- participation in reviews",
             "experinces": "INCA, Vector, QAC, AUTOSAR, GIT, RTRT modul testing, Trace32, Eclipse, Visual Studio, Notepad++, (AR)XML, tickets, Jenkins, miniHiL,",
             "languages":  "Ada, C/C++,",

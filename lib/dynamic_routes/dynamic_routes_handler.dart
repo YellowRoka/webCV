@@ -17,17 +17,21 @@ class DynamicRoutesHandler extends StatelessWidget {
           Navigator.pushNamed( context, "/splash_page" );
         }
 
-        if( state is StateManagerStateToMainPage ){
+        else if( state is StateManagerStateToMainPage ){
           Navigator.pushNamed( context, "/main_page" );
         }
         
-        if( state is StateManagerStateToReferencesPage ){
+        else if( state is StateManagerStateToReferencesPage ){
           Navigator.pushNamed( context, "/references_page" );
         }
         
-        if( state is StateManagerStateBackToMain ){ 
+        else if( state is StateManagerStateBackToMain ){ 
           Navigator.popUntil( context, ModalRoute.withName( '/main_page' ) );
         }
+        else{
+
+        }
+
       },
       child: Container( color: Colors.black ),
     );

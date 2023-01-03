@@ -1,30 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+
 import '../../../../bloc/state_manager_bloc.dart';
-import 'fob_animation_delegate.dart';
-import 'fob_builder.dart';
-import 'fob_data_model.dart';
+
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class FOB extends StatefulWidget{
+import 'parts/fob_animation_delegate.dart';
+import 'parts/fob_builder.dart';
+import 'parts/fob_data_model.dart';
+
+class FOBMain extends StatefulWidget{
   final double iconSize = 65;
 
-  const FOB({Key? key}) : super(key: key);
+  const FOBMain({Key? key}) : super(key: key);
 
   @override
-  State<FOB> createState() => _FOBState();
+  State<FOBMain> createState() => _FOBMainState();
 }
 
-class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
+class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin{
   late AnimationController controller;
   late AppLocalizations    localizations;
 
   @override
   void initState(){
     super.initState();
-    controller    = AnimationController( vsync: this, duration: const Duration( milliseconds: 250 ) );
+    controller = AnimationController( vsync: this, duration: const Duration( milliseconds: 250 ) );
   }
 
   @override
@@ -88,7 +91,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
           widgetKey:  const Key( "MFOBM" ),
-          ),
+        ),
         
         CommonFOBWidgetStruct(
           size:       widget.iconSize,
@@ -98,7 +101,7 @@ class _FOBState extends State< FOB > with SingleTickerProviderStateMixin{
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
           widgetKey:  const Key( "MFOBPDF" ),
-          ),
+        ),
         
         CommonFOBWidgetStruct(
           size:       widget.iconSize, 

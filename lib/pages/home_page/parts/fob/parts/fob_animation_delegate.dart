@@ -17,7 +17,7 @@ class FlowMenuDelegate extends FlowDelegate{
     for (var i = 0; i < n; i++) {
       final isLastItem = i == n - 1;
       final setValue   = (value)=> isLastItem ? 0.0 : value;
-      final radius     = 145 * controller.value;
+      final radius     = 170 * controller.value;
       final theta      = -1 + i * pi *0.7 /( n - 2 );//rotate on circle's line
       final x          = setValue(radius * -cos(theta) );
       final y          = setValue(radius *  sin(theta) );

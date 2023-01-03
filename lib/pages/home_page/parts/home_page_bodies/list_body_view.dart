@@ -52,7 +52,7 @@ class ListBodyView extends StatelessWidget {
                   key:                   const Key("mainlist"),
                   itemCount:             dataPack?.length??0,
                   itemScrollController:  itemScrollController,
-                  itemBuilder:           ( context, index ) => dataPack?[ index ]??Container()
+                  itemBuilder:           ( context, index ) => dataPack?[ index ] ?? Container()
                 ),
               ),
             )

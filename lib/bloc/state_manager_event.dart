@@ -90,3 +90,7 @@ class StateManagerEvenToReferencesPage extends StateManagerEvent{
 class StateManagerEventBackToMain extends StateManagerEvent{
   const StateManagerEventBackToMain();
 }
+
+class StateManagerEventOpenInfoCard extends StateManagerEvent{
+  const StateManagerEventOpenInfoCard();
+}

@@ -5,7 +5,7 @@ import '../../bloc/state_manager_bloc.dart';
 
 import 'parts/drawer/drawer_bar.dart';
 import '../../common/drawer_handler/drawer_handler.dart';
-import 'parts/fob/fob_widget.dart';
+import 'parts/fob/fob_main_widget.dart';
 import 'parts/home_page_bodies/page_handler.dart';
 
 class HomePage extends StatefulWidget{
@@ -34,7 +34,7 @@ class _HomePageState extends State< HomePage >{
       BlocProvider.of< StateManagerBloc >( context ).add( const StateManagerEventWideViewEnabled( true ) );
     }
     return Scaffold(
-      floatingActionButton: const FOB(),
+      floatingActionButton: const FOBMain(),
       drawer:               const DrawerBar(),
       body:                 const PageHandler(),
       onDrawerChanged:      (isOpen) => drawerHandler( context, isOpen ),
