@@ -7,12 +7,12 @@ class ParalaxRain extends StatelessWidget {
   @override
   Widget build( BuildContext context ){
     return ParallaxRain(
-      dropHeight:         40,
-      dropWidth:          4,//0.6,
+      dropHeight:         30,
+      dropWidth:          3,//0.6,
       numberOfLayers:     2,
-      trailStartFraction: 0.01,
+      trailStartFraction: 0.1,
       trail:              true,
-      dropFallSpeed:      0.12,
+      dropFallSpeed:      0.05,
       
       dropColors: [
           //Colors.red,
