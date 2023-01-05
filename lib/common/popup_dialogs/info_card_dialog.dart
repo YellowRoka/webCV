@@ -14,7 +14,7 @@ class InfoCardDialog extends StatelessWidget {
     return Dialog(
       backgroundColor: Colors.transparent,
       child:           Container(
-        height:     235 + 300 * 1/(1080/MediaQuery.of( context ).size.height),
+        height:     240 + 300 * 1/(1080/MediaQuery.of( context ).size.height),
         width:      200 + 600 * 1/(1920/MediaQuery.of( context ).size.width),
         padding:    const EdgeInsets.all( 10 ),
         decoration: BoxDecoration(
