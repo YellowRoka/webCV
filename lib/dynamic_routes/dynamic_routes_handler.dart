@@ -12,13 +12,18 @@ class DynamicRoutesHandler extends StatelessWidget {
     return BlocListener<StateManagerBloc,StateManagerState>(
       listener: (context, state ){
 
-        if( state is StateManagerStateToSplashPage ){
+        if(state is StateManagerStateInit){
+          Navigator.popUntil( context, ModalRoute.withName( '/' ) );
           context.read<JsonDataProvider>().load();
+        }
+
+        if( state is StateManagerStateToSplashPage ){
           Navigator.pushNamed( context, "/splash_page" );
         }
 
         else if( state is StateManagerStateToMainPage ){
-          Navigator.pushNamed( context, "/main_page" );
+          Navigator.pushReplacementNamed( context, "/main_page" );
+          BlocProvider.of<StateManagerBloc>(context).add( const StateManagerEventPopEnabled() );
         }
         
         else if( state is StateManagerStateToReferencesPage ){
@@ -28,12 +33,12 @@ class DynamicRoutesHandler extends StatelessWidget {
         else if( state is StateManagerStateBackToMain ){ 
           Navigator.popUntil( context, ModalRoute.withName( '/main_page' ) );
         }
-        else{
 
-        }
+        else{}
 
       },
       child: Container( color: Colors.black ),
+      //child: const SplashSreen()
     );
   }
 }

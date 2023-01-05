@@ -6,9 +6,9 @@ class PDFAlertDialog extends StatelessWidget {
   const PDFAlertDialog({Key? key}) : super(key: key);
 
   @override
-  Widget build( BuildContext context ) {
+  Widget build( BuildContext context ){
 
-    AppLocalizations localizations = AppLocalizations.of(context);
+    AppLocalizations localizations = AppLocalizations.of( context );
 
     return ClipRRect(
       borderRadius: BorderRadius.circular(24.0),
@@ -23,10 +23,9 @@ class PDFAlertDialog extends StatelessWidget {
               textStyle:         const TextStyle( color: Colors.white )
             ),
 
-            onPressed: (){
-              Navigator.pop( context );
-             },
-            child: const Text( "Ok" ) ),
+            onPressed: () => Navigator.pop( context ),
+            child:     const Text( "Ok" ) 
+          ),
         ],
 
       ),

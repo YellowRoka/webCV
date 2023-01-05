@@ -7,6 +7,9 @@ abstract class StateManagerState  extends Equatable{
   @override
   List<Object> get props =>[];
 }
+class StateManagerStateInitial extends StateManagerState {
+  const StateManagerStateInitial();
+}
 
 class StateManagerStateInit extends StateManagerState {
   const StateManagerStateInit();
@@ -134,4 +137,8 @@ class StateManagerStateBackToMain extends StateManagerState{
 
 class StateManagerStateOpenInfoCard extends StateManagerState{
   const StateManagerStateOpenInfoCard();
+}
+
+class StateManagerStateShowSizeWarn extends StateManagerState{
+  const StateManagerStateShowSizeWarn();
 }

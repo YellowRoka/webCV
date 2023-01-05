@@ -38,7 +38,6 @@ void callForSkills( BuildContext context ){
 
 void callForRefers( BuildContext context ){
   BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEvenToReferencesPage() );
-  //Navigator.pop( context ) ;
 }
 
 

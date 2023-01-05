@@ -14,6 +14,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'parts/ref_head.dart';
 import 'parts/slider_builder.dart';
 
+int playedVideoIndex = 0;
+
 class ReferencesPage extends StatelessWidget {
   const ReferencesPage({Key? key}) : super(key: key);
 
@@ -62,6 +64,7 @@ class ReferencesPageBody extends StatelessWidget {
               SliderBuilder( referencesList: [
 
                   RefCardVideo(
+                    id:       1,
                     headText: localizations.ote,
                     videoUrl: 
                     "https://drive.google.com/uc?export=view&id=1umt44PWimSKh6ejsKqT28rQ515fvXFzE",
@@ -69,13 +72,15 @@ class ReferencesPageBody extends StatelessWidget {
                   ),
 
                   RefCardVideo(
-                    headText:  localizations.czurPlanet,
+                    id:       2,
+                    headText: localizations.czurPlanet,
                     videoUrl: 
                     "https://drive.google.com/uc?export=view&id=1ZnwOSqAzlGLSr-zMkC-oIl9zG4xCOSHu",
                     //'assets/ref_medias/videos/cruzr_2021_planet.mp4',
                   ),
 
                   RefCardVideo(
+                    id:       3,
                     headText: localizations.cruzrMVM,
                     videoUrl: 
                     "https://drive.google.com/uc?export=view&id=1VyYtoGT-H203LIxBYD-hYvPeNHxuFaGQ",

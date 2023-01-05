@@ -7,36 +7,20 @@ import '../common/info_line_parts/info_button.dart';
 import 'locale_provider.dart';
 
 
-class LanguageChangerWithInfo extends StatefulWidget {
+class LanguageChangerWithInfo extends StatelessWidget {
   const LanguageChangerWithInfo({ Key? key }) : super(key: key);
 
   @override
-  State<LanguageChangerWithInfo> createState() => _LanguageChangerWithInfoState();
-}
-
-class _LanguageChangerWithInfoState extends State<LanguageChangerWithInfo> {
-
-  late bool locLang;
-
-  @override
-  void initState() {
-    super.initState();
-    locLang = ( context.read<LocaleProvider>().locale == const Locale('en') )? ( true ):( false );
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return BlocConsumer< StateManagerBloc, StateManagerState >(
-      listener: ( context, state ){
-        locLang = ( context.read<LocaleProvider>().locale == const Locale('en') )?( true ):( false );
-      },
-
+    return BlocBuilder< StateManagerBloc, StateManagerState >(
       builder: ( context, state ){
+        bool locLang = ( context.read<LocaleProvider>().locale == const Locale('en') )?( true ):( false );
+
         return Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+              begin:  Alignment.topCenter,
+              end:    Alignment.bottomCenter,
               colors: [
                 Colors.black.withOpacity(1.0),
                 Colors.black.withOpacity(0.8),

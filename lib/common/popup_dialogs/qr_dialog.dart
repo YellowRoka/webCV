@@ -12,7 +12,7 @@ class QRDialog extends StatelessWidget{
   @override
   Widget build( BuildContext context ){
 
-    AppLocalizations localizations = AppLocalizations.of(context);
+    AppLocalizations localizations = AppLocalizations.of( context );
 
     return ClipRRect(
       borderRadius: BorderRadius.circular( 24.0 ),
@@ -26,7 +26,7 @@ class QRDialog extends StatelessWidget{
             child:     Text( localizations.gotIt ),        
             onPressed: (){
               Navigator.pop( context ); 
-              BlocProvider.of<StateManagerBloc>(context).add(const StateManagerEventQRGotIt() );  
+              BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventQRGotIt() );  
             },
           ),
         ],

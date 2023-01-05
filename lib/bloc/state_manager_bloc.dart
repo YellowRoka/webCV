@@ -1,3 +1,4 @@
+import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,30 +16,36 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 part 'state_manager_event.dart';
 part 'state_manager_state.dart';
 
+
 class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
-  bool isPDFCreated      = true; 
-  bool isVideViewOn      = true;
-  bool isVideViewEnabled = true;
-  bool isLanguageEng     = true;
+  bool isPDFCreated       = true; 
+  bool isVideViewOn       = true;
+  bool isVideViewEnabled  = true;
+  bool isLanguageEng      = true;
+  bool isSizeWarnEnbled   = false;
+  bool isSizeWarnShowed   = false;
+  bool isSizeWarnMustShow = false;
 
-  JsonReaders jsonhandler = JsonReaders();
+  final JsonReaders jsonhandler;
 
-  StateManagerBloc() : super( const StateManagerStateInit() ){
-    jsonhandler.readJSONData();
+  StateManagerBloc(this.jsonhandler) : super( const StateManagerStateInitial() ){
 
-    on<StateManagerEventInit>( (event, emit) async {
-      emit( const StateManagerStateToSplashPage() );
-      await Future.delayed( const Duration( milliseconds: 5000 ) );
+    on<StateManagerEventInit>( (event, emit) async{
+      isSizeWarnEnbled = false;
+
       emit( const StateManagerStateInit() );
-      emit( const StateManagerStateJsonLoaded() );
+      emit( const StateManagerStateToSplashPage() );
+      await Future.delayed( const Duration( milliseconds: 4900 ) );
       emit( const StateManagerStateToMainPage() );
-      await Future.delayed( const Duration( milliseconds: 1000 ) );
-      emit( const StateManagerStateFOBEnabled() );
-    });
+    },transformer: sequential());
 
     on<StateManagerEventPopQRDialog>( (event, emit){
       emit( const StateManagerStatePopQRDialog() );
       emit( const StateManagerStateStandBy() );
+    },transformer: restartable());
+
+    on<StateManagerEventPopEnabled>((event, emit) {
+      isSizeWarnEnbled = true;
     });
 
     on<StateManagerEventChangeView>( (event, emit){
@@ -51,12 +58,26 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       }
     });
 
-    on<StateManagerEventWideViewEnabled>( (event, emit ) {
+    on<StateManagerEventWideViewEnabled>( (event, emit ) async {
       isVideViewEnabled = event.isWideViewEnabled;
       isVideViewOn      = isVideViewOn & isVideViewEnabled;
 
       emit( StateManagerStateWideViewEnabled( isVideViewEnabled ) );
       emit( StateManagerStateChangeView( isVideViewOn ) );
+      
+      if( isVideViewEnabled == false && isSizeWarnEnbled == true ){
+        isSizeWarnMustShow = true;
+      }
+      if( isVideViewOn == true ){
+        isSizeWarnMustShow = false;
+        isSizeWarnShowed = false;
+      }
+
+      if(isSizeWarnMustShow == true && isSizeWarnShowed == false){
+        isSizeWarnShowed = true;
+        await Future.delayed( const Duration( milliseconds: 100 ) );
+        emit( const StateManagerStateShowSizeWarn() );
+      }
     });
 
 
@@ -93,7 +114,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
         body:    'Please write here the desired work desctription and your contacts.',
       );
 
-      await launchUrl (Uri.parse(mailtoLink.toString()));
+      await launchUrl( Uri.parse( mailtoLink.toString() ) );
       emit( const StateManagerStateSendedMail() );
     });
 
@@ -104,7 +125,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       isPDFCreated = false;
 
       ScreenshotController screenshotController = ScreenshotController();
-
+      
       PDFCards pdfCards = PDFCards( 
         jobs:     jsonhandler.jobsEN, 
         baseData: jsonhandler.baseDataEN
@@ -127,7 +148,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       isPDFCreated = false;
       emit( const StateManagerStatePopPDFNotification() );
       emit( const StateManagerStateStandBy() );
-    });   
+    },transformer: restartable());   
 
     on<StateManagerEventQRGotIt>( (event, emit) {
       emit( const StateManagerStateQRGotIt() );
@@ -151,6 +172,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
     on<StateManagerEvenToReferencesPage>( (event, emit) {
       emit( const StateManagerStateToReferencesPage() );
+      emit( const StateManagerStateStandBy() );
     });
 
     on<StateManagerEventBackToMain>( (event, emit) {
@@ -160,7 +182,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
     on<StateManagerEventOpenInfoCard>( (event, emit) {
       emit( const StateManagerStateOpenInfoCard() );
       emit( const StateManagerStateStandBy() );
-    });
+    },transformer: restartable());
 
   }
 

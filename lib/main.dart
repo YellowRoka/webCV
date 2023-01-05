@@ -57,14 +57,13 @@ class MyApp extends StatelessWidget {
     
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider< JsonDataProvider > ( create: (context) => JsonDataProvider()..load() ),
+        ChangeNotifierProvider< JsonDataProvider > ( create: (context) => JsonDataProvider() ),
         ChangeNotifierProvider< LocaleProvider >   ( create: (context) => LocaleProvider() ),
-        BlocProvider< StateManagerBloc >           ( create: (context) => StateManagerBloc()..add( const StateManagerEventInit() ) )
+        BlocProvider< StateManagerBloc >           ( create: (context) => StateManagerBloc( context.read<JsonDataProvider>().jsonHandler )..add( const StateManagerEventInit() ) )
       ], 
 
       child: Consumer<LocaleProvider>(
         builder: ( context, localProvider, child ) {
-          
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             locale:                     localProvider.locale,

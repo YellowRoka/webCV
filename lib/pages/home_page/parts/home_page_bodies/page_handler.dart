@@ -15,67 +15,72 @@ import '../home_page_elements/page_data_structs/list_data_widgets.dart';
 import 'grid_body_view.dart';
 import 'list_body_view.dart';
 
-class PageHandler extends StatelessWidget {
+class PageHandler extends StatefulWidget {
   const PageHandler( { Key? key} ) : super(key: key);
 
+  @override
+  State<PageHandler> createState() => _PageHandlerState();
+}
+
+class _PageHandlerState extends State<PageHandler> {
+  
+  Future<bool> _onWillPop() async {
+    return false; //<-- DISABLE BACKWARD BUTTON
+  }
 
   @override
   Widget build( BuildContext context ){
-    bool isSizeWarnShowed = false;
-    bool isWideViewOn     = true;
-    Widget newChild         = const SizedBox();
+    bool   isWideViewOn = true;
+    Widget newChild     = const SizedBox();
 
-    return Stack(
-      children: [
-
-        const Background( width: double.infinity ),
-
-        BlocConsumer< StateManagerBloc, StateManagerState >(
-          listener: ( context, state ){
-
-            if( state is StateManagerStateLanguageChange     ){ context.read<LocaleProvider>().setLocale( state.loc );                  }
-            if( state is StateManagerStatePopPDFNotification ){ showDialog( context: context, builder: (_) => const PDFAlertDialog() ); } 
-            if( state is StateManagerStatePopQRDialog        ){ showDialog( context: context, builder: (_) => const QRDialog() );       } 
-            if( state is StateManagerStateOpenInfoCard       ){ showDialog( context: context, builder: (_) => const InfoCardDialog() ); } 
-            
-            if( (state is StateManagerStateWideViewEnabled) && (state.isWideViewEnabled == true) ){ 
-              isSizeWarnShowed = false; 
-            }
-
-            if( (state is StateManagerStateWideViewEnabled) && (state.isWideViewEnabled == false) ){
-              if( (isSizeWarnShowed == false) && (isWideViewOn == true) ){
-                isSizeWarnShowed = true;
-                showDialog( context: context, builder: (_) => const SizeWarningDialog() );
+    return WillPopScope(
+      onWillPop: _onWillPop,
+      child:     Stack(
+        children: [
+    
+          const Background( width: double.infinity ),
+    
+          BlocBuilder< StateManagerBloc, StateManagerState >(
+            builder: ( context, state ){
+              if( (state is StateManagerStateChangeView) || (state is StateManagerStateLanguageChange) ){
+                if( isWideViewOn ){
+                  newChild = GridBodyView( dataPack: ( context.read<LocaleProvider>().locale == L10n.localeEN )?( dataLinesEN(context) ):( dataLinesHU(context) ) );
+                }
+                else{
+                  newChild = ListBodyView( dataPack: ( context.read<LocaleProvider>().locale == L10n.localeEN )?( dataCardsEN(context) ):( dataCardsHU(context) ) );
+                }
               }
-            } 
-
-            if( state is StateManagerStateChangeView ){
-              isWideViewOn = state.isWideViewOn;
+    
+             return AnimatedSwitcher(
+                duration:          const Duration( milliseconds: 900 ),
+                transitionBuilder: ( child, animation ) => ScaleTransition( scale: animation, child: child ),
+                child:             newChild,
+              );
+              
             }
-          },
-
-          builder: ( context, state ){
-            if( (state is StateManagerStateChangeView) || (state is StateManagerStateLanguageChange) ){
-              if( isWideViewOn ){
-                newChild = GridBodyView( dataPack: ( context.read<LocaleProvider>().locale == L10n.localeEN )?( dataLinesEN(context) ):( dataLinesHU(context) ) );
+          ),
+    
+          BlocListener< StateManagerBloc, StateManagerState >(
+            listener: ( context, state ){
+    
+              if( state is StateManagerStateChangeView ){
+                isWideViewOn = state.isWideViewOn;
               }
-              else{
-                newChild = ListBodyView( dataPack: ( context.read<LocaleProvider>().locale == L10n.localeEN )?( dataCardsEN(context) ):( dataCardsHU(context) ) );
-              }
-            }
-
-           return AnimatedSwitcher(
-              duration:          const Duration( milliseconds: 900 ),
-              transitionBuilder: ( child, animation ) => ScaleTransition( scale: animation, child: child ),
-              child:             newChild,
-            );
-            
-          }
-        ),
-
-        const LanguageChangerWithInfo(),
-
-      ],
+    
+              if( state is StateManagerStateShowSizeWarn       ){ showDialog( context: context, builder: (_) => const SizeWarningDialog() ); }
+              if( state is StateManagerStatePopPDFNotification ){ showDialog( context: context, builder: (_) => const PDFAlertDialog() );    } 
+              if( state is StateManagerStatePopQRDialog        ){ showDialog( context: context, builder: (_) => const QRDialog());           } 
+              if( state is StateManagerStateOpenInfoCard       ){ showDialog( context: context, builder: (_) => const InfoCardDialog());     } 
+    
+              if( state is StateManagerStateLanguageChange ){ context.read<LocaleProvider>().setLocale( state.loc ); }
+            },
+            child: const SizedBox(),
+          ),
+    
+          const LanguageChangerWithInfo(),
+    
+        ],
+      ),
     );
   }
 }

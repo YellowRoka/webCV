@@ -25,7 +25,8 @@ class SizeWarningDialog extends StatelessWidget {
             onPressed: (){
               Navigator.pop( context );
              },
-            child: const Text( "Ok" ) ),
+            child: const Text( "Ok" ) 
+          ),
         ],
       ),
     );

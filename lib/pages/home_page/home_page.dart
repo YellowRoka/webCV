@@ -8,22 +8,12 @@ import '../../common/drawer_handler/drawer_handler.dart';
 import 'parts/fob/fob_main_widget.dart';
 import 'parts/home_page_bodies/page_handler.dart';
 
-class HomePage extends StatefulWidget{
+class HomePage extends StatelessWidget{
   const HomePage( { Key? key} ) : super(key: key);
-
-  @override
-  State< HomePage > createState() => _HomePageState();
-}
 
 //https://www.folkstalk.com/2022/09/how-to-check-flutter-app-comes-to-foreground-with-code-examples.html
 //https://stackoverflow.com/questions/62328609/how-to-correctly-use-bloclistener-and-blocprovider-in-flutter-app
 //https://mdevelopers.com/blog/everything-you-need-to-know-about-bloc-state-manager-in-flutter
-class _HomePageState extends State< HomePage >{ 
-
-  @override
-  void initState(){
-    super.initState();
-  }
 
   @override
   Widget build( BuildContext context ){

@@ -94,3 +94,7 @@ class StateManagerEventBackToMain extends StateManagerEvent{
 class StateManagerEventOpenInfoCard extends StateManagerEvent{
   const StateManagerEventOpenInfoCard();
 }
+
+class StateManagerEventPopEnabled extends StateManagerEvent{
+  const StateManagerEventPopEnabled();
+}
