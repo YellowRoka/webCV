@@ -12,15 +12,15 @@ class BaseCard extends StatelessWidget {
   Widget build( BuildContext context ){
     return ClipRRect(
       borderRadius: BorderRadius.circular( 25 ),
-      child:        BackdropFilter(
-        filter: ImageFilter.blur( sigmaX: 3, sigmaY: 3 ),//15,15
+      //child:        BackdropFilter(
+        //filter: ImageFilter.blur( sigmaX: 3, sigmaY: 3 ),//15,15
 
         child:  Container(
           height:     height,
           width:      width,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular( 30 ),
-            color:      Colors.black45.withOpacity(0.7),
+            color:      Colors.black45.withOpacity(0.8),
             /*boxShadow:  [
               BoxShadow(
                 color:      const Color.fromARGB(255, 33, 100, 243).withOpacity(0.35), //New
@@ -41,7 +41,7 @@ class BaseCard extends StatelessWidget {
             ),
           )
         )
-      )
+      //)
     );
   }
 }

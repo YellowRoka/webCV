@@ -12,7 +12,7 @@ class ParalaxRain extends StatelessWidget {
       numberOfLayers:     2,
       trailStartFraction: 0.01,
       trail:              true,
-      dropFallSpeed:      0.3,
+      dropFallSpeed:      0.12,
       
       dropColors: [
           //Colors.red,
