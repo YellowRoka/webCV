@@ -109,7 +109,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
           widgetKey: const Key( "RFOBQR" ),
         )
 
-      ].map<Widget>( commonFOBWidget ).toList()  
+      ].map<Widget>( commonFOBWidgetV2 ).toList()  
     );
   }
 }

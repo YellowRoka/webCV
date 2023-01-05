@@ -133,7 +133,7 @@ class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin
           widgetKey:  const Key( "MFOBO" ),
         )
 
-      ].map<Widget>( commonFOBWidget ).toList()  
+      ].map<Widget>( commonFOBWidgetV2 ).toList()  
     );
   }
 }
