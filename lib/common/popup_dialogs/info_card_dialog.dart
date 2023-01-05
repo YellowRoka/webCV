@@ -10,14 +10,17 @@ class InfoCardDialog extends StatelessWidget {
   @override
   Widget build( BuildContext context ) {
     AppLocalizations localizations = AppLocalizations.of( context );
-    //double width = 1/(1920/MediaQuery.of( context ).size.width);
-    //print(width);
+    
+    double calcPercent = 1/(1920/MediaQuery.of( context ).size.width);
+
+    calcPercent = (calcPercent < 1.0)?(calcPercent):(1.0);
+    //print(calcPercent);
 
     return Dialog(
       backgroundColor: Colors.transparent,
       child:           Container(
-        height:     390 + 300 * (1-1/(1920/MediaQuery.of( context ).size.width)),
-        width:      255 + 400 * 1/(1920/MediaQuery.of( context ).size.width),
+        height:     390 + 300 * (1-calcPercent),
+        width:      255 + 400 * calcPercent,
         padding:    const EdgeInsets.all( 10 ),
         decoration: BoxDecoration(
           color:      Colors.black,
