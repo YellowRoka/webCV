@@ -68842,7 +68842,7 @@ gOS(){return"Media:"},
 gEm(){return"Git Projects:"},
 gO4(){return"Go to References"},
 gPo(){return"Profil"},
-gPp(){return"I am a software and system developer with a good knowledge of embedded systems. I am constantly improving my skills with self-training and dedicated courses. \n\nRecently, I switched from the embedded system to mobile (android), web, desktop or other unique development based on Flutter. When I make Flutter projects then I most often use: \n\n-BLoC, \n-Hive, \n-OOP, \n-external packages, \n-CleanCode, \n-JSON, \n-explicit and implicit animations, \n-REST-APIs, \n-Blender,\n-Git source control,\n-Agil or DSDM methodology."}}
+gPp(){return"I am a software and system developer with a good knowledge of embedded systems. I am constantly improving my skills with self-training and dedicated courses. \n\nRecently, I moved from the embedded system to mobile (android), web, desktop and unique development based on Flutter. When I make Flutter projects then I most often use: \n\n-BLoC, \n-Hive, \n-OOP, \n-external packages, \n-CleanCode, \n-JSON, \n-explicit and implicit animations, \n-REST-APIs, \n-Blender,\n-Git source control,\n-Agil or DSDM methodology."}}
 A.FS.prototype={
 gvX(a){return"N\xe9v:"},
 gLO(){return"Sz\xfclet\xe9si id\u0151:"},
@@ -68889,7 +68889,7 @@ gOS(){return"M\xe9di\xe1k:"},
 gEm(){return"Git Projektek:"},
 gO4(){return"Tov\xe1bb a Referenci\xe1khoz"},
 gPo(){return"Profil"},
-gPp(){return"Szoftver- \xe9s rendszerfejleszt\u0151 vagyok, aki j\xf3l ismeri a be\xe1gyazott rendszereket. Folyamatosan fejlesztem k\xe9pess\xe9geimet \xf6nk\xe9pz\xe9ssel \xe9s dedik\xe1lt tanfolyamokkal. \n\nNemr\xe9g v\xe1ltottam a be\xe1gyazott rendszerr\u0151l a Flutter-re \xe9p\xfcl\u0151 mobil (android), web, asztali vagy m\xe1s egyedi fejleszt\xe9sre. Flutter projektek eset\xe9n, leggyakrabban a k\xf6vetkez\u0151ket haszn\xe1lom: \n\n-BloC, \n-Hive, \n-OOP, \n-k\xfcls\u0151 csomagok, \n-CleanCode, \n-JSON, \n-explicit \xe9s implicit anim\xe1ci\xf3k, \n-REST-API-k, \n-Blender, \n-Git verzi\xf3 kezel\u0151, \n-Agilis vagy DSDM fejleszt\u0151i m\xf3dszertan."}}
+gPp(){return"Szoftver- \xe9s rendszerfejleszt\u0151 vagyok, aki j\xf3l ismeri a be\xe1gyazott rendszereket. Folyamatosan fejlesztem k\xe9pess\xe9geimet \xf6nk\xe9pz\xe9ssel \xe9s dedik\xe1lt tanfolyamokkal. \n\nNemr\xe9g v\xe1ltottam a be\xe1gyazott rendszerr\u0151l a Flutter-re \xe9p\xfcl\u0151 mobil (android), web, asztali illetve egyedi jelleg\u0171 fejleszt\xe9sre. Flutter projektek eset\xe9n, leggyakrabban a k\xf6vetkez\u0151ket haszn\xe1lom: \n\n-BloC, \n-Hive, \n-OOP, \n-k\xfcls\u0151 csomagok, \n-CleanCode, \n-JSON, \n-explicit \xe9s implicit anim\xe1ci\xf3k, \n-REST-API-k, \n-Blender, \n-Git verzi\xf3 kezel\u0151, \n-Agilis vagy DSDM fejleszt\u0151i m\xf3dszertan."}}
 A.KO.prototype={$iZ:1}
 A.Uu.prototype={
 lU(a){return $.avC().B(0,a.gcv(a))},
