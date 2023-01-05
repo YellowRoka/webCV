@@ -226,8 +226,13 @@
       "description": ""
     },
 
-    "profilDetails": "I am a software and system developer with a good knowledge of embedded systems. I am constantly improving my skills with self-training and dedicated courses. \n\nRecently, I moved from the embedded system to mobile (android), web, desktop and unique development based on Flutter. When I make Flutter projects then I most often use: \n\n-BLoC, \n-Hive, \n-OOP, \n-external packages, \n-CleanCode, \n-JSON, \n-explicit and implicit animations, \n-REST-APIs, \n-Blender,\n-Git source control,\n-Agil or DSDM methodology.",
+    "profilDetails": "I am a software and system developer with a good knowledge of embedded systems. I am constantly improving my skills with self-training and dedicated courses. \n\nRecently, I moved from the embedded system to mobile (android), web, desktop and unique development based on Flutter. When I make Flutter projects then I most often use:",
     "@profilDetails": {
+      "description": ""
+    },
+
+    "profilDetailsSerial": "-BLoC, \n-Hive, \n-OOP, \n-external packages, \n-CleanCode, \n-JSON, \n-explicit and implicit animations, \n-REST-APIs, \n-Blender,\n-Git source control,\n-Agil or DSDM methodology.",
+    "@profilDetailsSerial": {
       "description": ""
     }
 

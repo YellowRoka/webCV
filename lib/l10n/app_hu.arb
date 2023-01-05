@@ -50,6 +50,7 @@
     "hintGoToRef": "Tovább a Referenciákhoz",
 
     "profil": "Profil",
-    "profilDetails": "Szoftver- és rendszerfejlesztő vagyok, aki jól ismeri a beágyazott rendszereket. Folyamatosan fejlesztem képességeimet önképzéssel és dedikált tanfolyamokkal. \n\nNemrég váltottam a beágyazott rendszerről a Flutter-re épülő mobil (android), web, asztali illetve egyedi jellegű fejlesztésre. Flutter projektek esetén, leggyakrabban a következőket használom: \n\n-BloC, \n-Hive, \n-OOP, \n-külső csomagok, \n-CleanCode, \n-JSON, \n-explicit és implicit animációk, \n-REST-API-k, \n-Blender, \n-Git verzió kezelő, \n-Agilis vagy DSDM fejlesztői módszertan."
+    "profilDetails": "Szoftver- és rendszerfejlesztő vagyok, aki jól ismeri a beágyazott rendszereket. Folyamatosan fejlesztem képességeimet önképzéssel és dedikált tanfolyamokkal. \n\nNemrég váltottam a beágyazott rendszerről a Flutter-re épülő mobil (android), web, asztali illetve egyedi jellegű fejlesztésre. Flutter projektek esetén, leggyakrabban a következőket használom:",
+    "profilDetailsSerial":"-BloC, \n-Hive, \n-OOP, \n-külső csomagok, \n-CleanCode, \n-JSON, \n-explicit és implicit animációk, \n-REST-API-k, \n-Blender, \n-Git verzió kezelő, \n-Agilis vagy DSDM fejlesztői módszertan."
 
 }

@@ -10,12 +10,14 @@ class InfoCardDialog extends StatelessWidget {
   @override
   Widget build( BuildContext context ) {
     AppLocalizations localizations = AppLocalizations.of( context );
+    //double width = 1/(1920/MediaQuery.of( context ).size.width);
+    //print(width);
 
     return Dialog(
       backgroundColor: Colors.transparent,
       child:           Container(
-        height:     240 + 300 * 1/(1080/MediaQuery.of( context ).size.height),
-        width:      200 + 600 * 1/(1920/MediaQuery.of( context ).size.width),
+        height:     390 + 300 * (1-1/(1920/MediaQuery.of( context ).size.width)),
+        width:      255 + 400 * 1/(1920/MediaQuery.of( context ).size.width),
         padding:    const EdgeInsets.all( 10 ),
         decoration: BoxDecoration(
           color:      Colors.black,
@@ -23,39 +25,51 @@ class InfoCardDialog extends StatelessWidget {
           borderRadius: const BorderRadius.all( Radius.circular( 32 ) )
         ),
 
-        child: Column(
-          mainAxisAlignment:  MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Stack(
           children: [
-
-            Text( 
-              localizations.profil,
-              style: const TextStyle( color: Colors.white ) 
+            ListView(
+              padding:  const EdgeInsets.fromLTRB(10,20,10,10),
+              children: [
+                Text( 
+                  localizations.profil,
+                  style: const TextStyle( color: Colors.white ) 
+                ),
+                
+                const SizedBox( height: 20 ),
+          
+                Text( 
+                  localizations.profilDetails,
+                  maxLines:  30,
+                  overflow:  TextOverflow.clip,
+                  textAlign: TextAlign.justify,
+                  style:     const TextStyle( color: Colors.white )
+                ),
+          
+                const SizedBox( height: 10 ),
+                
+                Text( 
+                  localizations.profilDetailsSerial,
+                  maxLines:  30,
+                  overflow:  TextOverflow.clip,
+                  textAlign: TextAlign.left,
+                  style:     const TextStyle( color: Colors.white )
+                ),
+                
+              ],
             ),
-            
-            const SizedBox( height: 10 ),
 
-            Text( 
-              localizations.profilDetails,
-              maxLines:  30,
-              overflow:  TextOverflow.clip,
-              textAlign: TextAlign.justify,
-              style:     const TextStyle( color: Colors.white )
-            ),
-            
             Align(
               alignment: Alignment.bottomRight,
               child:     ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.transparent,
-                  textStyle:         const TextStyle( color: Colors.white )
+                  backgroundColor: Colors.black.withOpacity(0.9),
+                  textStyle:       const TextStyle( color: Colors.white )
                 ),
                 onPressed: () => Navigator.pop( context ),
                 child:     const Text( "Ok" ) 
               ),
             ),
-
-          ],
+          ]
         ),
       ),
     );
