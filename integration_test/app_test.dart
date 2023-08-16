@@ -20,6 +20,9 @@ void main() async{
 
 }
 
+const int mainDelayTimeInMiliSec = 6500;
+const int subDelayTimeInMiliSec  = 3000;
+
 Future<void> mainTest() async {
   group('main end-to-end test',(){  
     testWidgets(
@@ -29,24 +32,24 @@ Future<void> mainTest() async {
         await setupApp(tester);
 
         /*test*/
-        final Finder button = find.byIcon(Icons.menu_book_sharp);
+        final Finder button = find.byIcon(Icons.menu);
 
         await tester.tap(button,warnIfMissed: false);
         await tester.pump();
 
         //expect(button, findsOneWidget);
-        print("button: $button");
+        debugPrint("button: $button");
        
         /*results*/
         final Finder menu = find.byType(Drawer);
-        print("menu: $menu"); 
+        debugPrint("menu: $menu"); 
         //expect(menu, findsOneWidget);
-        await Future.delayed( const Duration(seconds: 3));
+        await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
 
         /*close*/
         await tester.dragFrom(const Offset(500.0, 300.0), const Offset(0.0, 300.0));
         await tester.pump();
-        await Future.delayed( const Duration(seconds: 3));
+        await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
       }
     );
     testWidgets("go to personal", (WidgetTester tester) async{
@@ -54,7 +57,7 @@ Future<void> mainTest() async {
 
       await tester.dragFrom(const Offset(0.0, 300.0), const Offset(1500.0, 300.0));
       await tester.pump();
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
 
       final Finder bPersonal = find.byIcon(Icons.person);
 
@@ -62,20 +65,20 @@ Future<void> mainTest() async {
       await tester.pump();
 
       //expect(bPersonal, findsOneWidget);
-      print("button: $bPersonal");
+      debugPrint("button: $bPersonal");
       
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
       final Finder text = find.byKey(const Key("cdata"));
-      print("text: $text");
+      debugPrint("text: $text");
       //expect(text, findsOneWidget);
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
     });
     testWidgets("go to jobs", (WidgetTester tester) async{
       await setupApp(tester);
 
       await tester.dragFrom(const Offset(0.0, 300.0), const Offset(1500.0, 300.0));
       await tester.pump();
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
 
       final Finder bJobs = find.byIcon(Icons.factory_outlined);
       
@@ -83,20 +86,20 @@ Future<void> mainTest() async {
       await tester.pump();
 
       //expect(bJobs, findsOneWidget);
-      print("button: $bJobs");
+      debugPrint("button: $bJobs");
       
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
       final Finder text = find.byKey(const Key("cjobs"));
-      print("text: $text");
+      debugPrint("text: $text");
       //expect(text, findsOneWidget);
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
     });
     testWidgets("go to schools", (WidgetTester tester) async{
       await setupApp(tester);
       
       await tester.dragFrom(const Offset(0.0, 300.0), const Offset(1500.0, 300.0));
       await tester.pump();
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
 
       final Finder bSchools = find.byIcon(Icons.school_outlined);
       
@@ -104,20 +107,20 @@ Future<void> mainTest() async {
       await tester.pump();
 
       //expect(bSchools, findsOneWidget);
-      print("button: $bSchools");
+      debugPrint("button: $bSchools");
       
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
       final Finder text = find.byKey(const Key("cschools"));
-      print("text: $text");
+      debugPrint("text: $text");
       //expect(text, findsOneWidget);
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
     });
     testWidgets("go to skills", (WidgetTester tester) async{
       await setupApp(tester);
 
       await tester.dragFrom(const Offset(0.0, 300.0), const Offset(1500.0, 300.0));
       await tester.pump();
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
 
       final Finder bSkills = find.byIcon(Icons.add_chart_sharp);
       
@@ -137,13 +140,13 @@ Future<void> mainTest() async {
       await tester.pump();
 
       //expect(bSkills, findsOneWidget);
-      print("button: $bSkills");
+      debugPrint("button: $bSkills");
       
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
       final Finder text = find.byKey(const Key("cskills"));
-      print("text: $text");
+      debugPrint("text: $text");
       //expect(text, findsOneWidget);
-      await Future.delayed( const Duration(seconds: 3));
+      await Future.delayed( const Duration(milliseconds: subDelayTimeInMiliSec));
     });
   
   });
@@ -151,8 +154,8 @@ Future<void> mainTest() async {
 
 Future<void> setupApp(WidgetTester tester) async {
   app.main(); 
-  await tester;
+  //await tester;
   await tester.pumpAndSettle();
   await tester.pumpWidget( const app.MyApp());
-  await Future.delayed( const Duration(seconds: 3));
+  await Future.delayed( const Duration(milliseconds: mainDelayTimeInMiliSec));
 }

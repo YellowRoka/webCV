@@ -24,7 +24,7 @@ import 'local_changer/support_locale.dart';
 ///********************** FLUTTER HELP CMDs ********************************
 ///  (re)init:
 ///  (flutter create/init .)
-///  flutter generate
+///  dart pub run build_runner
 ///  flutter clean
 ///  flutter pub get
 ///  flutter gen-l10n
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
     
     final ThemeData materialTheme = ThemeData(
       primaryColor:            Colors.black,
-      backgroundColor:         Colors.black,
+      //backgroundColor:         Colors.black,
       scaffoldBackgroundColor: const Color.fromARGB( 223, 44, 6, 92 ),
     );
     

@@ -1,6 +1,3 @@
-
-import 'dart:typed_data';
-
 import 'package:universal_html/html.dart' as html;
 import 'package:universal_html/html.dart';
 

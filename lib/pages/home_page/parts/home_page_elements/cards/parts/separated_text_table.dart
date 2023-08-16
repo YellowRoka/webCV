@@ -16,7 +16,8 @@ class SeparatedTextTable extends StatelessWidget {
 
     return DataTable(
       columnSpacing:      10,
-      dataRowHeight:      30,
+      dataRowMinHeight:   30,
+      dataRowMaxHeight:   30,
       dividerThickness:   0,
       horizontalMargin:   0,
       border:             null,

@@ -13,7 +13,7 @@ class DynamicRoutesHandler extends StatelessWidget {
       listener: (context, state ){
 
         if(state is StateManagerStateInit){
-          Navigator.popUntil( context, ModalRoute.withName( '/' ) );
+          Navigator.popUntil( context, ModalRoute.withName( '/' ) );//this need to avoid the double state emitting after restart
           context.read<JsonDataProvider>().load();
         }
 

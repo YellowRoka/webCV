@@ -102,7 +102,7 @@
       "description": ""
     },
     
-    "plsPatient": "Please be patient!\nIt need ~10-30 secunds to load.",
+    "plsPatient": "Please be patient!\nIt need ~10-30 seconds to load.",
     "@plsPatient": {
       "description": ""
     },
@@ -226,7 +226,7 @@
       "description": ""
     },
 
-    "profilDetails": "I am a software and system developer with a good knowledge of embedded systems. I am constantly improving my skills with self-training and dedicated courses. \n\nRecently, I moved from the embedded system to mobile (android), web, desktop and unique development based on Flutter. When I make Flutter projects then I most often use:",
+    "profilDetails": "I am a software and system developer with a good knowledge of embedded systems. I am constantly improving my skills with self-training and dedicated courses. \n\nI moved from the embedded system to mobile (android), web, desktop and unique development based on Flutter. When I make Flutter projects then I most often use:",
     "@profilDetails": {
       "description": ""
     },

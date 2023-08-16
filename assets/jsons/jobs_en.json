@@ -1,13 +1,24 @@
 {
     "jobs":[
         {
+            "company":    "Cavitiy Eye Hungary Kft.",
+            "position":   "Front-End Software Engineer - Contractor",
+            "image":      "ce.jpg",
+            "place":      "Kecskemét, Hungary",
+            "date":       "Jan 2023 - Aug 2023",
+            "tasks":      "- bug fixing\n- software maintenance\n- development based on product requirement\n- design and create statemachines\n- make performance optimalizations\n- implement costumer's changed requirements\n- keep in touch with costumer's developer team\n- code refactoring",
+            "experinces": "Flutter, Android, Web, BLoC, Riverpod, REST-API, TCP Socket, Jira, Git, JSON, embedded system, front-end, graphical design,VSCode,",
+            "languages":  "Dart",
+            "commit":     ""
+        },
+        {
             "company":    "Organic Only Vending Franchise Magyarország Kft.",
             "position":   "System and Software Engineer - Contractor",
             "image":      "vendo.png",
             "place":      "Budapest, Hungary",
             "date":       "Mar 2022 - now",
-            "tasks":      "- create system architect\n- Application-level design and development based on product requirement\n- select the system hardware parts\n- create and implement UI design\n- design and create statemachines\n- create and implement local databases\n- implement costumers requirements\n- keep in touch with costumer's other developer teams\n- make time table and coordinate the parts of the project\n- create the base release processes\n- create animations\n- write code generator\n- refactoring\n- make performance optimalizations",
-            "experinces": "Flutter, Debian, Windows, Web, Raspberry Pi4, ORM, Hive, BLOC, REST-API, TCP Socket, Blender, Asana, Git, JSON, embedded sytem, front end, graphical design,",
+            "tasks":      "- create system architect\n- Application-level design and development based on product requirement\n- select the system hardware parts\n- create and implement UI design\n- design and create statemachines\n- create and implement local databases\n- implement costumers requirements\n- keep in touch with costumer's other developer teams\n- make time table and coordinate the parts of the project\n- create the base release processes\n- create animations\n- write code generator\n- code refactoring\n- make performance optimalizations",
+            "experinces": "Flutter, Debian, Windows, Web, Raspberry Pi4, ORM, Hive, BLoC, REST-API, TCP Socket, Blender, Asana, Git, JSON, embedded sytem, full-stack, graphical design,VSCode,",
             "languages":  "Dart, (C/C++, python, java)",
             "commit":     "During my time at the company, I am the main responsible of the developing of the central component. This component connect the base hardware functions with the cloud function, and keep in touch with the user. I manage this part of the project."
         },

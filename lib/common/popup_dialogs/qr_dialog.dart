@@ -45,7 +45,7 @@ class QRWindow extends StatelessWidget {
           height: 300,
           width:  300,
           child: Center(
-            child: QrImage(      
+            child: QrImageView(      
               data:               'https://yellowroka.github.io/webcvpage.github.io/#/',
               version:            QrVersions.auto,
               //size:               300,

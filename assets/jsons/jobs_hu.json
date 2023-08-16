@@ -1,13 +1,24 @@
 {
     "jobs":[
         {
+            "company":    "Cavitiy Eye Hungary Kft.",
+            "position":   "Front-End Software Mérnök - Contractor",
+            "image":      "ce.jpg",
+            "place":      "Kecskemét, Magyarország",
+            "date":       "Jan 2023 - Aug 2023",
+            "tasks":      "- hibák javítása\n- software karbantartás\n- termék fejlesztés követelmények alapján\n- állapotgépek tervezése és létrehozása\n- teljesítményoptimalizálás\n- a megrendelői követelmények változásának megvalósítása\n- kapcsolattartás a megrendelő fejlesztői csapatával\n- refaktorálás",
+            "experinces": "Flutter, Android, Web, BLoC, Riverpod, REST-API, TCP Socket, Jira, Git, JSON, embedded system, front-end, graphical design,VSCode,",
+            "languages":  "Dart",
+            "commit":     ""
+        },
+        {
             "company":    "Organic Only Vending Franchise Magyarország Kft.",
             "position":   "Rendszer és Software Mérnök - Contractor",
             "image":      "vendo.png",
             "place":      "Budapest, Magyarország",
             "date":       "Mar 2022 - jelenleg",
             "tasks":      "- rendszer architektúra létrehozása\n- Alkalmazásszintű tervezés és fejlesztés a termékkövetelmények alapján\n- a rendszer hardverrészeinek kiválasztása\n- UI tervezés létrehozása és megvalósítása\n- állapotgépek tervezése és létrehozása\n- helyi adatbázisok létrehozása és megvalósítása\n - a megrendelői követelmények megvalósítása\n- kapcsolattartás a megrendelő többi fejlesztői csapatával\n- ütemterv készítése és a projekt részeinek koordinálása\n- alap kiadási folyamatok létrehozása\n- animációk és videók létrehozása\n- kódgenerátor írása\n- refaktorálás\n- teljesítményoptimalizálás",
-            "experinces": "Flutter, Debian, Windows, Web, Raspberry Pi4, ORM, Hive, BLOC, REST-API, TCP Socket, Blender, Asana, Git, JSON, embedded sytem, front end, graphical design,",
+            "experinces": "Flutter, Debian, Windows, Web, Raspberry Pi4, ORM, Hive, BLoC, REST-API, TCP Socket, Blender, Asana, Git, JSON, embedded sytem, full-stack, graphical design,VSCode,",
             "languages":  "Dart, (C/C++, python, java)",
             "commit":     "A cégnél eltöltött idő alatt én vagyok a fő felelős a központi komponens fejlesztéséért. Ez az összetevő összekapcsolja az alap hardver funkciókat a felhő funkcióval, és tartja a kapcsolatot a felhasználóval. Én menedzselem a projekt ezen részét."
         },

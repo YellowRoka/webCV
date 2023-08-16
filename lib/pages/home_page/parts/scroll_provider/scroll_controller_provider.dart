@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
-
+//import 'package:flutter/material.dart';
+//import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+/*
 class ScrollControllerProvider extends ChangeNotifier{
   ItemScrollController?  _itemScrollController = ItemScrollController();
 
@@ -16,3 +16,4 @@ class ScrollControllerProvider extends ChangeNotifier{
 
   ItemScrollController get itemScrollController => _itemScrollController!;
 }
+*/

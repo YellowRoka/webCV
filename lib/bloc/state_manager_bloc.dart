@@ -9,7 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../common/json_workers/json_readers.dart';
 import '../pdf/pdf_cards.dart';
-import '../pdf/pdfV2.dart';
+import '../pdf/pdf_v2.dart';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
 
@@ -35,7 +35,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
       emit( const StateManagerStateInit() );
       emit( const StateManagerStateToSplashPage() );
-      await Future.delayed( const Duration( milliseconds: 4900 ) );
+      await Future.delayed( const Duration( milliseconds: 6000 ) );
       emit( const StateManagerStateToMainPage() );
     },transformer: sequential());
 
@@ -189,7 +189,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
   @override
   void onEvent( StateManagerEvent event){
-    print( "event: ${event.toString()}" );
+    debugPrint( "event: ${event.toString()}" );
     super.onEvent(event);
   }
 }
