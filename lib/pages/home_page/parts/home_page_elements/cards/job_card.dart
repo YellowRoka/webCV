@@ -35,9 +35,27 @@ class JobCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment:  MainAxisAlignment.start,
               children: [
-                CircleAvatar(  
-                  radius:          69,
-                  backgroundImage: AssetImage( 'assets/companies_images/${ description.image }' ),
+                Container(
+                  height:     150,
+                  width:      150,
+                  decoration: const BoxDecoration(
+                    color: Colors.grey,
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius:   5,
+                        spreadRadius: 2,
+                        color:      Colors.white
+                      )
+                    ]
+                  ),
+                  child: ClipOval(
+                    child: Image(
+                      fit: BoxFit.contain,
+                      color: Colors.transparent,
+                      image: AssetImage('assets/companies_images/${ description.image }'),
+                    ),
+                  ),
                 ),
 
                 const SizedBox(width: 30, height: 5),

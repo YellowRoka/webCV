@@ -29,10 +29,28 @@ class DataCard extends StatelessWidget{
           crossAxisAlignment: CrossAxisAlignment.center,
           direction:          ( MediaQuery.of( context ).size.width > 660 )?( Axis.horizontal ):( Axis.vertical ),
           children:  [
-
-            CircleAvatar(
-              radius:          100,
-              backgroundImage: AssetImage( 'assets/${ description.image }' ),
+            
+            Container(
+              height:     220,
+              width:      220,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                shape: BoxShape.circle,
+                boxShadow: [
+                  BoxShadow(
+                    blurRadius:   5,
+                    spreadRadius: 2,
+                    color:      Colors.white
+                  )
+                ]
+              ),
+              child: ClipOval(
+                child: Image(
+                  fit: BoxFit.contain,
+                  color: Colors.transparent,
+                  image: AssetImage('assets/${ description.image }'),
+                ),
+              ),
             ),
 
             ( MediaQuery.of( context ).size.width < 661 ) ?

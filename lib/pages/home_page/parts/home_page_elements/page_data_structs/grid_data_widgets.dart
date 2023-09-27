@@ -56,7 +56,8 @@ List<Widget> dataLinesEN( BuildContext context ){
           children: [
             const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsEN.jobs[ 1 ], width: 700 ),
             const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsEN.jobs[ 3 ], width: 700 ),
-            const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsEN.jobs[ 5 ], width: 700 )
+            const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsEN.jobs[ 5 ], width: 700 ),
+            const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsEN.jobs[ 7 ], width: 700 ),
           ]
         ),
       ],
@@ -112,7 +113,8 @@ List<Widget> dataLinesHU( BuildContext context ){
           children: [
             const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsHU.jobs[ 1 ], width: 700 ),
             const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsHU.jobs[ 3 ], width: 700 ),
-            const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsHU.jobs[ 5 ], width: 700 )
+            const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsHU.jobs[ 5 ], width: 700 ),
+            const SizedBox( height: 10 ), JobCard( description: jsonDataPack.jobsHU.jobs[ 7 ], width: 700 ),
           ]
         ),
       ],

@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:web_cv/common/json_workers/json_readers.dart';
 
@@ -24,7 +26,7 @@ class JsonDataProvider extends ChangeNotifier{
     if( isLoaded ){
        //isLoaded = false;
       notifyListeners();
-      print("-------------loaded jsons----------");
+      log("-------------loaded jsons----------");
     }
   }
 

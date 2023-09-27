@@ -70,7 +70,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
       }
       if( isVideViewOn == true ){
         isSizeWarnMustShow = false;
-        isSizeWarnShowed = false;
+        isSizeWarnShowed   = false;
       }
 
       if(isSizeWarnMustShow == true && isSizeWarnShowed == false){
@@ -98,11 +98,11 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
     });
 
     on<StateManagerEventToSchools>( (event, emit){
-      emit( StateManagerStateSchools(index: (isVideViewOn)?(0):(14) ) );
+      emit( StateManagerStateSchools(index: (isVideViewOn)?(0):(18) ) );
     });
 
     on<StateManagerEventToSkills>( (event, emit){
-      emit( StateManagerStateSkills( index: (isVideViewOn)?(0):(18) ) );
+      emit( StateManagerStateSkills( index: (isVideViewOn)?(0):(22) ) );
     });
 
     on<StateManagerEventSendMail>( (event, emit) async {

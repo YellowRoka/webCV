@@ -1,6 +1,17 @@
 {
     "jobs":[
         {
+            "company":    "Data-Vita Kft.",
+            "position":   "Android Front-End Software Engineer - Contractor",
+            "image":      "dv.png",
+            "place":      "Szeged, Hungary",
+            "date":       "Jan 2023 - now",
+            "tasks":      "- bug fixing\n- software maintenance\n- development based on product requirement\n- design and create statemachines\n- make performance optimalizations\n- implement costumer's changed requirements\n- keep in touch with costumer's developer team\n- code refactoring",
+            "experinces": "Flutter, Android, BLoC, media, notifications, Jira, Git, JSON, front-end, VSCode,",
+            "languages":  "Dart",
+            "commit":     ""
+        },
+        {
             "company":    "Cavitiy Eye Hungary Kft.",
             "position":   "Front-End Software Engineer - Contractor",
             "image":      "ce.jpg",

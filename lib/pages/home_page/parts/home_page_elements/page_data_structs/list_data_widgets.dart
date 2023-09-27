@@ -42,6 +42,9 @@ List<Widget> dataCardsEN( BuildContext context ){
           JobCard    ( description: jsonDataPack.jobsEN.jobs[ 6 ] ),
     const SizedBox   ( height: 20 ),
 
+          JobCard    ( description: jsonDataPack.jobsEN.jobs[ 7 ] ),
+    const SizedBox   ( height: 20 ),
+
           SchoolCard ( description: jsonDataPack.baseDataEN.schools[ 0 ] ),
     const SizedBox   ( height: 10 ),
 
@@ -83,6 +86,9 @@ return [
     const SizedBox   ( height: 20 ),
 
           JobCard    ( description: jsonDataPack.jobsHU.jobs[ 6 ] ),
+    const SizedBox   ( height: 20 ),
+
+          JobCard    ( description: jsonDataPack.jobsHU.jobs[ 7 ] ),
     const SizedBox   ( height: 20 ),
 
           SchoolCard ( description: jsonDataPack.baseDataHU.schools[ 0 ] ),

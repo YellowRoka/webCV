@@ -1,13 +1,24 @@
 {
     "jobs":[
         {
+            "company":    "Data-Vita Kft.",
+            "position":   "Android Front-End Software Mérnök - Contractor",
+            "image":      "dv.png",
+            "place":      "Szeged, Magyarország",
+            "date":       "Jan 2023 - jelenleg",
+            "tasks":      "- hibák javítása\n- software karbantartás\n- termék fejlesztés követelmények alapján\n- állapotgépek tervezése és létrehozása\n- teljesítményoptimalizálás\n- a megrendelői követelmények változásának megvalósítása\n- kapcsolattartás a megrendelő fejlesztői csapatával\n- refaktorálás",
+            "experinces": "Flutter, Android, BLoC, média, notifications, Jira, Git, JSON, front-end, VSCode,",
+            "languages":  "Dart",
+            "commit":     ""
+        },
+        {
             "company":    "Cavitiy Eye Hungary Kft.",
             "position":   "Front-End Software Mérnök - Contractor",
             "image":      "ce.jpg",
             "place":      "Kecskemét, Magyarország",
             "date":       "Jan 2023 - Aug 2023",
             "tasks":      "- hibák javítása\n- software karbantartás\n- termék fejlesztés követelmények alapján\n- állapotgépek tervezése és létrehozása\n- teljesítményoptimalizálás\n- a megrendelői követelmények változásának megvalósítása\n- kapcsolattartás a megrendelő fejlesztői csapatával\n- refaktorálás",
-            "experinces": "Flutter, Android, Web, BLoC, Riverpod, REST-API, TCP Socket, Jira, Git, JSON, embedded system, front-end, graphical design,VSCode,",
+            "experinces": "Flutter, Android, Web, BLoC, Riverpod, REST-API, TCP Socket, Jira, Git, JSON, embedded system, front-end, graphical design, VSCode,",
             "languages":  "Dart",
             "commit":     ""
         },
