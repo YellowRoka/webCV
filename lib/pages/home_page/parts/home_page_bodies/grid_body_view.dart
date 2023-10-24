@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../../../../bloc/state_manager_bloc.dart';
-import '../../../../common/animated_backgrounds/rain.dart';
+//import '../../../../common/animated_backgrounds/rain.dart';
 
 //https://pub.dev/packages/flutter_layout_grid
 //https://pub.dev/packages?q=grid
@@ -25,13 +25,13 @@ class GridBodyView extends StatelessWidget {
       children: [
 
         //const PraticleBG(),
-        Center(
+        /*Center(
           child: SizedBox(
             height: MediaQuery.of( context ).size.height,
             width:  1400,
             child:  const ParalaxRain()
           ),
-        ),
+        ),*/
           
         //https://www.youtube.com/watch?v=xnpzxZNi5x0
         Padding(

@@ -74,7 +74,7 @@ class DataCard extends StatelessWidget{
                   localizations.email,  
                   localizations.address,
                   localizations.address
-                  ],
+                ],
                 secundsTextList: [
                   description.name,   
                   description.birth,  
