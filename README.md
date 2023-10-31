@@ -24,5 +24,5 @@ This project is an online interactive savable CV.
 
 ## Flutter specific data:
 
-Builded with flutter 3.3.8
+Builded with flutter 3.13.4
 Designed for web and mobil(Android)
