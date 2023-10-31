@@ -12,12 +12,12 @@ class QRDialog extends StatelessWidget{
   @override
   Widget build( BuildContext context ){
 
-    AppLocalizations localizations = AppLocalizations.of( context );
+    AppLocalizations? localizations = AppLocalizations.of( context );
 
     return ClipRRect(
       borderRadius: BorderRadius.circular( 24.0 ),
       child:        AlertDialog(
-        title:      Text( localizations.savePage ),
+        title:      Text( localizations!.savePage ),
         content:    const QRWindow(),
         elevation:  40,
         actions:    [

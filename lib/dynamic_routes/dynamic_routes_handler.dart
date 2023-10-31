@@ -10,7 +10,7 @@ class DynamicRoutesHandler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<StateManagerBloc,StateManagerState>(
-      listener: (context, state ){
+      listener: (context, state ) async {
 
         if(state is StateManagerStateInit){
           Navigator.popUntil( context, ModalRoute.withName( '/' ) );//this need to avoid the double state emitting after restart

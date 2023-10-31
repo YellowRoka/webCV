@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../common/background/background.dart';
-import '../../common/drawer_handler/drawer_handler.dart';
-import '../../local_changer/language_changer_with_info.dart';
-import 'parts/drawer/drawer_ref.dart';
-import 'parts/fob/fob_ref_widget.dart';
-import 'parts/cards/ref_card_links.dart';
-import 'data_structs/references_list_items.dart';
-import 'parts/cards/ref_card_video.dart';
+
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:web_cv/common/background/background.dart';
+import 'package:web_cv/common/drawer_handler/drawer_handler.dart';
+import 'package:web_cv/local_changer/language_changer_with_info.dart';
+import 'package:web_cv/pages/references_page/data_structs/references_list_items.dart';
+import 'package:web_cv/pages/references_page/parts/cards/ref_card_links.dart';
+import 'package:web_cv/pages/references_page/parts/cards/ref_card_video.dart';
+import 'package:web_cv/pages/references_page/parts/drawer/drawer_ref.dart';
+import 'package:web_cv/pages/references_page/parts/fob/fob_ref_widget.dart';
 
 import 'parts/ref_head.dart';
 import 'parts/slider_builder.dart';
@@ -36,7 +37,7 @@ class ReferencesPageBody extends StatelessWidget {
   @override
   Widget build( BuildContext context ){
 
-    AppLocalizations localizations = AppLocalizations.of(context);
+    AppLocalizations? localizations = AppLocalizations.of(context);
 
     return Stack(
       children: [
@@ -49,7 +50,7 @@ class ReferencesPageBody extends StatelessWidget {
             
             children: [
 
-              RefHead( text: localizations.references ),
+              RefHead( text: localizations!.references ),
 
               RefHead( text:  localizations.cruzrForMZX ),
               SliderBuilder( referencesList: referencesList1 ),

@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 import '../../../../bloc/state_manager_bloc.dart';
-//import '../../../../common/animated_backgrounds/rain.dart';
+import '../../../../common/animated_backgrounds/rain.dart';
 
 class ListBodyView extends StatelessWidget {
 
@@ -22,12 +22,12 @@ class ListBodyView extends StatelessWidget {
       children: [
 
         //const PraticleBG(),
-        /*const Center(
+        const Center(
           child: SizedBox(
             width: 660,
             child: ParalaxRain()
           )
-        ),*/
+        ),
 
         //https://www.youtube.com/watch?v=xnpzxZNi5x0
         Padding(

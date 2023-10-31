@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 
-import '../../../../../common/json_workers/json_basedata_objs.dart';
-import '../../../../../common/widgets/base_card.dart';
-import 'parts/separated_text_table_column.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:web_cv/common/json_workers/json_basedata_objs.dart';
+import 'package:web_cv/common/widgets/base_card.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_elements/cards/parts/separated_text_table_column.dart';
 
 class SchoolCard extends StatelessWidget{
   final Schools description;
@@ -20,7 +20,7 @@ class SchoolCard extends StatelessWidget{
     const TextStyle textStyle = TextStyle( color: Colors.white, fontSize: 18, decoration: TextDecoration.none );
     const TextStyle headStyle = TextStyle( color: Colors.white, fontSize: 20, decoration: TextDecoration.none );
 
-    AppLocalizations localizations = AppLocalizations.of(context);
+    AppLocalizations? localizations = AppLocalizations.of(context);
 
     return BaseCard( 
       height:    height, 
@@ -36,7 +36,7 @@ class SchoolCard extends StatelessWidget{
               firstLineTextStyle: headStyle,
               otherLinesTextStyle:textStyle,
               firstTextList: [
-                localizations.university,
+                localizations!.university,
                 localizations.date,      
               ],
               secundsTextList: [

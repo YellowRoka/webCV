@@ -9,7 +9,7 @@ class InfoCardDialog extends StatelessWidget {
 
   @override
   Widget build( BuildContext context ) {
-    AppLocalizations localizations = AppLocalizations.of( context );
+    AppLocalizations? localizations = AppLocalizations.of( context );
     
     double calcPercent = 1/(1920/MediaQuery.of( context ).size.width);
 
@@ -34,7 +34,7 @@ class InfoCardDialog extends StatelessWidget {
               padding:  const EdgeInsets.fromLTRB(10,20,10,10),
               children: [
                 Text( 
-                  localizations.profil,
+                  localizations!.profil,
                   style: const TextStyle( color: Colors.white ) 
                 ),
                 

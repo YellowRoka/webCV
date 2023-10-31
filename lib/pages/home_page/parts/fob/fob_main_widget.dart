@@ -22,7 +22,7 @@ class FOBMain extends StatefulWidget{
 
 class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin{
   late AnimationController controller;
-  late AppLocalizations    localizations;
+  late AppLocalizations?   localizations;
 
   @override
   void initState(){
@@ -65,7 +65,7 @@ class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin
         ( CommonFOBWidgetStruct(
           size:       widget.iconSize,
           cbk:        ()=> BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventChangeView() ),
-          toolTip:    localizations.hintChangeLG,
+          toolTip:    localizations!.hintChangeLG,
           icon:       Icons.change_circle_outlined,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -76,7 +76,7 @@ class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin
         CommonFOBWidgetStruct(
           size:       widget.iconSize,
           cbk:        () => Scaffold.of( context ).openDrawer(),
-          toolTip:    localizations.hintOpenNav,
+          toolTip:    localizations!.hintOpenNav,
           icon:       Icons.menu_book_sharp,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -86,7 +86,7 @@ class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin
         CommonFOBWidgetStruct(
           size:       widget.iconSize,
           cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventSendMail() ),
-          toolTip:    localizations.hintSendMail,
+          toolTip:    localizations!.hintSendMail,
           icon:       Icons.outgoing_mail,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -96,7 +96,7 @@ class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin
         CommonFOBWidgetStruct(
           size:       widget.iconSize,
           cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventCreatePDF() ),
-          toolTip:    localizations.hintCreatePDF,
+          toolTip:    localizations!.hintCreatePDF,
           icon:       Icons.picture_as_pdf_rounded,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -106,7 +106,7 @@ class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin
         CommonFOBWidgetStruct(
           size:       widget.iconSize, 
           cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventPopQRDialog() ), 
-          toolTip:    localizations.hintGetConntects,
+          toolTip:    localizations!.hintGetConntects,
           icon:       Icons.qr_code_2_rounded,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -116,7 +116,7 @@ class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin
         CommonFOBWidgetStruct(
           size:       widget.iconSize,
           cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEvenToReferencesPage() ), 
-          toolTip:    localizations.hintGoToRef,
+          toolTip:    localizations!.hintGoToRef,
           icon:       Icons.add_task_rounded,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -126,7 +126,7 @@ class _FOBMainState extends State< FOBMain > with SingleTickerProviderStateMixin
         CommonFOBWidgetStruct(
           size:       widget.iconSize, 
           cbk:        (){}, 
-          toolTip:    localizations.hintOCMenu,
+          toolTip:    localizations!.hintOCMenu,
           icon:       Icons.menu,
           controller: controller,
           color:      Colors.black,

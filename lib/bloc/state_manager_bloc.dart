@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -189,7 +191,7 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
 
   @override
   void onEvent( StateManagerEvent event){
-    debugPrint( "event: ${event.toString()}" );
+    log( "event: ${event.toString()}" );
     super.onEvent(event);
   }
 }

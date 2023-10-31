@@ -7,12 +7,12 @@ class SizeWarningDialog extends StatelessWidget {
 
   @override
   Widget build( BuildContext context ) {
-    AppLocalizations localizations = AppLocalizations.of(context);
+    AppLocalizations? localizations = AppLocalizations.of(context);
 
     return ClipRRect(
       borderRadius: BorderRadius.circular(24.0),
       child:        AlertDialog(
-        title:      Text( localizations.changedToLV ),
+        title:      Text( localizations!.changedToLV ),
         content:    Text( localizations.winIsSmall ),
         elevation: 40,
         actions:   [

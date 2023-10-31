@@ -21,21 +21,21 @@ import 'local_changer/support_locale.dart';
 //https://stackoverflow.com/questions/65689346/404-failed-to-load-resource-deploying-flutter-web-app-to-github-pages
 //https://docs.github.com/en/pages/quickstart
 
-///********************** FLUTTER HELP CMDs ********************************
+///********************** FLUTTER HELP CMDs ********************************/
 ///  (re)init:
 ///  (flutter create/init .)
 ///  dart pub run build_runner
 ///  flutter clean
 ///  flutter pub get
 ///  flutter gen-l10n
-///  flutter pub run build_runner watch --delete-conflicting-outputs
+///  dart run build_runner watch --delete-conflicting-outputs
 /// 
 ///  analyzer:
 ///  dart analyze lib    
 /// 
 ///  for deploy on github:
 ///  flutter build web --release --base-href="/webcvpage.github.io/" -v
-///************************************************************************
+///************************************************************************/
 
 
 void main() async {

@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-import '../../../../bloc/state_manager_bloc.dart';
-import '../../../home_page/parts/fob/parts/fob_animation_delegate.dart';
-import '../../../home_page/parts/fob/parts/fob_builder.dart';
-import '../../../home_page/parts/fob/parts/fob_data_model.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
+import 'package:web_cv/pages/home_page/parts/fob/parts/fob_animation_delegate.dart';
+import 'package:web_cv/pages/home_page/parts/fob/parts/fob_builder.dart';
+import 'package:web_cv/pages/home_page/parts/fob/parts/fob_data_model.dart';
 
 
 class FOBRef extends StatefulWidget{
@@ -20,7 +19,7 @@ class FOBRef extends StatefulWidget{
 
 class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
   late AnimationController controller;
-  late AppLocalizations    localizations;
+  late AppLocalizations?   localizations;
 
   @override
   void initState(){
@@ -51,7 +50,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
         CommonFOBWidgetStruct(
           size:       widget.iconSize,
           cbk:        () => Scaffold.of( context ).openDrawer(),
-          toolTip:    localizations.hintOpenNav,
+          toolTip:    localizations!.hintOpenNav,
           icon:       Icons.menu_book_sharp,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -61,7 +60,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
         CommonFOBWidgetStruct(
           size:       widget.iconSize,
           cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventSendMail() ),
-          toolTip:    localizations.hintSendMail,
+          toolTip:    localizations!.hintSendMail,
           icon:       Icons.outgoing_mail,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -71,7 +70,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
         CommonFOBWidgetStruct(
           size:       widget.iconSize,
           cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventCreatePDF() ),
-          toolTip:    localizations.hintCreatePDF,
+          toolTip:    localizations!.hintCreatePDF,
           icon:       Icons.picture_as_pdf_rounded,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -81,7 +80,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
         CommonFOBWidgetStruct(
           size:       widget.iconSize, 
           cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventPopQRDialog() ), 
-          toolTip:    localizations.hintGetConntects,
+          toolTip:    localizations!.hintGetConntects,
           icon:       Icons.qr_code_2_rounded,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -91,7 +90,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
         ( CommonFOBWidgetStruct(
           size:       widget.iconSize,
           cbk:        () => BlocProvider.of<StateManagerBloc>( context ).add( const StateManagerEventBackToMain() ), 
-          toolTip:    localizations.hintBackToMain,
+          toolTip:    localizations!.hintBackToMain,
           icon:       Icons.arrow_back_ios_rounded,
           controller: controller,
           color:      Colors.black.withOpacity( 0.70 ),
@@ -102,7 +101,7 @@ class _FOBRefState extends State< FOBRef > with SingleTickerProviderStateMixin{
         CommonFOBWidgetStruct(
           size:       widget.iconSize, 
           cbk:        (){}, 
-          toolTip:    localizations.hintOCMenu,
+          toolTip:    localizations!.hintOCMenu,
           icon:       Icons.menu,
           controller: controller,
           color:      Colors.black,

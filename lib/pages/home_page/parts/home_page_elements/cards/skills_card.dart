@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 
-import '../../../../../common/json_workers/json_basedata_objs.dart';
-import '../../../../../common/widgets/base_card.dart';
-
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:web_cv/common/json_workers/json_basedata_objs.dart';
+import 'package:web_cv/common/widgets/base_card.dart';
 
 class SkillsCard extends StatelessWidget {
   final BaseDataConverter description;
@@ -19,7 +18,7 @@ class SkillsCard extends StatelessWidget {
     const TextStyle textStyle = TextStyle( color: Colors.white, fontSize: 18, decoration: TextDecoration.none );
     const TextStyle headStyle = TextStyle( color: Colors.white, fontSize: 22, decoration: TextDecoration.none );
 
-    AppLocalizations localizations = AppLocalizations.of(context);
+    AppLocalizations? localizations = AppLocalizations.of(context);
     return BaseCard(
       height:    height,
       width:     width,
@@ -32,7 +31,7 @@ class SkillsCard extends StatelessWidget {
           children: [
             const SizedBox( width: 900 ),
 
-            Text( localizations.langauges, style: headStyle ), const SizedBox( height: 10 ),
+            Text( localizations!.langauges, style: headStyle ), const SizedBox( height: 10 ),
             Text( description.languages,   style: textStyle ), const SizedBox( height: 30 ),
             Text( localizations.trainings, style: headStyle ), const SizedBox( height: 10 ),
 

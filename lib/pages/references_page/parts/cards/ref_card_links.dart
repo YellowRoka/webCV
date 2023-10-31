@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../common/json_workers/data_struct/json_data_struct.dart';
-import '../../../../common/json_workers/json_provider/json_provider.dart';
-import '../../../../common/widgets/base_card.dart';
-
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:web_cv/common/json_workers/data_struct/json_data_struct.dart';
+import 'package:web_cv/common/json_workers/json_provider/json_provider.dart';
+import 'package:web_cv/common/widgets/base_card.dart';
 
 import 'parts/link_line_builder.dart';
 
@@ -16,7 +15,7 @@ class RefCardLinks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AppLocalizations localizations  = AppLocalizations.of(context);
+    AppLocalizations? localizations = AppLocalizations.of(context);
     JsonDataStruct?  jsonDataStruct = context.read<JsonDataProvider>().readAllData();
 
     return BaseCard(
@@ -33,7 +32,7 @@ class RefCardLinks extends StatelessWidget {
 
             SizedBox(
                 height: 30,
-                child:  Text( localizations.mediaLinks, style: const TextStyle( color: Colors.white, fontSize: 26 ) )
+                child:  Text( localizations!.mediaLinks, style: const TextStyle( color: Colors.white, fontSize: 26 ) )
             ),
 
             Padding(

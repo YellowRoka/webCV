@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../common/json_workers/json_jobs_objs.dart';
-import '../../../../../common/widgets/base_card.dart';
-import 'parts/separated_text_table_column.dart';
+
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:web_cv/common/json_workers/json_jobs_objs.dart';
+import 'package:web_cv/common/widgets/base_card.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_elements/cards/parts/separated_text_table_column.dart';
 
 class JobCard extends StatelessWidget {
   final JobData description; 
@@ -19,7 +20,7 @@ class JobCard extends StatelessWidget {
     const TextStyle headStyle = TextStyle( color: Colors.white, fontSize: 20, decoration: TextDecoration.none );
     const TextStyle textStyle = TextStyle( color: Colors.white, fontSize: 18, decoration: TextDecoration.none );
 
-    AppLocalizations localizations = AppLocalizations.of(context);
+    AppLocalizations? localizations = AppLocalizations.of(context);
 
     return BaseCard(
       height:    height,
@@ -52,7 +53,7 @@ class JobCard extends StatelessWidget {
                   child: ClipOval(
                     child: Image(
                       fit: BoxFit.contain,
-                      color: Colors.transparent,
+                      //color: Colors.transparent,
                       image: AssetImage('assets/companies_images/${ description.image }'),
                     ),
                   ),
@@ -70,7 +71,7 @@ class JobCard extends StatelessWidget {
                     firstLineTextStyle: headStyle,
                     otherLinesTextStyle:textStyle,
                     firstTextList: [
-                      localizations.company, 
+                      localizations!.company, 
                       localizations.position,
                       localizations.date,    
                       localizations.place,   

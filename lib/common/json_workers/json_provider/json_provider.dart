@@ -12,10 +12,10 @@ class JsonDataProvider extends ChangeNotifier{
 
   bool isLoaded = false;
 
-  JsonReaders jsonHandler = JsonReaders();
+  JsonReaders     jsonHandler = JsonReaders();
   JsonDataStruct? jsonDataPack;
 
-  void load() async {
+  Future<void> load() async {
     if(!isLoaded){
       isLoaded = await jsonHandler.readJSONData();
     }

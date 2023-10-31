@@ -31,7 +31,7 @@ Map<String, dynamic> _$JobDataToJson(JobData instance) => <String, dynamic>{
     };
 
 JobConverter _$JobConverterFromJson(Map<String, dynamic> json) => JobConverter(
-      (json['jobs'] as List<dynamic>).map((e) => JobData.fromJson(e)).toList(),
+      (json['jobs'] as List<dynamic>).map(JobData.fromJson).toList(),
     );
 
 Map<String, dynamic> _$JobConverterToJson(JobConverter instance) =>

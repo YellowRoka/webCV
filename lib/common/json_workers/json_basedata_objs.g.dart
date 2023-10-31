@@ -43,12 +43,8 @@ BaseDataConverter _$BaseDataConverterFromJson(Map<String, dynamic> json) =>
       json['birth'] as String,
       json['mobile'] as String,
       json['mail'] as String,
-      (json['schools'] as List<dynamic>)
-          .map((e) => Schools.fromJson(e))
-          .toList(),
-      (json['trainings'] as List<dynamic>)
-          .map((e) => Trainings.fromJson(e))
-          .toList(),
+      (json['schools'] as List<dynamic>).map(Schools.fromJson).toList(),
+      (json['trainings'] as List<dynamic>).map(Trainings.fromJson).toList(),
       json['languages'] as String,
     );
 
