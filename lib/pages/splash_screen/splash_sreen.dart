@@ -47,7 +47,7 @@ class SplashSreen extends StatelessWidget {
         ),
 */
 
-        const Center( child: OpenerVideoPlayer( videoLink: 'assets/blender/videos/opener.mp4') )
+        const Center( child: OpenerVideoPlayer( videoLink: 'assets/blender/videos/opener_2.mp4') )
         /*Center(
           child: Column(
             mainAxisAlignment:  MainAxisAlignment.center,
