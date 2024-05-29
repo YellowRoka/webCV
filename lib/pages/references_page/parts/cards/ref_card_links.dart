@@ -5,8 +5,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:web_cv/common/json_workers/data_struct/json_data_struct.dart';
 import 'package:web_cv/common/json_workers/json_provider/json_provider.dart';
 import 'package:web_cv/common/widgets/base_card.dart';
+import 'package:web_cv/pages/references_page/parts/cards/parts/link_line_builder.dart';
 
-import 'parts/link_line_builder.dart';
+
 
 class RefCardLinks extends StatelessWidget {
   final String headText;

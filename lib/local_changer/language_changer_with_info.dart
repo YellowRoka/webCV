@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
+import 'package:web_cv/common/info_line_parts/info_button.dart';
 import 'package:web_cv/common/info_line_parts/local_switcher.dart';
+import 'package:web_cv/local_changer/locale_provider.dart';
 
-import '../bloc/state_manager_bloc.dart';
-import '../common/info_line_parts/info_button.dart';
-import 'locale_provider.dart';
 
 
 class LanguageChangerWithInfo extends StatelessWidget {

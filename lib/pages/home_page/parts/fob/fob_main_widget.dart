@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 
-import '../../../../bloc/state_manager_bloc.dart';
-
-
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
+import 'package:web_cv/pages/home_page/parts/fob/parts/fob_animation_delegate.dart';
+import 'package:web_cv/pages/home_page/parts/fob/parts/fob_builder.dart';
+import 'package:web_cv/pages/home_page/parts/fob/parts/fob_data_model.dart';
 
-import 'parts/fob_animation_delegate.dart';
-import 'parts/fob_builder.dart';
-import 'parts/fob_data_model.dart';
+
 
 class FOBMain extends StatefulWidget{
   final double iconSize = 65;

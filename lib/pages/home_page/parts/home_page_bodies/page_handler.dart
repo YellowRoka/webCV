@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
+import 'package:web_cv/common/background/background.dart';
 import 'package:web_cv/common/popup_dialogs/info_card_dialog.dart';
+import 'package:web_cv/common/popup_dialogs/pdf_alert_dialog.dart';
+import 'package:web_cv/common/popup_dialogs/qr_dialog.dart';
+import 'package:web_cv/common/popup_dialogs/size_warning_dialog.dart';
+import 'package:web_cv/local_changer/language_changer_with_info.dart';
+import 'package:web_cv/local_changer/locale_provider.dart';
+import 'package:web_cv/local_changer/support_locale.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_bodies/grid_body_view.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_bodies/list_body_view.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_elements/page_data_structs/grid_data_widgets.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_elements/page_data_structs/list_data_widgets.dart';
 
-import '../../../../bloc/state_manager_bloc.dart';
-import '../../../../common/background/background.dart';
-import '../../../../common/popup_dialogs/pdf_alert_dialog.dart';
-import '../../../../common/popup_dialogs/qr_dialog.dart';
-import '../../../../common/popup_dialogs/size_warning_dialog.dart';
-import '../../../../local_changer/language_changer_with_info.dart';
-import '../../../../local_changer/locale_provider.dart';
-import '../../../../local_changer/support_locale.dart';
-import '../home_page_elements/page_data_structs/grid_data_widgets.dart';
-import '../home_page_elements/page_data_structs/list_data_widgets.dart';
-import 'grid_body_view.dart';
-import 'list_body_view.dart';
+
 
 class PageHandler extends StatefulWidget {
   const PageHandler( { Key? key} ) : super(key: key);
@@ -24,7 +25,7 @@ class PageHandler extends StatefulWidget {
 
 class _PageHandlerState extends State<PageHandler> {
   
-  Future<bool> _onWillPop() async {
+  bool _onWillPop( bool? result ){
     return false; //<-- DISABLE BACKWARD BUTTON
   }
 
@@ -33,8 +34,8 @@ class _PageHandlerState extends State<PageHandler> {
     bool   isWideViewOn = true;
     Widget newChild     = const SizedBox();
 
-    return WillPopScope(
-      onWillPop: _onWillPop,
+    return PopScope (
+      onPopInvoked: _onWillPop,
       child:     Stack(
         children: [
     

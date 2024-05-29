@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
 
-import '../../bloc/state_manager_bloc.dart';
 
 class QRDialog extends StatelessWidget{
   const QRDialog({Key? key}) : super(key: key);

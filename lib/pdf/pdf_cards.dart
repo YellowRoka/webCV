@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../common/json_workers/json_basedata_objs.dart';
-import '../common/json_workers/json_jobs_objs.dart';
+import 'package:web_cv/common/json_workers/json_basedata_objs.dart';
+import 'package:web_cv/common/json_workers/json_jobs_objs.dart';
 
 
 const TextStyle headStyle = TextStyle( color: Colors.black, fontSize: 14, decoration: TextDecoration.none );

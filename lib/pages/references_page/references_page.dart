@@ -11,9 +11,10 @@ import 'package:web_cv/pages/references_page/parts/cards/ref_card_links.dart';
 import 'package:web_cv/pages/references_page/parts/cards/ref_card_video.dart';
 import 'package:web_cv/pages/references_page/parts/drawer/drawer_ref.dart';
 import 'package:web_cv/pages/references_page/parts/fob/fob_ref_widget.dart';
+import 'package:web_cv/pages/references_page/parts/ref_head.dart';
+import 'package:web_cv/pages/references_page/parts/slider_builder.dart';
 
-import 'parts/ref_head.dart';
-import 'parts/slider_builder.dart';
+
 
 int playedVideoIndex = 0;
 
@@ -68,24 +69,24 @@ class ReferencesPageBody extends StatelessWidget {
                     id:       1,
                     headText: localizations.ote,
                     videoUrl: 
-                    "https://drive.google.com/uc?export=view&id=1umt44PWimSKh6ejsKqT28rQ515fvXFzE",
-                    //'assets/ref_medias/videos/flutter_help_btn_1.mp4',
+                    //"https://drive.google.com/uc?export=view&id=1umt44PWimSKh6ejsKqT28rQ515fvXFzE",
+                    'assets/ref_medias/videos/flutter_help_btn.mp4',
                   ),
 
                   RefCardVideo(
                     id:       2,
                     headText: localizations.czurPlanet,
                     videoUrl: 
-                    "https://drive.google.com/uc?export=view&id=1ZnwOSqAzlGLSr-zMkC-oIl9zG4xCOSHu",
-                    //'assets/ref_medias/videos/cruzr_2021_planet.mp4',
+                    //"https://drive.google.com/uc?export=view&id=1ZnwOSqAzlGLSr-zMkC-oIl9zG4xCOSHu",
+                    'assets/ref_medias/videos/cruzr_2021_planet.mp4',
                   ),
 
                   RefCardVideo(
                     id:       3,
                     headText: localizations.cruzrMVM,
                     videoUrl: 
-                    "https://drive.google.com/uc?export=view&id=1VyYtoGT-H203LIxBYD-hYvPeNHxuFaGQ",
-                    //'assets/ref_medias/videos/cruzr_mvm_1.mp4',
+                    //"https://drive.google.com/uc?export=view&id=1VyYtoGT-H203LIxBYD-hYvPeNHxuFaGQ",
+                    'assets/ref_medias/videos/cruzr_mvm.mp4',
                   ),
 
                   /*VideoCardBox(

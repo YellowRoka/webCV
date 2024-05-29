@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
 
-import '../../bloc/state_manager_bloc.dart';
 
 void drawerHandler( BuildContext context, bool isOpen ){
   if( isOpen ){

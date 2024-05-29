@@ -1,8 +1,19 @@
 {
     "jobs":[
         {
+            "company":    "Hunelco Kft.",
+            "position":   "Senior Android Front-End Software Mérnök - Contractor",
+            "image":      "hunelco.jpg",
+            "place":      "Budapest, Magyarország",
+            "date":       "Jan 2024 - jelenleg",
+            "tasks":      "- hibák javításag\n- software karbantartás\n- termék fejlesztés követelmények alapján\n- állapotgépek tervezése és létrehozása\n- teljesítményoptimalizálás\n- a megrendelői követelmények változásának megvalósítása\n- kapcsolattartás a megrendelő fejlesztői csapatával\n- refaktorálás\n- új funkciók implementálása\n- applikáció fejlesztése egyedi Android alapú eszközökre",
+            "experinces": "Flutter, Android, BLoC, Cubit, Jira, Git, JSON, interapp operations,front-end, VSCode",
+            "languages":  "Dart",
+            "commit":     ""
+        },
+        {
             "company":    "Data-Vita Kft.",
-            "position":   "Android Front-End Software Mérnök - Contractor",
+            "position":   "Lead Android Front-End Software Mérnök - Contractor",
             "image":      "dv.png",
             "place":      "Szeged, Magyarország",
             "date":       "Jan 2023 - jelenleg",
@@ -13,7 +24,7 @@
         },
         {
             "company":    "Cavitiy Eye Hungary Kft.",
-            "position":   "Front-End Software Mérnök - Contractor",
+            "position":   "Senior Front-End Software Mérnök - Contractor",
             "image":      "ce.jpg",
             "place":      "Kecskemét, Magyarország",
             "date":       "Jan 2023 - Aug 2023",
@@ -24,7 +35,7 @@
         },
         {
             "company":    "Organic Only Vending Franchise Magyarország Kft.",
-            "position":   "Rendszer és Software Mérnök - Contractor",
+            "position":   "Lead Rendszer és Software Mérnök - Contractor",
             "image":      "vendo.png",
             "place":      "Budapest, Magyarország",
             "date":       "Mar 2022 - jelenleg",
@@ -35,7 +46,7 @@
         },
         {
             "company":    "MuzixGroup / MZX Robotics",
-            "position":   "Robotikai Software Mérnök - Contractor",
+            "position":   "Senior Software Mérnök - Contractor",
             "image":      "mzx.png",
             "place":      "Budapest, Magyarország",
             "date":       "Marc 2021 - jelenleg",
@@ -46,7 +57,7 @@
         },
         {
             "company":    "B. Braun Group",
-            "position":   "Software Mérnök",
+            "position":   "Medior Software Mérnök",
             "image":      "bb.jpg",
             "place":      "Budapest, Magyarország",
             "date":       "Apr 2020 - Mar 2022, 2 év",
@@ -57,7 +68,7 @@
         },
         {
             "company":    "MuzixGroup",
-            "position":   "Robotikai Software Mérnök",
+            "position":   "Medior Robotikai Software Mérnök",
             "image":      "mza.jpg",
             "place":      "Budapest, Magyarország",
             "date":       "Jun 2019 - Dec 2019, 6 hónap",
@@ -68,7 +79,7 @@
         },
         {
             "company":    "Mentor Graphics",
-            "position":   "Software Mérnök",
+            "position":   "Medior Software Mérnök",
             "image":      "mentor.jpg",
             "place":      "Budapest, Magyarország",
             "date":       "Feb 2019 - May 2019, 3 hónap",
@@ -79,7 +90,7 @@
         },
         {
             "company":    "evosoft Hungary",
-            "position":   "Software Mérnök",
+            "position":   "Junior Software Mérnök",
             "image":      "evosoft.jpg",
             "place":      "Budapest, Magyarország",
             "date":       "Feb 2017 - Jan 2019, 2 év",

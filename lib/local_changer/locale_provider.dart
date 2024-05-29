@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:web_cv/local_changer/support_locale.dart';
 
-import 'support_locale.dart';
 
 //singleton with provider
 

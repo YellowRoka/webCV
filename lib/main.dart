@@ -1,17 +1,16 @@
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
+import 'package:web_cv/common/json_workers/json_provider/json_provider.dart';
+import 'package:web_cv/dynamic_routes/dynamic_routes.dart';
+import 'package:web_cv/dynamic_routes/dynamic_routes_handler.dart';
+import 'package:web_cv/local_changer/locale_provider.dart';
+import 'package:web_cv/local_changer/support_locale.dart';
 
-import 'bloc/state_manager_bloc.dart';
-import 'common/json_workers/json_provider/json_provider.dart';
-import 'dynamic_routes/dynamic_routes.dart';
-import 'dynamic_routes/dynamic_routes_handler.dart';
 
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
-import 'local_changer/locale_provider.dart';
-import 'local_changer/support_locale.dart';
 
 //FLUTTER EAT HDD after every debug build!!!!
 //help:https://stackoverflow.com/questions/68204150/flutter-web-stable-reducing-my-hard-drive-space-everytime-i-run-the-web-app
@@ -24,10 +23,10 @@ import 'local_changer/support_locale.dart';
 ///********************** FLUTTER HELP CMDs ********************************/
 ///  (re)init:
 ///  (flutter create/init .)
-///  dart pub run build_runner
 ///  flutter clean
 ///  flutter pub get
 ///  flutter gen-l10n
+///  dart pub run build_runner
 ///  dart run build_runner watch --delete-conflicting-outputs
 /// 
 ///  analyzer:

@@ -1,8 +1,19 @@
 {
     "jobs":[
         {
+            "company":    "Hunelco Kft.",
+            "position":   "Senior Android Front-End Software Engineer - Contractor",
+            "image":      "hunelco.jpg",
+            "place":      "Budapest, Hungary",
+            "date":       "Jan 2024 - now",
+            "tasks":      "- bug fixing\n- software maintenance\n- development based on product requirement\n- design and create statemachines\n -make performance optimalizations\n- implement costumer's changed requirements\n- keep in touch with costumer's developer team\n- code refactoring\n- implement new features\n- create application for unique Android device",
+            "experinces": "Flutter, Android, BLoC, Cubit, Jira, Git, JSON, interapp operations,front-end, VSCode",
+            "languages":  "Dart",
+            "commit":     ""
+        },
+        {
             "company":    "Data-Vita Kft.",
-            "position":   "Android Front-End Software Engineer - Contractor",
+            "position":   "Lead Android Front-End Software Engineer - Contractor",
             "image":      "dv.png",
             "place":      "Szeged, Hungary",
             "date":       "Jan 2023 - now",
@@ -13,7 +24,7 @@
         },
         {
             "company":    "Cavitiy Eye Hungary Kft.",
-            "position":   "Front-End Software Engineer - Contractor",
+            "position":   "Senior Front-End Software Engineer - Contractor",
             "image":      "ce.jpg",
             "place":      "Kecskemét, Hungary",
             "date":       "Jan 2023 - Aug 2023",
@@ -24,7 +35,7 @@
         },
         {
             "company":    "Organic Only Vending Franchise Magyarország Kft.",
-            "position":   "System and Software Engineer - Contractor",
+            "position":   "Lead System and Software Engineer - Contractor",
             "image":      "vendo.png",
             "place":      "Budapest, Hungary",
             "date":       "Mar 2022 - now",
@@ -35,7 +46,7 @@
         },
         {
             "company":    "MuzixGroup / MZX Robotics",
-            "position":   "Robotical Software Engineer - Contractor",
+            "position":   "Senior Software Engineer - Contractor",
             "image":      "mzx.png",
             "place":      "Budapest, Hungary",
             "date":       "Marc 2021 - now",
@@ -46,7 +57,7 @@
         },
         {
             "company":    "B. Braun Group",
-            "position":   "Software Engineer",
+            "position":   "Medior Software Engineer",
             "image":      "bb.jpg",
             "place":      "Budapest, Hungary",
             "date":       "Apr 2020 - Mar 2022, 2 years",
@@ -57,7 +68,7 @@
         },
         {
             "company":    "MuzixGroup",
-            "position":   "Robotical Software Engineer",
+            "position":   "Medior Robotical Software Engineer",
             "image":      "mza.jpg",
             "place":      "Budapest, Hungary",
             "date":       "Jun 2019 - Dec 2019, 6 months",
@@ -68,7 +79,7 @@
         },
         {
             "company":    "Mentor Graphics",
-            "position":   "Software Engineer",
+            "position":   "Medior Software Engineer",
             "image":      "mentor.jpg",
             "place":      "Budapest, Hungary",
             "date":       "Feb 2019 - May 2019, 3 months",
@@ -79,7 +90,7 @@
         },
         {
             "company":    "evosoft Hungary",
-            "position":   "Software Engineer",
+            "position":   "Junior Software Engineer",
             "image":      "evosoft.jpg",
             "place":      "Budapest, Hungary",
             "date":       " Feb 2017 - Jan 2019, 2 years",

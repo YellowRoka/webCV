@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
 import 'package:web_cv/common/json_workers/json_provider/json_provider.dart';
 
-import '../bloc/state_manager_bloc.dart';
 
 class DynamicRoutesHandler extends StatelessWidget {
   const DynamicRoutesHandler({Key? key}) : super(key: key);

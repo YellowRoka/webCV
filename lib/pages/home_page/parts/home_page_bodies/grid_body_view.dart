@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
+import 'package:web_cv/common/animated_backgrounds/rain.dart';
 
-import '../../../../bloc/state_manager_bloc.dart';
-import '../../../../common/animated_backgrounds/rain.dart';
+
 
 //https://pub.dev/packages/flutter_layout_grid
 //https://pub.dev/packages?q=grid

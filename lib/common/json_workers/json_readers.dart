@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
+import 'package:web_cv/common/json_workers/json_basedata_objs.dart';
+import 'package:web_cv/common/json_workers/json_jobs_objs.dart';
+import 'package:web_cv/common/json_workers/json_links_data_objs.dart';
 
-import 'json_basedata_objs.dart';
-import 'json_jobs_objs.dart';
-import 'json_links_data_objs.dart';
 
 class JsonReaders {
   late JobConverter      jobsEN;

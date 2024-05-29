@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:web_cv/common/json_workers/data_struct/json_data_struct.dart';
+import 'package:web_cv/common/json_workers/json_provider/json_provider.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_elements/cards/data_card.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_elements/cards/job_card.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_elements/cards/school_card.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_elements/cards/skills_card.dart';
 
-import '../../../../../common/json_workers/data_struct/json_data_struct.dart';
-import '../../../../../common/json_workers/json_provider/json_provider.dart';
-
-import '../cards/data_card.dart';
-import '../cards/job_card.dart';
-import '../cards/school_card.dart';
-import '../cards/skills_card.dart';
 
 List<Widget> dataCardsEN( BuildContext context ){
 

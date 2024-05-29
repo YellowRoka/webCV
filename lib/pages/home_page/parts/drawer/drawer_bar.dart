@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:web_cv/bloc/state_manager_bloc.dart';
+import 'package:web_cv/common/drawer_handler/drawer_handler.dart';
 
-import '../../../../common/drawer_handler/drawer_handler.dart';
 
 class DrawerBar extends StatefulWidget {
 

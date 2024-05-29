@@ -9,11 +9,11 @@ import 'package:mailto/mailto.dart';
 import 'package:screenshot/screenshot.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../common/json_workers/json_readers.dart';
-import '../pdf/pdf_cards.dart';
-import '../pdf/pdf_v2.dart';
+import 'package:web_cv/common/json_workers/json_readers.dart';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:web_cv/pdf/pdf_cards.dart';
+import 'package:web_cv/pdf/pdf_v2.dart';
 
 part 'state_manager_event.dart';
 part 'state_manager_state.dart';

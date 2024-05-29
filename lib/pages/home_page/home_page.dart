@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:web_cv/bloc/state_manager_bloc.dart';
+import 'package:web_cv/common/drawer_handler/drawer_handler.dart';
+import 'package:web_cv/pages/home_page/parts/drawer/drawer_bar.dart';
+import 'package:web_cv/pages/home_page/parts/fob/fob_main_widget.dart';
+import 'package:web_cv/pages/home_page/parts/home_page_bodies/page_handler.dart';
 
-import '../../bloc/state_manager_bloc.dart';
 
-import 'parts/drawer/drawer_bar.dart';
-import '../../common/drawer_handler/drawer_handler.dart';
-import 'parts/fob/fob_main_widget.dart';
-import 'parts/home_page_bodies/page_handler.dart';
 
 class HomePage extends StatelessWidget{
   const HomePage( { Key? key} ) : super(key: key);

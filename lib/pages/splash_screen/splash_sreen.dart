@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:web_cv/common/background/background.dart';
+import 'package:web_cv/pages/splash_screen/parts/opener_video_player.dart';
 
-import '../../common/background/background.dart';
-import 'parts/opener_video_player.dart';
 
 class SplashSreen extends StatelessWidget {
   const SplashSreen({Key? key}) : super(key: key);

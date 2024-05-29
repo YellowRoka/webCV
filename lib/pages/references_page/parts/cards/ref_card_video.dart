@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:web_cv/common/widgets/base_card.dart';
+import 'package:web_cv/pages/references_page/parts/cards/parts/ref_video_player.dart';
 
-import '../../../../common/widgets/base_card.dart';
-import 'parts/ref_video_player.dart';
+
 
 class RefCardVideo extends StatelessWidget {
   final String headText;

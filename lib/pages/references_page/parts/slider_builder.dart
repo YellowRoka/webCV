@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:web_cv/pages/references_page/parts/cards/parts/index_markers.dart';
 
-import 'cards/parts/index_markers.dart';
 
 
 //help: https://blog.codemagic.io/how-to-improve-the-performance-of-your-flutter-app./

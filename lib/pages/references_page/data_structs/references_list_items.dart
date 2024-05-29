@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:web_cv/pages/references_page/parts/cards/ref_image_card.dart';
 
-import '../parts/cards/ref_image_card.dart';
+
 //import 'package:image_network/image_network.dart';
 
 //html.window.open('https://www.fluttercampus.com',"_blank", "location=yes,height=570,width=520,scrollbars=yes,status=yes");

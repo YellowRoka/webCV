@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:web_cv/pages/home_page/home_page.dart';
+import 'package:web_cv/pages/references_page/references_page.dart';
+import 'package:web_cv/pages/splash_screen/splash_sreen.dart';
 
-import '../pages/home_page/home_page.dart';
-import '../pages/references_page/references_page.dart';
-import '../pages/splash_screen/splash_sreen.dart';
+
 
 PageRouteBuilder< dynamic > animatedRouteToMainPage( RouteSettings settings ){
 return PageRouteBuilder(

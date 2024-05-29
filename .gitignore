@@ -51,7 +51,9 @@ app.*.map.json
 
 # Otheres:
 /assets/blender/blends/
-/assets/ref_medias/videos/
+/assets/ref_medias/bad_vids/
 /assets/ref_medias/orig_vids/
 /lib/pdf/not_working/
 /assets/pdf/old/
+
+/.VSCodeCounter
