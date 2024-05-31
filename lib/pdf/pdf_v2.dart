@@ -141,7 +141,7 @@ https://stackoverflow.com/questions/70988967/about-pdf-file-opening-and-download
 
   //final rawData = file.readAsBytesSync();
   //final content = base64Encode(rawData);
-  final anchor = html.AnchorElement(
+  /*final anchor = */html.AnchorElement(
       href: "data:application/octet-stream,$file")
     ..setAttribute("download", "file.pdf")
     ..click();

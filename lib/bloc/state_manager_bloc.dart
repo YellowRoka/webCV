@@ -100,11 +100,11 @@ class StateManagerBloc extends Bloc<StateManagerEvent, StateManagerState> {
     });
 
     on<StateManagerEventToSchools>( (event, emit){
-      emit( StateManagerStateSchools(index: (isVideViewOn)?(0):(18) ) );
+      emit( StateManagerStateSchools(index: (isVideViewOn)?(0):(20) ) );
     });
 
     on<StateManagerEventToSkills>( (event, emit){
-      emit( StateManagerStateSkills( index: (isVideViewOn)?(0):(22) ) );
+      emit( StateManagerStateSkills( index: (isVideViewOn)?(0):(24) ) );
     });
 
     on<StateManagerEventSendMail>( (event, emit) async {

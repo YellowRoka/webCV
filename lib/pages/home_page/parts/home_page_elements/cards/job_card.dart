@@ -21,7 +21,6 @@ class JobCard extends StatelessWidget {
     const TextStyle textStyle = TextStyle( color: Colors.white, fontSize: 18, decoration: TextDecoration.none );
 
     AppLocalizations? localizations = AppLocalizations.of(context);
-
     return BaseCard(
       height:    height,
       width:    width,
@@ -67,22 +66,22 @@ class JobCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:[
 
-                  SeparatedTextTableColumn(
-                    firstLineTextStyle: headStyle,
-                    otherLinesTextStyle:textStyle,
-                    firstTextList: [
-                      localizations!.company, 
-                      localizations.position,
-                      localizations.date,    
-                      localizations.place,   
-                    ],
-                    secundsTextList: [
-                      description.company, 
-                      description.position,
-                      description.date,    
-                      description.place,   
-                    ]
-                  ),
+                    SeparatedTextTableColumn(
+                      firstLineTextStyle:  headStyle,
+                      otherLinesTextStyle: textStyle,
+                      firstTextList: [
+                        localizations!.company, 
+                        localizations.position,
+                        localizations.date,    
+                        localizations.place,   
+                      ],
+                      secundsTextList: [
+                        description.company, 
+                        description.position,
+                        description.date,    
+                        description.place,   
+                      ]
+                    ),
                   ]
                 )
               ],
@@ -101,9 +100,9 @@ class JobCard extends StatelessWidget {
                   
                   Text( description.commit??"", style: textStyle, maxLines: 10, overflow: TextOverflow.ellipsis )
                 ],
-                
               ),
             )
+
           ],
         )
       ],
