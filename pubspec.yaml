@@ -74,7 +74,7 @@ dependencies:
 
   #local_hero: ^0.2.0
 
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.0.0
   video_player: ^2.8.3
   url_launcher: ^6.1.7
 
@@ -128,11 +128,8 @@ flutter:
     - assets/my_images/
     - assets/companies_images/
     - assets/ref_medias/images/
-
+    - assets/ref_medias/videos/
     - assets/blender/videos/opener.mp4
-    - assets/ref_medias/videos/cruzr_2021_planet.mp4
-    - assets/ref_medias/videos/cruzr_mvm.mp4
-    - assets/ref_medias/videos/flutter_help_btn.mp4
 
     #- assets/l10n/
     #- assets/l10n/app_en.arb

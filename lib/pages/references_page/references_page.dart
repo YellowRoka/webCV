@@ -70,7 +70,7 @@ class ReferencesPageBody extends StatelessWidget {
                     headText: localizations.ote,
                     videoUrl: 
                     //"https://drive.google.com/uc?export=view&id=1umt44PWimSKh6ejsKqT28rQ515fvXFzE",
-                    'assets/ref_medias/videos/flutter_help_btn.mp4',
+                    "assets/ref_medias/videos/flutter_help_btn.mp4",
                   ),
 
                   RefCardVideo(
@@ -78,7 +78,7 @@ class ReferencesPageBody extends StatelessWidget {
                     headText: localizations.czurPlanet,
                     videoUrl: 
                     //"https://drive.google.com/uc?export=view&id=1ZnwOSqAzlGLSr-zMkC-oIl9zG4xCOSHu",
-                    'assets/ref_medias/videos/cruzr_2021_planet.mp4',
+                    "assets/ref_medias/videos/cruzr_2021_planet.mp4",
                   ),
 
                   RefCardVideo(
@@ -86,7 +86,7 @@ class ReferencesPageBody extends StatelessWidget {
                     headText: localizations.cruzrMVM,
                     videoUrl: 
                     //"https://drive.google.com/uc?export=view&id=1VyYtoGT-H203LIxBYD-hYvPeNHxuFaGQ",
-                    'assets/ref_medias/videos/cruzr_mvm.mp4',
+                    "assets/ref_medias/videos/cruzr_mvm.mp4",
                   ),
 
                   /*VideoCardBox(

@@ -10,6 +10,7 @@
             "type": "dart",
             "program": "lib/main.dart",
             "flutterMode": "debug",
+            "cwd": "${workspaceFolder}", 
             "args": [
                 //"--web-browser-flag",
                 //"--disable-web-security"
@@ -20,6 +21,7 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
+            "cwd": "${workspaceFolder}", 
             "flutterMode": "profile"
         },
         {
@@ -28,6 +30,7 @@
             "type": "dart",
             //"program": "${workspaceFolder}/bin/flutter_tools.dart",
             "program": "lib/main.dart",
+            "cwd": "${workspaceFolder}", 
             "flutterMode": "release"
         },
         {
@@ -35,6 +38,7 @@
             "type": "dart",
             "request": "launch",
             "program": "lib/main_mock.dart",
+            "cwd": "${workspaceFolder}", 
             "flutterMode": "debug"
         }
     ]

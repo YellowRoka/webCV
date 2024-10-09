@@ -19,7 +19,8 @@ class RefVideoPlayerState extends State<RefVideoPlayer> {
   void initState() {
     super.initState();
     _controller = VideoPlayerController
-      .networkUrl(Uri.parse(widget.videoLink))
+      .asset( widget.videoLink )
+      //.networkUrl(Uri.parse(widget.videoLink))
       //.asset( widget.videoLink )
       ..initialize().then( (_) => setState( () {} ) );
       _controller.addListener( (){ 

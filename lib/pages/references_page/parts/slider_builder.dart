@@ -1,5 +1,7 @@
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+
 import 'package:web_cv/pages/references_page/parts/cards/parts/index_markers.dart';
 
 
@@ -17,13 +19,13 @@ class SliderBuilder extends StatefulWidget {
 
 class _SliderBuilderState extends State<SliderBuilder> {
 
-  late CarouselController? buttonCarouselController;
-  late ValueNotifier       indexNotifier;
+  late CarouselSliderController? buttonCarouselController;
+  late ValueNotifier             indexNotifier;
 
   @override
   void initState() {
     super.initState();
-    buttonCarouselController = CarouselController();
+    buttonCarouselController = CarouselSliderController();
     indexNotifier            = ValueNotifier< int >(0);
   }
 
